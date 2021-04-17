@@ -313,7 +313,6 @@ Shout
 + info: String{URL}
 
 
-
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -335,6 +334,7 @@ Task
 + description: String {NotBlank, Length(1, 500)}
 + public: Boolean
 + link: String
+
 
 
 
