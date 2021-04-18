@@ -14,12 +14,16 @@ import org.hibernate.validator.constraints.Length;
 
 import acme.framework.entities.DomainEntity;
 import acme.framework.entities.Manager;
+import acme.validators.ValidDates;
+import acme.validators.ValidWorkload;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
+@ValidDates
+@ValidWorkload
 public class Task extends DomainEntity{
 	
 	// Serialisation identifier -----------------------------------------------
@@ -40,6 +44,9 @@ public class Task extends DomainEntity{
 	@NotNull
 	protected Date executionEnd;
 	
+	@NotNull
+	protected Float workload;
+	
 	@NotBlank
 	@Length(min = 1, max = 500)
 	protected String description;
@@ -52,14 +59,7 @@ public class Task extends DomainEntity{
 	// Derived attributes -----------------------------------------------------
 
 
-	public Float getWorkload() {
-		
-		float diff = Math.abs(this.executionStart.getTime() - this.executionEnd.getTime());
-		float hours = ((int)diff/ (1000 * 60 * 60))% 24;
-		float minsDec = ((diff / (1000 * 60)) % 60)/100;
-		
-		return hours + minsDec;
-	}
+	
 
 	// Relationships ----------------------------------------------------------
 
