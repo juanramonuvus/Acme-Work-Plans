@@ -11,6 +11,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.URL;
 
 import acme.framework.entities.DomainEntity;
 import acme.framework.entities.Manager;
@@ -54,6 +55,7 @@ public class Task extends DomainEntity{
 	@NotNull
 	protected Boolean isPublic;
 	
+	@URL
 	protected String link;
 	
 	// Derived attributes -----------------------------------------------------
