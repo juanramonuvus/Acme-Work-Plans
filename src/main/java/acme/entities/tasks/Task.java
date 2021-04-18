@@ -1,10 +1,11 @@
 package acme.entities.tasks;
 
-import java.time.Duration;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -31,11 +32,13 @@ public class Task extends DomainEntity{
 	@Length(min=1, max=80)
 	protected String title;
 	
+	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	protected LocalDateTime executionStart;
+	protected Date executionStart;
 	
+	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	protected LocalDateTime executionEnd;
+	protected Date executionEnd;
 	
 	@NotBlank
 	@Length(min = 1, max = 500)
@@ -51,10 +54,11 @@ public class Task extends DomainEntity{
 
 	public Float getWorkload() {
 		
-		Duration duration = Duration.between(this.executionStart, this.executionEnd);
-
-		return (float) duration.toHours() +
-			(float) (duration.toMinutes() % 60) / 100;
+		float diff = Math.abs(this.executionStart.getTime() - this.executionEnd.getTime());
+		float hours = ((int)diff/ (1000 * 60 * 60))% 24;
+		float minsDec = ((diff / (1000 * 60)) % 60)/100;
+		
+		return hours + minsDec;
 	}
 
 	// Relationships ----------------------------------------------------------
