@@ -18,5 +18,107 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<import resource="classpath:/WEB-INF/population/conversion-service.xml"/>	
+	
+	<!-- Managers -->
+	
+	<bean name="manager01UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="manager1"/>
+		<property name="password" value="manag3r"/>
+		<property name="enabled" value="true"/>
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">		
+				<property name="name" value="Jhon"/>
+				<property name="surname" value="Lock"/>
+				<property name="email" value="jhonlock@gmail.com"/>
+			</bean>
+		</property>	
+		<property name="roles">
+			<list>
+				<ref bean="manager01Provider"/>
+				<ref bean="manager01Authenticated"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="manager01" class="acme.framework.entities.Manager">
+	<property name="userAccount" ref="manager01UserAccount"/>
+	</bean>
+	
+	<bean name="manager01Provider" class="acme.entities.roles.Provider">
+		<property name="company" value="Universidad de Sevilla"/>
+		<property name="sector" value="Informatica"/>
+		<property name="userAccount" ref="manager01UserAccount"/>
+	</bean>
+
+	<bean name="manager01Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="manager01UserAccount"/>
+	</bean>
+	
+	<!--  Tasks -->
+	<bean id="task01" class="acme.entities.tasks.Task">
+		<property name="title" value="Create TaskController"/>
+		<property name="executionStart" value="2021/02/13 19:39"/>
+		<property name="executionEnd" value="2021/02/14 19:39"/>
+		<property name="workload" value="20.50"/>
+		<property name="description" value="Create controller of task entity"/>
+		<property name="isPublic" value="true"/>
+		<property name="link" value="https://github.com/task1"/>
+		<property name="manager" ref="manager01"/>
+	</bean>
+	
+	<bean id="task02" class="acme.entities.tasks.Task">
+		<property name="title" value="Create TaskService"/>
+		<property name="executionStart" value="2021/02/13 19:39"/>
+		<property name="executionEnd" value="2021/05/14 19:39"/>
+		<property name="workload" value="50.50"/>
+		<property name="description" value="Create service of task entity"/>
+		<property name="isPublic" value="true"/>
+		<property name="link" value="https://github.com/task2"/>
+		<property name="manager" ref="manager01"/>
+	</bean>
+	
+	<bean id="task03" class="acme.entities.tasks.Task">
+		<property name="title" value="Create TaskView"/>
+		<property name="executionStart" value="2019/02/13 19:39"/>
+		<property name="executionEnd" value="2019/02/14 19:39"/>
+		<property name="workload" value="21.30"/>
+		<property name="description" value="Create view of task entity"/>
+		<property name="isPublic" value="true"/>
+		<property name="link" value="https://github.com/task3"/>
+		<property name="manager" ref="manager01"/>
+	</bean>
+	
+	<bean id="task04" class="acme.entities.tasks.Task">
+		<property name="title" value="Create TaskRepository"/>
+		<property name="executionStart" value="2020/03/13 19:39"/>
+		<property name="executionEnd" value="2020/03/14 19:39"/>
+		<property name="workload" value="22.50"/>
+		<property name="description" value="Create repository of task entity"/>
+		<property name="isPublic" value="true"/>
+		<property name="link" value="https://github.com/task4"/>
+		<property name="manager" ref="manager01"/>
+	</bean>
+	
+	<bean id="task05" class="acme.entities.tasks.Task">
+		<property name="title" value="Create TaskValidators"/>
+		<property name="executionStart" value="2017/08/13 19:39"/>
+		<property name="executionEnd" value="2018/10/13 19:39"/>
+		<property name="workload" value="100.20"/>
+		<property name="description" value="Create validators of task entity"/>
+		<property name="isPublic" value="true"/>
+		<property name="link" value="https://github.com/task5"/>
+		<property name="manager" ref="manager01"/>
+	</bean>
+	
+	<bean id="task06" class="acme.entities.tasks.Task">
+		<property name="title" value="Create TaskQueries"/>
+		<property name="executionStart" value="2021/02/13 19:39"/>
+		<property name="executionEnd" value="2021/04/14 19:39"/>
+		<property name="workload" value="30.20"/>
+		<property name="description" value="Create queries of task entity"/>
+		<property name="isPublic" value="true"/>
+		<property name="link" value="https://github.com/task6"/>
+		<property name="manager" ref="manager01"/>
+	</bean>
 
 </beans>
