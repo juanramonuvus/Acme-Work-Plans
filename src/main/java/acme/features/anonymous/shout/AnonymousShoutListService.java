@@ -41,17 +41,17 @@ public class AnonymousShoutListService implements AbstractListService<Anonymous,
 	public Collection<Shout> findMany(final Request<Shout> request) {
 		assert request != null;
 
-		ZoneId defaultZoneId = ZoneId.systemDefault();
+		final ZoneId defaultZoneId = ZoneId.systemDefault();
 		
-		LocalDate fechauno = LocalDate.of(LocalDate.now().getYear(), LocalDate.now().getMonthValue() - 1, LocalDate.now().getDayOfMonth());
-		LocalDate fechados = LocalDate.of(LocalDate.now().getYear(), LocalDate.now().getMonthValue(), LocalDate.now().getDayOfMonth());
+		final LocalDate fechauno = LocalDate.of(LocalDate.now().getYear(), LocalDate.now().getMonthValue() - 1, LocalDate.now().getDayOfMonth());
+		final LocalDate fechados = LocalDate.of(LocalDate.now().getYear(), LocalDate.now().getMonthValue(), LocalDate.now().getDayOfMonth());
 		
-		Date date = Date.from(fechauno.atStartOfDay(defaultZoneId).toInstant());
-		Date date2 = Date.from(fechados.atStartOfDay(defaultZoneId).toInstant());
+		final Date date = Date.from(fechauno.atStartOfDay(defaultZoneId).toInstant());
+		final Date date2 = Date.from(fechados.atStartOfDay(defaultZoneId).toInstant());
 		
 		Collection<Shout> result;
 		result = this.shoutsRepository.findAllShouts(date, date2);
-		
+
 		return result;
 	}
 
