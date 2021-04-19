@@ -283,5 +283,57 @@
 		
 	</bean>
 	
+			<!-- Blacklist words -->
+	
+	<bean id="blacklist01" class="acme.entities.spamConfig.BlackList">
+		<property name="word" value="sex"/>	
+	</bean>
+	
+	<bean id="blacklist02" class="acme.entities.spamConfig.BlackList">
+		<property name="word" value="sexo"/>	
+	</bean>
+	
+	<bean id="blacklist03" class="acme.entities.spamConfig.BlackList">
+		<property name="word" value="hard core"/>	
+	</bean>
+	
+	<bean id="blacklist04" class="acme.entities.spamConfig.BlackList">
+		<property name="word" value="extremo"/>	
+	</bean>
+	
+	<bean id="blacklist05" class="acme.entities.spamConfig.BlackList">
+		<property name="word" value="viagra"/>	
+	</bean>
+	
+	<bean id="blacklist06" class="acme.entities.spamConfig.BlackList">
+	<property name="word" value="cialis"/>	
+	</bean>
+	
+	<bean id="blacklist07" class="acme.entities.spamConfig.BlackList">
+	<property name="word" value="nigeria"/>	
+	</bean>
+	
+	<bean id="blacklist08" class="acme.entities.spamConfig.BlackList">
+	<property name="word" value="you've won"/>	
+	</bean>
+	
+	<bean id="blacklist09" class="acme.entities.spamConfig.BlackList">
+	<property name="word" value="ha ganado"/>	
+	</bean>
+	
+	
+	<bean id="blacklist10" class="acme.entities.spamConfig.BlackList">
+	<property name="word" value="million dollar"/>	
+	</bean>
+	
+	<bean id="blacklist11" class="acme.entities.spamConfig.BlackList">
+	<property name="word" value="millón de dolares"/>	
+	</bean>
+	
+	<!-- Blacklist words -->
+	
+	<bean id="spamconfig01" class="acme.entities.spamConfig.SpamConfig">
+		<property name="threshold" value="10.00"/>	
+	</bean>
 	
 </beans>
