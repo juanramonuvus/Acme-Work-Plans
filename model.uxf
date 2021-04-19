@@ -498,14 +498,14 @@ fg=red</panel_attributes>
     </coordinates>
     <panel_attributes>lt=.
 fg=red</panel_attributes>
-    <additional_attributes>340.0;360.0;430.0;360.0;430.0;60.0;10.0;60.0;10.0;10.0</additional_attributes>
+    <additional_attributes>360.0;360.0;430.0;360.0;430.0;60.0;10.0;60.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
       <x>1288</x>
       <y>231</y>
-      <w>168</w>
+      <w>182</w>
       <h>56</h>
     </coordinates>
     <panel_attributes>RN-01
@@ -520,7 +520,7 @@ bg=#FF5555</panel_attributes>
     <coordinates>
       <x>1288</x>
       <y>294</y>
-      <w>168</w>
+      <w>182</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>RN-02
@@ -536,7 +536,7 @@ bg=#FF5555</panel_attributes>
     <coordinates>
       <x>1288</x>
       <y>581</y>
-      <w>168</w>
+      <w>182</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>RN-05
@@ -552,7 +552,7 @@ bg=#FF5555</panel_attributes>
     <coordinates>
       <x>1288</x>
       <y>511</y>
-      <w>168</w>
+      <w>182</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>RN-04
@@ -568,7 +568,7 @@ bg=#FF5555</panel_attributes>
     <coordinates>
       <x>1288</x>
       <y>448</y>
-      <w>168</w>
+      <w>182</w>
       <h>56</h>
     </coordinates>
     <panel_attributes>RN-03
