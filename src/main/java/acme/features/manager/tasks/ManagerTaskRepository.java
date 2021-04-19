@@ -11,6 +11,9 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface ManagerTaskRepository extends AbstractRepository{
 
+	@Query("select t from Task t where t.id = ?1")
+	Task findOneTaskById(int id);
+	
 	@Query("select t from Task t where t.manager.id = :managerId")
 	Collection<Task> findManyByManagerId(int managerId);
 	

@@ -3,7 +3,14 @@
 	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd"> 
 
 <tiles-definitions>
+
 	<definition name="manager/task/list" extends="master">
 		<put-attribute name="body" type="template" value="../tasks/manager/list.jsp"></put-attribute>
 	</definition>
+
+	<definition name="manager/task/form" extends="master">
+		<put-attribute name="body" type="template" value="../tasks/manager/form.jsp"></put-attribute>
+	</definition>
+
+
 </tiles-definitions>

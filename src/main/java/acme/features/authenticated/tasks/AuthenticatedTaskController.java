@@ -19,10 +19,14 @@ public class AuthenticatedTaskController extends AbstractController<Authenticate
 	@Autowired
 	private AuthenticatedTaskListService listService;
 	
+	@Autowired
+	private AuthenticatedTaskShowService showService;
+	
 	//Contructors -------------------------------------------------------
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
+		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 	
 
