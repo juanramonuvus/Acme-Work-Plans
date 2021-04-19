@@ -436,7 +436,8 @@ Plan
       <w>56</w>
       <h>21</h>
     </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
+    <panel_attributes>lt=.
+fg=red</panel_attributes>
     <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -447,7 +448,8 @@ Plan
       <w>56</w>
       <h>21</h>
     </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
+    <panel_attributes>lt=.
+fg=red</panel_attributes>
     <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -458,7 +460,8 @@ Plan
       <w>56</w>
       <h>21</h>
     </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
+    <panel_attributes>lt=.
+fg=red</panel_attributes>
     <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -469,7 +472,8 @@ Plan
       <w>56</w>
       <h>21</h>
     </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
+    <panel_attributes>lt=.
+fg=red</panel_attributes>
     <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -480,7 +484,8 @@ Plan
       <w>77</w>
       <h>70</h>
     </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
+    <panel_attributes>lt=.
+fg=red</panel_attributes>
     <additional_attributes>90.0;80.0;10.0;80.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -491,7 +496,8 @@ Plan
       <w>315</w>
       <h>266</h>
     </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
+    <panel_attributes>lt=.
+fg=red</panel_attributes>
     <additional_attributes>340.0;360.0;430.0;360.0;430.0;60.0;10.0;60.0;10.0;10.0</additional_attributes>
   </element>
   <element>
