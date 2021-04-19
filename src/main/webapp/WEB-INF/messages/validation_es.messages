@@ -44,5 +44,5 @@ acme.validation.script = El script "{0}" debe devolver true
 
 acme.validators.validdates = La fecha de inicio debe ser anterior a la fecha fin
 acme.validators.validworkload = Carga de trabajo inválida
-acme.validators.validdatesplan = La fecha de inicio del plan debe ser anterior a la menor fecha de inicio de todas las tareas
+acme.validators.validdatesplan = Las fechas de las tareas deben ajustarse a las fechas de inicio y fin del plan
 acme.validators.validtasksinplan = Solo se pueden asociar tareas públicas a un plan público

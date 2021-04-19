@@ -1,7 +1,7 @@
 package acme.entities.plans;
 
 import java.util.Date;
-import java.util.Set;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
@@ -60,7 +60,7 @@ public class Plan extends DomainEntity{
 	
 	@Valid
 	@ManyToMany
-	protected Set<Task> tasks;
+	protected List<Task> tasks;
 
 	@NotNull
 	@Valid

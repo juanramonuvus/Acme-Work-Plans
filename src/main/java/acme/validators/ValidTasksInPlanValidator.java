@@ -16,7 +16,7 @@ public class ValidTasksInPlanValidator implements ConstraintValidator<ValidTasks
     public boolean isValid(final Plan plan, final ConstraintValidatorContext context) {
         if(plan.getIsPublic()) {
 	        for(final Task task : plan.getTasks()) {
-	        	if(!task.getIsPublic()) {
+	        	if(!(boolean)task.getIsPublic()) {
 	        		return false;
 	        	}
 	        }
