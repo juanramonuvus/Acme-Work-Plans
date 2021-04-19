@@ -44,5 +44,5 @@ acme.validation.script = Script expression "{0}" must return true
 
 acme.validators.validdates = Start date must be earlier than end date
 acme.validators.validworkload = Invalid workload
-acme.validators.validdatesplan = Start date of plan must be earlier than earliest task start date
+acme.validators.validdatesplan = Tasks's dates must fit inside plan's execution start and end
 acme.validators.validtasksinplan = Only public tasks can be associated to a public plan
