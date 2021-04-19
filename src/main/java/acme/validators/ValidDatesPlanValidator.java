@@ -14,18 +14,17 @@ public class ValidDatesPlanValidator implements ConstraintValidator<ValidDatesPl
  
     @Override
     public boolean isValid(final Plan plan, final ConstraintValidatorContext context) {
-        boolean result = true;
         for(final Task task : plan.getTasks()) {
         	if(task.getExecutionStart().before(plan.getExecutionStart())) {
-        		result = false;
+        		return false;
         	}
         }
         for(final Task task : plan.getTasks()) {
         	if(task.getExecutionEnd().after(plan.getExecutionStart())) {
-        		result = false;
+        		return false;
         	}
         }
-        return result;
+        return true;
     }
 	
 
