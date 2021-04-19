@@ -1,9 +1,9 @@
 # i18_en.messages
 # Los mensajes en español
 
-authenticated.task.list.label.title = Titulo
-authenticated.task.list.label.executionStart = Inicio de ejecucion
-authenticated.task.list.label.executionEnd = Fin de ejecucion
+authenticated.task.list.label.title = Título
+authenticated.task.list.label.executionStart = Inicio de ejecución
+authenticated.task.list.label.executionEnd = Fin de ejecución
 authenticated.task.list.label.workload = Carga trabajo
 authenticated.task.list.label.description = Descripción
 authenticated.task.list.label.link = Link

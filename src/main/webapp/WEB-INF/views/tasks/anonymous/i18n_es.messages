@@ -1,9 +1,9 @@
 # i18_en.messages
 # Los mensajes en español
 
-anonymous.task.list.label.title = Titulo
-anonymous.task.list.label.executionStart = Inicio de ejecucion
-anonymous.task.list.label.executionEnd = Fin de ejecucion
+anonymous.task.list.label.title = Título
+anonymous.task.list.label.executionStart = Inicio de ejecución
+anonymous.task.list.label.executionEnd = Fin de ejecución
 anonymous.task.list.label.workload = Carga trabajo
 anonymous.task.list.label.description = Descripción
 anonymous.task.list.label.link = Link

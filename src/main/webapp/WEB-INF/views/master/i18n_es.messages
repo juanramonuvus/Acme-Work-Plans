@@ -58,7 +58,7 @@ master.menu.consumer.tasks = Tareas
 master.menu.manager.favourite-link = Enlace favorito
 master.menu.manager = Manager
 master.menu.manager.tasks = Tareas
-master.menu.manager.personal.tasks = Tareas Personales
+master.menu.manager.personal.tasks = Tareas personales
 
 # master.menu.user-account ####################################################
 
