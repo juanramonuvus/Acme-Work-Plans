@@ -5,10 +5,10 @@ import javax.validation.ConstraintValidatorContext;
 
 import acme.entities.tasks.Task;
 
-public class ValidDatesValidator implements ConstraintValidator<ValidDates,Task>{
+public class ValidDatesTaskValidator implements ConstraintValidator<ValidDatesTask,Task>{
 	
 	@Override
-    public void initialize(final ValidDates constraint) {
+    public void initialize(final ValidDatesTask constraint) {
     }
  
     @Override

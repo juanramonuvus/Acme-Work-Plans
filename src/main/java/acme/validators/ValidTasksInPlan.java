@@ -11,10 +11,10 @@ import javax.validation.Payload;
 
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = {ValidDatesValidator.class})
-public @interface ValidDates {
+@Constraint(validatedBy = {ValidTasksInPlanValidator.class})
+public @interface ValidTasksInPlan {
  
-    String message() default "{acme.validators.validdates}";
+    String message() default "{acme.validators.validtasksinplan}";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
  
