@@ -64,5 +64,23 @@ public class AdministratorTaskListService implements AbstractListService<Authent
 		return repository.getNumberOfNonFinishedTasks();
 	}
 
+	public Float getAvarageWorkloads(Request<Task> request) {
+		assert request!=null;
+		
+		return repository.getAvarageWorkloads();
+	}
+
+	public Float getMinimumWorkloads(Request<Task> request) {
+		assert request!=null;
+		
+		return repository.getMinimumWorkloads();
+	}
+
+	public Float getMaximumWorkloads(Request<Task> request) {
+		assert request!=null;
+		
+		return repository.getMaximumWorkloads();
+	}
+
 	
 }

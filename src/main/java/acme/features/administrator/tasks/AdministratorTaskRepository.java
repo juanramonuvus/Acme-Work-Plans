@@ -20,4 +20,13 @@ public interface AdministratorTaskRepository extends AbstractRepository{
 	@Query("select COUNT(t) from Task t WHERE t.moment > curdate()")
 	Integer getNumberOfNonFinishedTasks();
 	
+	@Query("select AVG(t.workload) from Task t")
+	Float getAvarageWorkloads();
+	
+	@Query("select MIN(t.workload) from Task t")
+	Float getMinimumWorkloads();
+	
+	@Query("select MAX(t.workload) from Task t")
+	Float getMaximumWorkloads();
+	
 }
