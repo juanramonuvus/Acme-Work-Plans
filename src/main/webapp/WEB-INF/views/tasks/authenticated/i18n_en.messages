@@ -1,0 +1,9 @@
+# i18_en.messages
+# Los mensajes en ingles
+
+authenticated.task.list.label.title = Title
+authenticated.task.list.label.executionStart = Execution start
+authenticated.task.list.label.executionEnd = Execution end
+authenticated.task.list.label.workload = Workload
+authenticated.task.list.label.description = Description
+authenticated.task.list.label.link = Link
