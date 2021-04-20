@@ -20,6 +20,7 @@
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.anonymous.plans" action="/anonymous/plan/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
@@ -38,6 +39,15 @@
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.manager" access="hasRole('Manager')">
+			<acme:menu-suboption code="master.menu.manager.favourite-link" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.manager.tasks" action="/authenticated/task/list"/>
+			<acme:menu-suboption code="master.menu.manager.personal.tasks" action="/manager/task/list-mine"/>
+			<acme:menu-suboption code="master.menu.manager.plans" action="/manager/plan/list"/>
+			
+		</acme:menu-option>
+		
 	</acme:menu-left>
 
 	<acme:menu-right>
