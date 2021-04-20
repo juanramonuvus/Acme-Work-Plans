@@ -247,18 +247,26 @@
 		<property name="text" value="Mirad esta web"/>
 		<property name="info" value= "https://es.python.org/"/>	
 	</bean>
-		<bean id="shout06" class="acme.entities.shouts.Shout">
+	<bean id="shout06" class="acme.entities.shouts.Shout">
 		<property name="moment" value="2021/04/19 13:58"/>
 		<property name="author" value="Alicia"/>
 		<property name="text" value="Me gusta Java"/>
 		<property name="info"><null/></property>	
 	</bean>
-		<bean id="shout07" class="acme.entities.shouts.Shout">
+	<bean id="shout07" class="acme.entities.shouts.Shout">
 		<property name="moment" value="2021/04/19 14:41"/>
 		<property name="author" value="Alicia"/>
 		<property name="text" value="Corrijo, prefiero Python"/>
 		<property name="info"><null/></property>	
 	</bean>
+
+	<bean id="shout08" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/02/01 21:00"/>
+		<property name="author" value="David"/>
+		<property name="text" value="Tarea Betis!"/>
+		<property name="info"><null/></property>	
+	</bean>
+
 	
 	<!--  Plans -->
 	<bean id="plan01" class="acme.entities.plans.Plan">
