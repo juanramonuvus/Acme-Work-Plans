@@ -5,11 +5,11 @@
 <tiles-definitions>
 
 	<definition name="manager/task/list" extends="master">
-		<put-attribute name="body" type="template" value="../tasks/manager/list.jsp"></put-attribute>
+		<put-attribute name="body" type="template" value="../manager/tasks/list.jsp"></put-attribute>
 	</definition>
 
 	<definition name="manager/task/form" extends="master">
-		<put-attribute name="body" type="template" value="../tasks/manager/form.jsp"></put-attribute>
+		<put-attribute name="body" type="template" value="../manager/tasks/form.jsp"></put-attribute>
 	</definition>
 
 

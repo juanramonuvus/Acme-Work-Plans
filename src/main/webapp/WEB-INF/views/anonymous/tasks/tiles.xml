@@ -5,11 +5,11 @@
 <tiles-definitions>
 	
 	<definition name="anonymous/task/list" extends="master">
-		<put-attribute name="body" type="template" value="../tasks/anonymous/list.jsp"></put-attribute>
+		<put-attribute name="body" type="template" value="../anonymous/tasks/list.jsp"></put-attribute>
 	</definition>
 	
 	<definition name="anonymous/task/form" extends="master">
-		<put-attribute name="body" type="template" value="../tasks/anonymous/form.jsp"></put-attribute>
+		<put-attribute name="body" type="template" value="../anonymous/tasks/form.jsp"></put-attribute>
 	</definition>
 	
 </tiles-definitions>
