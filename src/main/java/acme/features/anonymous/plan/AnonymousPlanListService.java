@@ -49,7 +49,7 @@ public class AnonymousPlanListService implements AbstractListService<Anonymous, 
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "executionStart", "executionEnd");
+		request.unbind(entity, model, "executionStart", "executionEnd","id");
 	}
 
 	@Override
@@ -60,7 +60,7 @@ public class AnonymousPlanListService implements AbstractListService<Anonymous, 
 
 		result = this.repository.findMany();
 		
-		result = result.stream().sorted(Comparator.comparing(a -> a.totalWorkload())).collect(Collectors.toList());
+		result = result.stream().sorted(Comparator.comparing(Plan::totalWorkload)).collect(Collectors.toList());
 
 		return result;
 	}

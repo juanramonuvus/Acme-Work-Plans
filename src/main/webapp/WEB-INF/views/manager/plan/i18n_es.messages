@@ -10,8 +10,10 @@
 
 manager.plan.list.label.executionStart = Inicio Ejecución
 manager.plan.list.label.executionEnd = Fin Ejecución
+manager.plan.list.label.id = Id
 manager.plan.form.label.executionStart = Inicio Ejecución
 manager.plan.form.label.executionEnd = Fin Ejecución
 manager.plan.form.label.isPublic = Es Público
 manager.plan.form.label.manager = Mánager
 manager.plan.form.label.return = Volver
+manager.plan.form.label.id = Id

@@ -10,8 +10,10 @@
 
 anonymous.plan.list.label.executionStart = Inicio Ejecución
 anonymous.plan.list.label.executionEnd = Fin Ejecución
+anonymous.plan.list.label.id = Id
 anonymous.plan.form.label.executionStart = Inicio Ejecución
 anonymous.plan.form.label.executionEnd = Fin Ejecución
-anonymous.plan.form.label.isPublic = Es Público
+anonymous.plan.form.label.isPublic = Público
 anonymous.plan.form.label.manager = Mánager
 anonymous.plan.form.label.return = Volver
+anonymous.plan.form.label.id = Id

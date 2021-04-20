@@ -16,6 +16,7 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form readonly="true">
+	<acme:form-textbox code="anonymous.plan.form.label.id" path="id"/>	
 	<acme:form-textbox code="anonymous.plan.form.label.executionStart" path="executionStart"/>	
 	<acme:form-textbox code="anonymous.plan.form.label.executionEnd" path="executionEnd"/>
 	<acme:form-textbox code="anonymous.plan.form.label.isPublic" path="isPublic"/>

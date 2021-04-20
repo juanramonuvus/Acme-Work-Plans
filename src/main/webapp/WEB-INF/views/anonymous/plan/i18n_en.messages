@@ -10,8 +10,10 @@
 
 anonymous.plan.list.label.executionStart = Execution Start
 anonymous.plan.list.label.executionEnd = Execution End
+anonymous.plan.list.label.id = Id
 anonymous.plan.form.label.executionStart = Execution Start
 anonymous.plan.form.label.executionEnd = Execution End
-anonymous.plan.form.label.isPublic = Is Public
+anonymous.plan.form.label.isPublic = Public
 anonymous.plan.form.label.manager = Manager
 anonymous.plan.form.label.return = Return
+anonymous.plan.form.label.id = Id
