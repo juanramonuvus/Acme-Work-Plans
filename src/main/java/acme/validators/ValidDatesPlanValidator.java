@@ -20,7 +20,7 @@ public class ValidDatesPlanValidator implements ConstraintValidator<ValidDatesPl
         	}
         }
         for(final Task task : plan.getTasks()) {
-        	if(task.getExecutionEnd().after(plan.getExecutionStart())) {
+        	if(task.getExecutionEnd().after(plan.getExecutionEnd())) {
         		return false;
         	}
         }

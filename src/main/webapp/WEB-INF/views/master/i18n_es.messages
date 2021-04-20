@@ -31,6 +31,8 @@ master.menu.sign-out = Salir
 master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link = Enlace favorito
 master.menu.anonymous.shoutsList = Lista de anuncios
+master.menu.anonymous.tasks = Tareas
+
 
 # master.menu.administrator ###################################################
 
@@ -40,16 +42,25 @@ master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.populate-initial = Poblar BD (inicial)
 master.menu.administrator.populate-sample = Poblar BD (ejemplos)
 master.menu.administrator.shutdown = Parar el sistema
+master.menu.administrator.tasks = Tareas
 
 # master.menu.provider ########################################################
 
 master.menu.provider = Proveedor
 master.menu.provider.favourite-link = Enlace favorito
+master.menu.provider.tasks = Tareas
 
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
+master.menu.consumer.tasks = Tareas
+
+# master.menu.manager ##########################################################
+master.menu.manager.favourite-link = Enlace favorito
+master.menu.manager = Manager
+master.menu.manager.tasks = Tareas
+master.menu.manager.personal.tasks = Tareas personales
 
 # master.menu.user-account ####################################################
 

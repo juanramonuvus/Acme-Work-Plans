@@ -60,7 +60,12 @@ public class Task extends DomainEntity{
 	
 	// Derived attributes -----------------------------------------------------
 
-
+	public Float getPeriod() {
+		final float diff = (float)this.getExecutionEnd().getTime() - (float)this.getExecutionStart().getTime();
+		final float hours = ((int)diff/ (1000 * 60 * 60));
+		final float minsDec = ((diff / (1000 * 60)) % 60)/100;
+		return hours+minsDec;
+	}
 	
 
 	// Relationships ----------------------------------------------------------
