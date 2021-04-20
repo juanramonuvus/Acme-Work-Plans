@@ -1,7 +1,6 @@
 package acme.features.authenticated.tasks;
 
 import java.util.Collection;
-import java.util.Date;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,7 +40,7 @@ public class AuthenticatedTaskListService implements AbstractListService<Authent
 	public Collection<Task> findMany(final Request<Task> request) {
 		assert request!=null;
 		Collection<Task> result;
-		result = this.repository.findMany(new Date());
+		result = this.repository.findMany();
 		result = result.stream().sorted(
 			(x1,x2)-> {
 				if(x1.getWorkload()<x2.getWorkload()) {
