@@ -17,3 +17,7 @@ manager.plan.form.label.isPublic = Es Público
 manager.plan.form.label.manager = Mánager
 manager.plan.form.label.return = Volver
 manager.plan.form.label.id = Id
+
+
+manager.plan.form.label.tasks = Tareas
+manager.plan.form.label.title = Título

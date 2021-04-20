@@ -17,3 +17,6 @@ anonymous.plan.form.label.isPublic = Public
 anonymous.plan.form.label.manager = Manager
 anonymous.plan.form.label.return = Return
 anonymous.plan.form.label.id = Id
+
+anonymous.plan.form.label.tasks = Tasks
+anonymous.plan.form.label.title = Title
