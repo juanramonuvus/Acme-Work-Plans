@@ -17,14 +17,13 @@
 	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
-
-	<definition name="anonymous/shout/list" extends="master">
-		<put-attribute name="body" type="template" value="../anonymous/shout/list.jsp" />
+	
+	<definition name="manager/plan/list" extends="master">
+		<put-attribute name="body" type="template" value="../manager/plan/list.jsp" />
 	</definition>
 
-	<definition name="anonymous/shout/form" extends="master">
-		<put-attribute name="body" type="template" value="../anonymous/shout/form.jsp" />
+	<definition name="manager/plan/form" extends="master">
+		<put-attribute name="body" type="template" value="../manager/plan/form.jsp" />
 	</definition>
 	
-
 </tiles-definitions>
