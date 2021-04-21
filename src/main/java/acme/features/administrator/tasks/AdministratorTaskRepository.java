@@ -1,5 +1,7 @@
 package acme.features.administrator.tasks;
 
+import java.util.Date;
+
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
@@ -14,11 +16,11 @@ public interface AdministratorTaskRepository extends AbstractRepository{
 	@Query("select COUNT(t) from Task t WHERE t.isPublic = false")
 	Integer getNumberOfPrivateTasks();
 	
-	@Query("select COUNT(t) from Task t WHERE t.moment <= curdate()")
-	Integer getNumberOfFinishedTasks();
+	@Query("select COUNT(t) from Task t WHERE t.executionEnd <= ?1")
+	Integer getNumberOfFinishedTasks(Date fechaActual);
 	
-	@Query("select COUNT(t) from Task t WHERE t.moment > curdate()")
-	Integer getNumberOfNonFinishedTasks();
+	@Query("select COUNT(t) from Task t WHERE t.executionEnd > ?1")
+	Integer getNumberOfNonFinishedTasks(Date fechaActual);
 	
 	@Query("select AVG(t.workload) from Task t")
 	Float getAvarageWorkloads();
