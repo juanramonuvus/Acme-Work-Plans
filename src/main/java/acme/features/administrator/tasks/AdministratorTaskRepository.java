@@ -21,6 +21,7 @@ public interface AdministratorTaskRepository extends AbstractRepository{
 	
 	@Query("select COUNT(t) from Task t WHERE t.executionEnd > ?1")
 	Integer getNumberOfNonFinishedTasks(Date fechaActual);
+
 	
 	@Query("select AVG(t.workload) from Task t")
 	Float getAvarageWorkloads();

@@ -24,5 +24,4 @@ public class AdministratorTaskController extends AbstractController<Administrato
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 	
-	
 }
