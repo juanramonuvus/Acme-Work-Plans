@@ -18,13 +18,10 @@
 
 <tiles-definitions>
 
-	<definition name="administrator/user-account/list" extends="master">		
-		<put-attribute name="body" type="template" value="../administrator/user-account/list.jsp" />
+	<definition name="administrator/spamconfig/list" extends="master">
+		<put-attribute name="body" type="template" value="../administrator/spamconfig/list.jsp" />
 	</definition>
-	
-	<definition name="administrator/user-account/form" extends="master">
-		<put-attribute name="body" type="template" value="../administrator/user-account/form.jsp" />
-	</definition>
+
 	
 
 </tiles-definitions>
