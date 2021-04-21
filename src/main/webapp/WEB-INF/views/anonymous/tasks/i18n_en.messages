@@ -1,0 +1,9 @@
+# i18_en.messages
+# Los mensajes en ingles
+
+anonymous.task.list.label.title = Title
+anonymous.task.list.label.executionStart = Execution start
+anonymous.task.list.label.executionEnd = Execution end
+anonymous.task.list.label.workload = Workload
+anonymous.task.list.label.description = Description
+anonymous.task.list.label.link = Link

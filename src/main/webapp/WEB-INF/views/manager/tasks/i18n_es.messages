@@ -1,0 +1,9 @@
+# i18_en.messages
+# Los mensajes en español
+
+manager.task.list.label.title = Título
+manager.task.list.label.executionStart = Inicio de ejecucion
+manager.task.list.label.executionEnd = Fin de ejecución
+manager.task.list.label.workload = Carga trabajo
+manager.task.list.label.description = Descripción
+manager.task.list.label.link = Link

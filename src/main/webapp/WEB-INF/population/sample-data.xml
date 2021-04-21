@@ -54,6 +54,32 @@
 		<property name="userAccount" ref="manager01UserAccount"/>
 	</bean>
 	
+	<bean name="manager02UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="manager2"/>
+		<property name="password" value="manag3r"/>
+		<property name="enabled" value="true"/>
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">		
+				<property name="name" value="Pepe"/>
+				<property name="surname" value="Lock"/>
+				<property name="email" value="pepelock@gmail.com"/>
+			</bean>
+		</property>	
+		<property name="roles">
+			<list>
+				<ref bean="manager02Authenticated"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="manager02" class="acme.framework.entities.Manager">
+	<property name="userAccount" ref="manager02UserAccount"/>
+	</bean>
+	
+	<bean name="manager02Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="manager02UserAccount"/>
+	</bean>
+	
 	<!--  Tasks -->
 	<bean id="task01" class="acme.entities.tasks.Task">
 		<property name="title" value="Create TaskController"/>
@@ -121,6 +147,74 @@
 		<property name="manager" ref="manager01"/>
 	</bean>
 	
+
+	<bean id="task07" class="acme.entities.tasks.Task">
+		<property name="title" value="Create PlanController"/>
+		<property name="executionStart" value="2021/02/13 19:39"/>
+		<property name="executionEnd" value="2021/06/14 14:39"/>
+		<property name="workload" value="20.50"/>
+		<property name="description" value="Create controller of task entity"/>
+		<property name="isPublic" value="true"/>
+		<property name="link" value="https://github.com/task1"/>
+		<property name="manager" ref="manager01"/>
+	</bean>
+	
+	<bean id="task08" class="acme.entities.tasks.Task">
+		<property name="title" value="Create PlanService"/>
+		<property name="executionStart" value="2021/02/13 19:39"/>
+		<property name="executionEnd" value="2021/06/14 19:39"/>
+		<property name="workload" value="20.50"/>
+		<property name="description" value="Create controller of task entity"/>
+		<property name="isPublic" value="true"/>
+		<property name="link" value="https://github.com/task1"/>
+		<property name="manager" ref="manager01"/>
+	</bean>
+	
+	<bean id="task09" class="acme.entities.tasks.Task">
+		<property name="title" value="Create PlanRepository"/>
+		<property name="executionStart" value="2021/02/13 19:39"/>
+		<property name="executionEnd" value="2021/02/14 19:39"/>
+		<property name="workload" value="20.50"/>
+		<property name="description" value="Create controller of task entity"/>
+		<property name="isPublic" value="true"/>
+		<property name="link" value="https://github.com/task1"/>
+		<property name="manager" ref="manager01"/>
+	</bean>
+	
+	<bean id="task10" class="acme.entities.tasks.Task">
+		<property name="title" value="Create UserController"/>
+		<property name="executionStart" value="2019/01/01 19:39"/>
+		<property name="executionEnd" value="2019/01/14 19:39"/>
+		<property name="workload" value="20.50"/>
+		<property name="description" value="Create controller of task entity"/>
+		<property name="isPublic" value="true"/>
+		<property name="link" value="https://github.com/task1"/>
+		<property name="manager" ref="manager01"/>
+	</bean>
+	
+	<bean id="task11" class="acme.entities.tasks.Task">
+		<property name="title" value="Create UserService"/>
+		<property name="executionStart" value="2022/02/13 19:39"/>
+		<property name="executionEnd" value="2022/02/14 19:39"/>
+		<property name="workload" value="20.50"/>
+		<property name="description" value="Create controller of task entity"/>
+		<property name="isPublic" value="true"/>
+		<property name="link" value="https://github.com/task1"/>
+		<property name="manager" ref="manager01"/>
+	</bean>
+	
+	<bean id="task12" class="acme.entities.tasks.Task">
+		<property name="title" value="Create UserRepository"/>
+		<property name="executionStart" value="2018/02/13 19:39"/>
+		<property name="executionEnd" value="2018/03/14 19:39"/>
+		<property name="workload" value="20.50"/>
+		<property name="description" value="Create controller of task entity"/>
+		<property name="isPublic" value="true"/>
+		<property name="link" value="https://github.com/task1"/>
+		<property name="manager" ref="manager01"/>
+	</bean>
+
+
 		<!-- Shouts -->
 	
 	<bean id="shout01" class="acme.entities.shouts.Shout">
@@ -153,18 +247,26 @@
 		<property name="text" value="Mirad esta web"/>
 		<property name="info" value= "https://es.python.org/"/>	
 	</bean>
-		<bean id="shout06" class="acme.entities.shouts.Shout">
+	<bean id="shout06" class="acme.entities.shouts.Shout">
 		<property name="moment" value="2021/04/19 13:58"/>
 		<property name="author" value="Alicia"/>
 		<property name="text" value="Me gusta Java"/>
 		<property name="info"><null/></property>	
 	</bean>
-		<bean id="shout07" class="acme.entities.shouts.Shout">
+	<bean id="shout07" class="acme.entities.shouts.Shout">
 		<property name="moment" value="2021/04/19 14:41"/>
 		<property name="author" value="Alicia"/>
 		<property name="text" value="Corrijo, prefiero Python"/>
 		<property name="info"><null/></property>	
 	</bean>
+
+	<bean id="shout08" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/02/01 21:00"/>
+		<property name="author" value="David"/>
+		<property name="text" value="Tarea Betis!"/>
+		<property name="info"><null/></property>	
+	</bean>
+
 	
 	<!--  Plans -->
 	<bean id="plan01" class="acme.entities.plans.Plan">
