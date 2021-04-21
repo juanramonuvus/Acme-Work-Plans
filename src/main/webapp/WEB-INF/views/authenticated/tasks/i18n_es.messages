@@ -7,3 +7,5 @@ authenticated.task.list.label.executionEnd = Fin de ejecución
 authenticated.task.list.label.workload = Carga trabajo
 authenticated.task.list.label.description = Descripción
 authenticated.task.list.label.link = Link
+
+authenticated.task.form.button.return = Volver
