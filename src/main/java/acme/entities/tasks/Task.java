@@ -15,16 +15,12 @@ import org.hibernate.validator.constraints.URL;
 
 import acme.framework.entities.DomainEntity;
 import acme.framework.entities.Manager;
-import acme.validators.ValidDatesTask;
-import acme.validators.ValidWorkload;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-@ValidDatesTask
-@ValidWorkload
 public class Task extends DomainEntity{
 	
 	// Serialisation identifier -----------------------------------------------
@@ -61,10 +57,11 @@ public class Task extends DomainEntity{
 	// Derived attributes -----------------------------------------------------
 
 	public Float getPeriod() {
-		final float diff = (float)this.getExecutionEnd().getTime() - (float)this.getExecutionStart().getTime();
-		final float hours = ((int)diff/ (1000 * 60 * 60));
-		final float minsDec = ((diff / (1000 * 60)) % 60)/100;
-		return hours+minsDec;
+		final Double diff = (double)(this.getExecutionEnd().getTime() - this.getExecutionStart().getTime());
+		
+		final Float hours = (float) (diff/ (1000 * 60 * 60));
+		final Float minsDec = (float) (((diff / (1000 * 60)) % 60)/100);
+		return hours.intValue()+minsDec;
 	}
 	
 

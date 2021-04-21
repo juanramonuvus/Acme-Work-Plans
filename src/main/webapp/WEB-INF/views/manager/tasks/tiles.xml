@@ -11,6 +11,10 @@
 	<definition name="manager/task/form" extends="master">
 		<put-attribute name="body" type="template" value="../manager/tasks/form.jsp"></put-attribute>
 	</definition>
+	
+		<definition name="manager/task/create" extends="master">
+		<put-attribute name="body" type="template" value="../manager/tasks/form.jsp"></put-attribute>
+	</definition>
 
 
 </tiles-definitions>

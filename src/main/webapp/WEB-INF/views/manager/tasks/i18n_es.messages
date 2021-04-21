@@ -7,3 +7,6 @@ manager.task.list.label.executionEnd = Fin de ejecución
 manager.task.list.label.workload = Carga trabajo
 manager.task.list.label.description = Descripción
 manager.task.list.label.link = Link
+manager.task.list.label.isPublic = Público
+manager.task.list.label.return = Volver
+manager.task.create.label.create = Crear
