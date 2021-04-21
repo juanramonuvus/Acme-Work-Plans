@@ -51,8 +51,9 @@
 			<acme:menu-suboption code="master.menu.manager.favourite-link" action="http://www.example.com/"/>
 			<acme:menu-suboption code="master.menu.manager.tasks" action="/authenticated/task/list"/>
 			<acme:menu-suboption code="master.menu.manager.personal.tasks" action="/manager/task/list-mine"/>
+			<acme:menu-suboption code="master.menu.manager.personal.create" action="/manager/task/create"/>
 			<acme:menu-suboption code="master.menu.manager.plans" action="/manager/plan/list"/>
-			
+
 		</acme:menu-option>
 
 	</acme:menu-left>

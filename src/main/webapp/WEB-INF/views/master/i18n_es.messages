@@ -62,6 +62,7 @@ master.menu.manager.favourite-link = Enlace favorito
 master.menu.manager = Manager
 master.menu.manager.tasks = Tareas
 master.menu.manager.personal.tasks = Tareas personales
+master.menu.manager.personal.create = Crear Tarea
 
 # master.menu.manager ##########################################################
 master.menu.manager.favourite-link = Enlace favorito
