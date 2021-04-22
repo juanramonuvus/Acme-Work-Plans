@@ -1,0 +1,12 @@
+administrator.taskstatistics.list.label.numberOfPublicTasks = Public Tasks
+administrator.taskstatistics.list.label.numberOfPrivateTasks = Private Tasks
+administrator.taskstatistics.list.label.numberOfFinishedTasks = Finished Tasks
+administrator.taskstatistics.list.label.numberOfNonFinishedTasks = Non-Finished Tasks
+administrator.taskstatistics.list.label.avarageWorkloads = Average Worload
+administrator.taskstatistics.list.label.minimumWorkloads = Minimum Worload
+administrator.taskstatistics.list.label.maximumWorkloads = Maximum Worload
+administrator.taskstatistics.list.label.avarageExecPeriod = Average Execution Period
+administrator.taskstatistics.list.label.minimumExecPeriod = Minimum Execution Period
+administrator.taskstatistics.list.label.maximumExecPeriod = Maximum Execution Period
+
+administrator.taskstatistics.show.title = Task Statistics Table

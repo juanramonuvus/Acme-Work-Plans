@@ -1,4 +1,4 @@
-package acme.features.administrator.tasks;
+package acme.features.administrator.taskstatics;
 
 import java.util.Date;
 

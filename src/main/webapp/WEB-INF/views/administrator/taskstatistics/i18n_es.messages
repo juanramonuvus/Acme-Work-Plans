@@ -1,0 +1,12 @@
+administrator.taskstatistics.list.label.numberOfPublicTasks = Tareas Públicas
+administrator.taskstatistics.list.label.numberOfPrivateTasks = Tareas Privadas
+administrator.taskstatistics.list.label.numberOfFinishedTasks = Tareas Acabadas
+administrator.taskstatistics.list.label.numberOfNonFinishedTasks = Tareas Sin Acabar
+administrator.taskstatistics.list.label.avarageWorkloads = Workload Medio
+administrator.taskstatistics.list.label.minimumWorkloads = Workload Mínimo
+administrator.taskstatistics.list.label.maximumWorkloads = Workload Máximo
+administrator.taskstatistics.list.label.avarageExecPeriod = Periodo de Ejecución Medio
+administrator.taskstatistics.list.label.minimumExecPeriod = Periodo de Ejecución Mínimo
+administrator.taskstatistics.list.label.maximumExecPeriod = Periodo de Ejecución Máximo
+
+administrator.taskstatistics.show.title = Tabla de Estadísticas de Tareas

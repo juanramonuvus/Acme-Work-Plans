@@ -1,50 +1,56 @@
-package acme.features.administrator.tasks;
+package acme.features.administrator.taskstatics;
 
 import java.time.LocalDate;
 import java.time.ZoneId;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.forms.Taskstatistics;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
-import acme.framework.services.AbstractShowService;
+import acme.framework.services.AbstractListService;
 
 @Service
-public class AdministratorTaskShowService implements AbstractShowService<Administrator, TaskStatistics> {
+public class AdministratorTaskListService implements AbstractListService<Administrator, Taskstatistics> {
 
 	//Internal state -------------------------------------------------
 	@Autowired
-	AdministratorTaskRepository repository;
+	protected AdministratorTaskRepository repository;
 	
 	
 	@Override
-	public boolean authorise(final Request<TaskStatistics> request) {
+	public boolean authorise(final Request<Taskstatistics> request) {
 		assert request !=null;
 		return true;
 	}
 
 	@Override
-	public void unbind(final Request<TaskStatistics> request, final TaskStatistics entity, final Model model) {
+	public void unbind(final Request<Taskstatistics> request, final Taskstatistics entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "numberOfPublicTasks", "numberOfPrivateTasks", "numberOfFinishedTasks", "numberOfNonFinishedTasks", "avarageWorkloads", "minimumWorkloads", "maximumWorkloads");
+		request.unbind(entity, model, "numberOfPublicTasks", "numberOfPrivateTasks", 
+			"numberOfFinishedTasks", "numberOfNonFinishedTasks", 
+			"avarageWorkloads", "minimumWorkloads", "maximumWorkloads",
+			"avarageExecPeriod", "minimumExecPeriod", "maximumExecPeriod");
 		
 	}
 
 	
 	//----------------------------------------------------------------------------------------------------------------------------
-	public Integer getNumberOfPublicTasks(final Request<TaskStatistics> request) {
+	public Integer getNumberOfPublicTasks(final Request<Taskstatistics> request) {
 		assert request!=null;
 		
 		return this.repository.getNumberOfPublicTasks();
 	}
 
-	public Integer getNumberOfPrivateTasks(final Request<TaskStatistics> request) {
+	public Integer getNumberOfPrivateTasks(final Request<Taskstatistics> request) {
 		assert request!=null;
 		
 		return this.repository.getNumberOfPrivateTasks();
@@ -52,7 +58,7 @@ public class AdministratorTaskShowService implements AbstractShowService<Adminis
 
 	
 	//----------------------------------------------------------------------------------------------------------------------------
-	public Integer getNumberOfFinishedTasks(final Request<TaskStatistics> request) {
+	public Integer getNumberOfFinishedTasks(final Request<Taskstatistics> request) {
 		assert request!=null;
 
 		final ZoneId defaultZoneId = ZoneId.systemDefault();
@@ -63,7 +69,7 @@ public class AdministratorTaskShowService implements AbstractShowService<Adminis
 		return this.repository.getNumberOfFinishedTasks(date);
 	}
 
-	public Integer getNumberOfNonFinishedTasks(final Request<TaskStatistics> request) {
+	public Integer getNumberOfNonFinishedTasks(final Request<Taskstatistics> request) {
 		assert request!=null;
 
 		final ZoneId defaultZoneId = ZoneId.systemDefault();
@@ -76,19 +82,19 @@ public class AdministratorTaskShowService implements AbstractShowService<Adminis
 
 	
 	//----------------------------------------------------------------------------------------------------------------------------
-	public Float getAvarageWorkloads(final Request<TaskStatistics> request) {
+	public Float getAvarageWorkloads(final Request<Taskstatistics> request) {
 		assert request!=null;
 		
 		return this.repository.getAvarageWorkloads();
 	}
 
-	public Float getMinimumWorkloads(final Request<TaskStatistics> request) {
+	public Float getMinimumWorkloads(final Request<Taskstatistics> request) {
 		assert request!=null;
 		
 		return this.repository.getMinimumWorkloads();
 	}
 
-	public Float getMaximumWorkloads(final Request<TaskStatistics> request) {
+	public Float getMaximumWorkloads(final Request<Taskstatistics> request) {
 		assert request!=null;
 		
 		return this.repository.getMaximumWorkloads();
@@ -96,19 +102,19 @@ public class AdministratorTaskShowService implements AbstractShowService<Adminis
 
 	
 	//----------------------------------------------------------------------------------------------------------------------------
-	public Float getAvarageExecPeriod(final Request<TaskStatistics> request) {
+	public Float getAvarageExecPeriod(final Request<Taskstatistics> request) {
 		assert request!=null;
 		
 		return this.repository.getAvarageExecPeriod();
 	}
 
-	public Float getMinimumExecPeriod(final Request<TaskStatistics> request) {
+	public Float getMinimumExecPeriod(final Request<Taskstatistics> request) {
 		assert request!=null;
 		
 		return this.repository.getMinimumExecPeriod();
 	}
 
-	public Float getMaximumExecPeriod(final Request<TaskStatistics> request) {
+	public Float getMaximumExecPeriod(final Request<Taskstatistics> request) {
 		assert request!=null;
 		
 		return this.repository.getMaximumExecPeriod();
@@ -116,13 +122,13 @@ public class AdministratorTaskShowService implements AbstractShowService<Adminis
 
 	
 
-	
-	//----------------------------------------------------------------------------------------------------------------------------
 	@Override
-	public TaskStatistics findOne(final Request<TaskStatistics> request) {
+	public Collection<Taskstatistics> findMany(final Request<Taskstatistics> request) {
 		assert request!=null;
+		final ArrayList<Taskstatistics> lsResult = new ArrayList<>();
 		
-		final TaskStatistics result = new TaskStatistics();
+		final Taskstatistics result = new Taskstatistics();
+		
 		result.setNumberOfPublicTasks(this.getNumberOfPublicTasks(request));
 		result.setNumberOfPrivateTasks(this.getNumberOfPrivateTasks(request));
 		result.setNumberOfNonFinishedTasks(this.getNumberOfNonFinishedTasks(request));
@@ -130,8 +136,12 @@ public class AdministratorTaskShowService implements AbstractShowService<Adminis
 		result.setMinimumWorkloads(this.getMinimumWorkloads(request));
 		result.setMaximumWorkloads(this.getMaximumWorkloads(request));
 		result.setAvarageWorkloads(this.getAvarageWorkloads(request));
+		result.setMinimumExecPeriod(this.getMinimumExecPeriod(request));
+		result.setMaximumExecPeriod(this.getMaximumExecPeriod(request));
+		result.setAvarageExecPeriod(this.getAvarageExecPeriod(request));
 		
-		return result;
+		lsResult.add(result);
+		return lsResult;
 	}
 
 	

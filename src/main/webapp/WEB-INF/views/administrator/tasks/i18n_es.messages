@@ -1,7 +1,0 @@
-administrator.tasks.list.label.numberOfPublicTasks = Public Tasks
-administrator.tasks.list.label.numberOfPrivateTasks = Private Tasks
-administrator.tasks.list.label.numberOfFinishedTasks = Finished Tasks
-administrator.tasks.list.label.numberOfNonFinishedTasks = Non-Finished Tasks
-administrator.tasks.list.label.avarageWorkloads = Average Worload
-administrator.tasks.list.label.minimumWorkloads = Minimum Worload
-administrator.tasks.list.label.maximumWorkloads = Maximum Worload
