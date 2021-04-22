@@ -479,3 +479,722 @@ ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.fra
 ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
 ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
 ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:45): End-point not available
+ERROR [com.zaxxer.hikari.pool.HikariPool] at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174): Communications link failure
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method): Communications link failure
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method): Connection refused: connect
+WARN [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator] at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174): Communications link failure
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method): Communications link failure
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method): Connection refused: connect
+ERROR [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+ERROR [org.springframework.boot.SpringApplication] at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788): Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275): Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:100): Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+ERROR [com.zaxxer.hikari.pool.HikariPool] at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174): Communications link failure
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method): Communications link failure
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method): Connection refused: connect
+WARN [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator] at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174): Communications link failure
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method): Communications link failure
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method): Connection refused: connect
+ERROR [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+ERROR [org.springframework.boot.SpringApplication] at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788): Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275): Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:100): Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administratorTaskController': Unsatisfied dependency expressed through field 'listService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administratorTaskListService': Unsatisfied dependency expressed through field 'repository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'administratorTaskRepository' defined in acme.features.administrator.taskstatics.AdministratorTaskRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.lang.Float acme.features.administrator.taskstatics.AdministratorTaskRepository.getDeviationExecPeriod()!
+ERROR [org.springframework.boot.SpringApplication] at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643): Error creating bean with name 'administratorTaskController': Unsatisfied dependency expressed through field 'listService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administratorTaskListService': Unsatisfied dependency expressed through field 'repository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'administratorTaskRepository' defined in acme.features.administrator.taskstatics.AdministratorTaskRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.lang.Float acme.features.administrator.taskstatics.AdministratorTaskRepository.getDeviationExecPeriod()!
+at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643): Error creating bean with name 'administratorTaskListService': Unsatisfied dependency expressed through field 'repository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'administratorTaskRepository' defined in acme.features.administrator.taskstatics.AdministratorTaskRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.lang.Float acme.features.administrator.taskstatics.AdministratorTaskRepository.getDeviationExecPeriod()!
+at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788): Error creating bean with name 'administratorTaskRepository' defined in acme.features.administrator.taskstatics.AdministratorTaskRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.lang.Float acme.features.administrator.taskstatics.AdministratorTaskRepository.getDeviationExecPeriod()!
+at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:93): Validation failed for query for method public abstract java.lang.Float acme.features.administrator.taskstatics.AdministratorTaskRepository.getDeviationExecPeriod()!
+at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:138): org.hibernate.QueryException: No data type for node: org.hibernate.hql.internal.ast.tree.MethodNode 
+\-[METHOD_CALL] MethodNode: '('
++-[METHOD_NAME] IdentNode: 'STTDEV' {originalText=STTDEV}
+\-[EXPR_LIST] SqlNode: 'exprList'
+\-[MINUS] BinaryArithmeticOperatorNode: '-' {dataType=org.hibernate.type.IntegerType@62ab5e63}
++-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@62ab5e63}
+|  +-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@62ab5e63}
+|  |  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@62ab5e63}
+|  |  |  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@62ab5e63}
+|  |  |  |  +-[METHOD_CALL] MethodNode: '('
+|  |  |  |  |  +-[METHOD_NAME] IdentNode: 'day' {originalText=day}
+|  |  |  |  |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |  |  |  |     \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |  |  |  |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |  |  |  |        \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+|  |  |  |  \-[NUM_INT] LiteralNode: '24'
+|  |  |  \-[NUM_INT] LiteralNode: '60'
+|  |  \-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@62ab5e63}
+|  |     +-[METHOD_CALL] MethodNode: '('
+|  |     |  +-[METHOD_NAME] IdentNode: 'hour' {originalText=hour}
+|  |     |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |     |     \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |     |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |     |        \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+|  |     \-[NUM_INT] LiteralNode: '60'
+|  \-[METHOD_CALL] MethodNode: '('
+|     +-[METHOD_NAME] IdentNode: 'minutes' {originalText=minutes}
+|     \-[EXPR_LIST] SqlNode: 'exprList'
+|        \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|           +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|           \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+\-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@62ab5e63}
++-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@62ab5e63}
+|  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@62ab5e63}
+|  |  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@62ab5e63}
+|  |  |  +-[METHOD_CALL] MethodNode: '('
+|  |  |  |  +-[METHOD_NAME] IdentNode: 'day' {originalText=day}
+|  |  |  |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |  |  |     \-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |  |  |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |  |  |        \-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+|  |  |  \-[NUM_INT] LiteralNode: '24'
+|  |  \-[NUM_INT] LiteralNode: '60'
+|  \-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@62ab5e63}
+|     +-[METHOD_CALL] MethodNode: '('
+|     |  +-[METHOD_NAME] IdentNode: 'hour' {originalText=hour}
+|     |  \-[EXPR_LIST] SqlNode: 'exprList'
+|     |     \-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|     |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|     |        \-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+|     \-[NUM_INT] LiteralNode: '60'
+\-[METHOD_CALL] MethodNode: '('
++-[METHOD_NAME] IdentNode: 'minutes' {originalText=minutes}
+\-[EXPR_LIST] SqlNode: 'exprList'
+\-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
++-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+\-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+[SELECT STTDEV((day(t.executionEnd)*24*60 + hour(t.executionEnd)*60 + minutes(t.executionEnd)) - (day(t.executionStart)*24*60 + hour(t.executionStart)*60 + minutes(t.executionStart))) FROM acme.entities.tasks.Task t]
+at org.hibernate.QueryException.generateQueryException(QueryException.java:120): No data type for node: org.hibernate.hql.internal.ast.tree.MethodNode 
+\-[METHOD_CALL] MethodNode: '('
++-[METHOD_NAME] IdentNode: 'STTDEV' {originalText=STTDEV}
+\-[EXPR_LIST] SqlNode: 'exprList'
+\-[MINUS] BinaryArithmeticOperatorNode: '-' {dataType=org.hibernate.type.IntegerType@62ab5e63}
++-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@62ab5e63}
+|  +-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@62ab5e63}
+|  |  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@62ab5e63}
+|  |  |  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@62ab5e63}
+|  |  |  |  +-[METHOD_CALL] MethodNode: '('
+|  |  |  |  |  +-[METHOD_NAME] IdentNode: 'day' {originalText=day}
+|  |  |  |  |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |  |  |  |     \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |  |  |  |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |  |  |  |        \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+|  |  |  |  \-[NUM_INT] LiteralNode: '24'
+|  |  |  \-[NUM_INT] LiteralNode: '60'
+|  |  \-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@62ab5e63}
+|  |     +-[METHOD_CALL] MethodNode: '('
+|  |     |  +-[METHOD_NAME] IdentNode: 'hour' {originalText=hour}
+|  |     |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |     |     \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |     |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |     |        \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+|  |     \-[NUM_INT] LiteralNode: '60'
+|  \-[METHOD_CALL] MethodNode: '('
+|     +-[METHOD_NAME] IdentNode: 'minutes' {originalText=minutes}
+|     \-[EXPR_LIST] SqlNode: 'exprList'
+|        \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|           +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|           \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+\-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@62ab5e63}
++-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@62ab5e63}
+|  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@62ab5e63}
+|  |  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@62ab5e63}
+|  |  |  +-[METHOD_CALL] MethodNode: '('
+|  |  |  |  +-[METHOD_NAME] IdentNode: 'day' {originalText=day}
+|  |  |  |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |  |  |     \-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |  |  |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |  |  |        \-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+|  |  |  \-[NUM_INT] LiteralNode: '24'
+|  |  \-[NUM_INT] LiteralNode: '60'
+|  \-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@62ab5e63}
+|     +-[METHOD_CALL] MethodNode: '('
+|     |  +-[METHOD_NAME] IdentNode: 'hour' {originalText=hour}
+|     |  \-[EXPR_LIST] SqlNode: 'exprList'
+|     |     \-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|     |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|     |        \-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+|     \-[NUM_INT] LiteralNode: '60'
+\-[METHOD_CALL] MethodNode: '('
++-[METHOD_NAME] IdentNode: 'minutes' {originalText=minutes}
+\-[EXPR_LIST] SqlNode: 'exprList'
+\-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
++-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+\-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+[SELECT STTDEV((day(t.executionEnd)*24*60 + hour(t.executionEnd)*60 + minutes(t.executionEnd)) - (day(t.executionStart)*24*60 + hour(t.executionStart)*60 + minutes(t.executionStart))) FROM acme.entities.tasks.Task t]
+at org.hibernate.hql.internal.ast.tree.SelectClause.initializeExplicitSelectClause(SelectClause.java:161): No data type for node: org.hibernate.hql.internal.ast.tree.MethodNode 
+\-[METHOD_CALL] MethodNode: '('
++-[METHOD_NAME] IdentNode: 'STTDEV' {originalText=STTDEV}
+\-[EXPR_LIST] SqlNode: 'exprList'
+\-[MINUS] BinaryArithmeticOperatorNode: '-' {dataType=org.hibernate.type.IntegerType@62ab5e63}
++-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@62ab5e63}
+|  +-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@62ab5e63}
+|  |  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@62ab5e63}
+|  |  |  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@62ab5e63}
+|  |  |  |  +-[METHOD_CALL] MethodNode: '('
+|  |  |  |  |  +-[METHOD_NAME] IdentNode: 'day' {originalText=day}
+|  |  |  |  |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |  |  |  |     \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |  |  |  |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |  |  |  |        \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+|  |  |  |  \-[NUM_INT] LiteralNode: '24'
+|  |  |  \-[NUM_INT] LiteralNode: '60'
+|  |  \-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@62ab5e63}
+|  |     +-[METHOD_CALL] MethodNode: '('
+|  |     |  +-[METHOD_NAME] IdentNode: 'hour' {originalText=hour}
+|  |     |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |     |     \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |     |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |     |        \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+|  |     \-[NUM_INT] LiteralNode: '60'
+|  \-[METHOD_CALL] MethodNode: '('
+|     +-[METHOD_NAME] IdentNode: 'minutes' {originalText=minutes}
+|     \-[EXPR_LIST] SqlNode: 'exprList'
+|        \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|           +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|           \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+\-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@62ab5e63}
++-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@62ab5e63}
+|  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@62ab5e63}
+|  |  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@62ab5e63}
+|  |  |  +-[METHOD_CALL] MethodNode: '('
+|  |  |  |  +-[METHOD_NAME] IdentNode: 'day' {originalText=day}
+|  |  |  |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |  |  |     \-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |  |  |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |  |  |        \-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+|  |  |  \-[NUM_INT] LiteralNode: '24'
+|  |  \-[NUM_INT] LiteralNode: '60'
+|  \-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@62ab5e63}
+|     +-[METHOD_CALL] MethodNode: '('
+|     |  +-[METHOD_NAME] IdentNode: 'hour' {originalText=hour}
+|     |  \-[EXPR_LIST] SqlNode: 'exprList'
+|     |     \-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|     |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|     |        \-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+|     \-[NUM_INT] LiteralNode: '60'
+\-[METHOD_CALL] MethodNode: '('
++-[METHOD_NAME] IdentNode: 'minutes' {originalText=minutes}
+\-[EXPR_LIST] SqlNode: 'exprList'
+\-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
++-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+\-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administratorTaskController': Unsatisfied dependency expressed through field 'listService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administratorTaskListService': Unsatisfied dependency expressed through field 'repository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'administratorTaskRepository' defined in acme.features.administrator.taskstatics.AdministratorTaskRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.lang.Float acme.features.administrator.taskstatics.AdministratorTaskRepository.getDeviationExecPeriod()!
+ERROR [org.springframework.boot.SpringApplication] at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643): Error creating bean with name 'administratorTaskController': Unsatisfied dependency expressed through field 'listService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administratorTaskListService': Unsatisfied dependency expressed through field 'repository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'administratorTaskRepository' defined in acme.features.administrator.taskstatics.AdministratorTaskRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.lang.Float acme.features.administrator.taskstatics.AdministratorTaskRepository.getDeviationExecPeriod()!
+at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643): Error creating bean with name 'administratorTaskListService': Unsatisfied dependency expressed through field 'repository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'administratorTaskRepository' defined in acme.features.administrator.taskstatics.AdministratorTaskRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.lang.Float acme.features.administrator.taskstatics.AdministratorTaskRepository.getDeviationExecPeriod()!
+at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788): Error creating bean with name 'administratorTaskRepository' defined in acme.features.administrator.taskstatics.AdministratorTaskRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.lang.Float acme.features.administrator.taskstatics.AdministratorTaskRepository.getDeviationExecPeriod()!
+at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:93): Validation failed for query for method public abstract java.lang.Float acme.features.administrator.taskstatics.AdministratorTaskRepository.getDeviationExecPeriod()!
+at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:138): org.hibernate.QueryException: No data type for node: org.hibernate.hql.internal.ast.tree.MethodNode 
+\-[METHOD_CALL] MethodNode: '('
++-[METHOD_NAME] IdentNode: 'STTDEV' {originalText=STTDEV}
+\-[EXPR_LIST] SqlNode: 'exprList'
+\-[MINUS] BinaryArithmeticOperatorNode: '-' {dataType=org.hibernate.type.IntegerType@1827fc4e}
++-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@1827fc4e}
+|  +-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@1827fc4e}
+|  |  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@1827fc4e}
+|  |  |  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@1827fc4e}
+|  |  |  |  +-[METHOD_CALL] MethodNode: '('
+|  |  |  |  |  +-[METHOD_NAME] IdentNode: 'day' {originalText=day}
+|  |  |  |  |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |  |  |  |     \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |  |  |  |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |  |  |  |        \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+|  |  |  |  \-[NUM_INT] LiteralNode: '24'
+|  |  |  \-[NUM_INT] LiteralNode: '60'
+|  |  \-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@1827fc4e}
+|  |     +-[METHOD_CALL] MethodNode: '('
+|  |     |  +-[METHOD_NAME] IdentNode: 'hour' {originalText=hour}
+|  |     |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |     |     \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |     |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |     |        \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+|  |     \-[NUM_INT] LiteralNode: '60'
+|  \-[METHOD_CALL] MethodNode: '('
+|     +-[METHOD_NAME] IdentNode: 'minute' {originalText=minute}
+|     \-[EXPR_LIST] SqlNode: 'exprList'
+|        \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|           +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|           \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+\-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@1827fc4e}
++-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@1827fc4e}
+|  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@1827fc4e}
+|  |  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@1827fc4e}
+|  |  |  +-[METHOD_CALL] MethodNode: '('
+|  |  |  |  +-[METHOD_NAME] IdentNode: 'day' {originalText=day}
+|  |  |  |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |  |  |     \-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |  |  |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |  |  |        \-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+|  |  |  \-[NUM_INT] LiteralNode: '24'
+|  |  \-[NUM_INT] LiteralNode: '60'
+|  \-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@1827fc4e}
+|     +-[METHOD_CALL] MethodNode: '('
+|     |  +-[METHOD_NAME] IdentNode: 'hour' {originalText=hour}
+|     |  \-[EXPR_LIST] SqlNode: 'exprList'
+|     |     \-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|     |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|     |        \-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+|     \-[NUM_INT] LiteralNode: '60'
+\-[METHOD_CALL] MethodNode: '('
++-[METHOD_NAME] IdentNode: 'minute' {originalText=minute}
+\-[EXPR_LIST] SqlNode: 'exprList'
+\-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
++-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+\-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+[SELECT STTDEV((day(t.executionEnd)*24*60 + hour(t.executionEnd)*60 + minute(t.executionEnd)) - (day(t.executionStart)*24*60 + hour(t.executionStart)*60 + minute(t.executionStart))) FROM acme.entities.tasks.Task t]
+at org.hibernate.QueryException.generateQueryException(QueryException.java:120): No data type for node: org.hibernate.hql.internal.ast.tree.MethodNode 
+\-[METHOD_CALL] MethodNode: '('
++-[METHOD_NAME] IdentNode: 'STTDEV' {originalText=STTDEV}
+\-[EXPR_LIST] SqlNode: 'exprList'
+\-[MINUS] BinaryArithmeticOperatorNode: '-' {dataType=org.hibernate.type.IntegerType@1827fc4e}
++-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@1827fc4e}
+|  +-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@1827fc4e}
+|  |  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@1827fc4e}
+|  |  |  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@1827fc4e}
+|  |  |  |  +-[METHOD_CALL] MethodNode: '('
+|  |  |  |  |  +-[METHOD_NAME] IdentNode: 'day' {originalText=day}
+|  |  |  |  |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |  |  |  |     \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |  |  |  |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |  |  |  |        \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+|  |  |  |  \-[NUM_INT] LiteralNode: '24'
+|  |  |  \-[NUM_INT] LiteralNode: '60'
+|  |  \-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@1827fc4e}
+|  |     +-[METHOD_CALL] MethodNode: '('
+|  |     |  +-[METHOD_NAME] IdentNode: 'hour' {originalText=hour}
+|  |     |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |     |     \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |     |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |     |        \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+|  |     \-[NUM_INT] LiteralNode: '60'
+|  \-[METHOD_CALL] MethodNode: '('
+|     +-[METHOD_NAME] IdentNode: 'minute' {originalText=minute}
+|     \-[EXPR_LIST] SqlNode: 'exprList'
+|        \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|           +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|           \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+\-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@1827fc4e}
++-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@1827fc4e}
+|  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@1827fc4e}
+|  |  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@1827fc4e}
+|  |  |  +-[METHOD_CALL] MethodNode: '('
+|  |  |  |  +-[METHOD_NAME] IdentNode: 'day' {originalText=day}
+|  |  |  |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |  |  |     \-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |  |  |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |  |  |        \-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+|  |  |  \-[NUM_INT] LiteralNode: '24'
+|  |  \-[NUM_INT] LiteralNode: '60'
+|  \-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@1827fc4e}
+|     +-[METHOD_CALL] MethodNode: '('
+|     |  +-[METHOD_NAME] IdentNode: 'hour' {originalText=hour}
+|     |  \-[EXPR_LIST] SqlNode: 'exprList'
+|     |     \-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|     |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|     |        \-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+|     \-[NUM_INT] LiteralNode: '60'
+\-[METHOD_CALL] MethodNode: '('
++-[METHOD_NAME] IdentNode: 'minute' {originalText=minute}
+\-[EXPR_LIST] SqlNode: 'exprList'
+\-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
++-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+\-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+[SELECT STTDEV((day(t.executionEnd)*24*60 + hour(t.executionEnd)*60 + minute(t.executionEnd)) - (day(t.executionStart)*24*60 + hour(t.executionStart)*60 + minute(t.executionStart))) FROM acme.entities.tasks.Task t]
+at org.hibernate.hql.internal.ast.tree.SelectClause.initializeExplicitSelectClause(SelectClause.java:161): No data type for node: org.hibernate.hql.internal.ast.tree.MethodNode 
+\-[METHOD_CALL] MethodNode: '('
++-[METHOD_NAME] IdentNode: 'STTDEV' {originalText=STTDEV}
+\-[EXPR_LIST] SqlNode: 'exprList'
+\-[MINUS] BinaryArithmeticOperatorNode: '-' {dataType=org.hibernate.type.IntegerType@1827fc4e}
++-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@1827fc4e}
+|  +-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@1827fc4e}
+|  |  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@1827fc4e}
+|  |  |  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@1827fc4e}
+|  |  |  |  +-[METHOD_CALL] MethodNode: '('
+|  |  |  |  |  +-[METHOD_NAME] IdentNode: 'day' {originalText=day}
+|  |  |  |  |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |  |  |  |     \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |  |  |  |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |  |  |  |        \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+|  |  |  |  \-[NUM_INT] LiteralNode: '24'
+|  |  |  \-[NUM_INT] LiteralNode: '60'
+|  |  \-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@1827fc4e}
+|  |     +-[METHOD_CALL] MethodNode: '('
+|  |     |  +-[METHOD_NAME] IdentNode: 'hour' {originalText=hour}
+|  |     |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |     |     \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |     |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |     |        \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+|  |     \-[NUM_INT] LiteralNode: '60'
+|  \-[METHOD_CALL] MethodNode: '('
+|     +-[METHOD_NAME] IdentNode: 'minute' {originalText=minute}
+|     \-[EXPR_LIST] SqlNode: 'exprList'
+|        \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|           +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|           \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+\-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@1827fc4e}
++-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@1827fc4e}
+|  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@1827fc4e}
+|  |  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@1827fc4e}
+|  |  |  +-[METHOD_CALL] MethodNode: '('
+|  |  |  |  +-[METHOD_NAME] IdentNode: 'day' {originalText=day}
+|  |  |  |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |  |  |     \-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |  |  |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |  |  |        \-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+|  |  |  \-[NUM_INT] LiteralNode: '24'
+|  |  \-[NUM_INT] LiteralNode: '60'
+|  \-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@1827fc4e}
+|     +-[METHOD_CALL] MethodNode: '('
+|     |  +-[METHOD_NAME] IdentNode: 'hour' {originalText=hour}
+|     |  \-[EXPR_LIST] SqlNode: 'exprList'
+|     |     \-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|     |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|     |        \-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+|     \-[NUM_INT] LiteralNode: '60'
+\-[METHOD_CALL] MethodNode: '('
++-[METHOD_NAME] IdentNode: 'minute' {originalText=minute}
+\-[EXPR_LIST] SqlNode: 'exprList'
+\-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
++-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+\-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administratorTaskController': Unsatisfied dependency expressed through field 'listService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administratorTaskListService': Unsatisfied dependency expressed through field 'repository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'administratorTaskRepository' defined in acme.features.administrator.taskstatics.AdministratorTaskRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.lang.Float acme.features.administrator.taskstatics.AdministratorTaskRepository.getDeviationExecPeriod()!
+ERROR [org.springframework.boot.SpringApplication] at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643): Error creating bean with name 'administratorTaskController': Unsatisfied dependency expressed through field 'listService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administratorTaskListService': Unsatisfied dependency expressed through field 'repository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'administratorTaskRepository' defined in acme.features.administrator.taskstatics.AdministratorTaskRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.lang.Float acme.features.administrator.taskstatics.AdministratorTaskRepository.getDeviationExecPeriod()!
+at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643): Error creating bean with name 'administratorTaskListService': Unsatisfied dependency expressed through field 'repository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'administratorTaskRepository' defined in acme.features.administrator.taskstatics.AdministratorTaskRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.lang.Float acme.features.administrator.taskstatics.AdministratorTaskRepository.getDeviationExecPeriod()!
+at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788): Error creating bean with name 'administratorTaskRepository' defined in acme.features.administrator.taskstatics.AdministratorTaskRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.lang.Float acme.features.administrator.taskstatics.AdministratorTaskRepository.getDeviationExecPeriod()!
+at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:93): Validation failed for query for method public abstract java.lang.Float acme.features.administrator.taskstatics.AdministratorTaskRepository.getDeviationExecPeriod()!
+at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:138): org.hibernate.QueryException: No data type for node: org.hibernate.hql.internal.ast.tree.MethodNode 
+\-[METHOD_CALL] MethodNode: '('
++-[METHOD_NAME] IdentNode: 'STTDEV' {originalText=STTDEV}
+\-[EXPR_LIST] SqlNode: 'exprList'
+\-[MINUS] BinaryArithmeticOperatorNode: '-' {dataType=org.hibernate.type.IntegerType@2faf6e4a}
++-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@2faf6e4a}
+|  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@2faf6e4a}
+|  |  +-[METHOD_CALL] MethodNode: '('
+|  |  |  +-[METHOD_NAME] IdentNode: 'day' {originalText=day}
+|  |  |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |  |     \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |  |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |  |        \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+|  |  \-[NUM_INT] LiteralNode: '24'
+|  \-[METHOD_CALL] MethodNode: '('
+|     +-[METHOD_NAME] IdentNode: 'hour' {originalText=hour}
+|     \-[EXPR_LIST] SqlNode: 'exprList'
+|        \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|           +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|           \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+\-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@2faf6e4a}
++-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@2faf6e4a}
+|  +-[METHOD_CALL] MethodNode: '('
+|  |  +-[METHOD_NAME] IdentNode: 'day' {originalText=day}
+|  |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |     \-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |        \-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+|  \-[NUM_INT] LiteralNode: '24'
+\-[METHOD_CALL] MethodNode: '('
++-[METHOD_NAME] IdentNode: 'hour' {originalText=hour}
+\-[EXPR_LIST] SqlNode: 'exprList'
+\-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
++-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+\-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+[SELECT STTDEV((day(t.executionEnd)*24 + hour(t.executionEnd)) - (day(t.executionStart)*24+ hour(t.executionStart))) FROM acme.entities.tasks.Task t]
+at org.hibernate.QueryException.generateQueryException(QueryException.java:120): No data type for node: org.hibernate.hql.internal.ast.tree.MethodNode 
+\-[METHOD_CALL] MethodNode: '('
++-[METHOD_NAME] IdentNode: 'STTDEV' {originalText=STTDEV}
+\-[EXPR_LIST] SqlNode: 'exprList'
+\-[MINUS] BinaryArithmeticOperatorNode: '-' {dataType=org.hibernate.type.IntegerType@2faf6e4a}
++-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@2faf6e4a}
+|  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@2faf6e4a}
+|  |  +-[METHOD_CALL] MethodNode: '('
+|  |  |  +-[METHOD_NAME] IdentNode: 'day' {originalText=day}
+|  |  |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |  |     \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |  |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |  |        \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+|  |  \-[NUM_INT] LiteralNode: '24'
+|  \-[METHOD_CALL] MethodNode: '('
+|     +-[METHOD_NAME] IdentNode: 'hour' {originalText=hour}
+|     \-[EXPR_LIST] SqlNode: 'exprList'
+|        \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|           +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|           \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+\-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@2faf6e4a}
++-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@2faf6e4a}
+|  +-[METHOD_CALL] MethodNode: '('
+|  |  +-[METHOD_NAME] IdentNode: 'day' {originalText=day}
+|  |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |     \-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |        \-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+|  \-[NUM_INT] LiteralNode: '24'
+\-[METHOD_CALL] MethodNode: '('
++-[METHOD_NAME] IdentNode: 'hour' {originalText=hour}
+\-[EXPR_LIST] SqlNode: 'exprList'
+\-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
++-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+\-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+[SELECT STTDEV((day(t.executionEnd)*24 + hour(t.executionEnd)) - (day(t.executionStart)*24+ hour(t.executionStart))) FROM acme.entities.tasks.Task t]
+at org.hibernate.hql.internal.ast.tree.SelectClause.initializeExplicitSelectClause(SelectClause.java:161): No data type for node: org.hibernate.hql.internal.ast.tree.MethodNode 
+\-[METHOD_CALL] MethodNode: '('
++-[METHOD_NAME] IdentNode: 'STTDEV' {originalText=STTDEV}
+\-[EXPR_LIST] SqlNode: 'exprList'
+\-[MINUS] BinaryArithmeticOperatorNode: '-' {dataType=org.hibernate.type.IntegerType@2faf6e4a}
++-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@2faf6e4a}
+|  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@2faf6e4a}
+|  |  +-[METHOD_CALL] MethodNode: '('
+|  |  |  +-[METHOD_NAME] IdentNode: 'day' {originalText=day}
+|  |  |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |  |     \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |  |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |  |        \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+|  |  \-[NUM_INT] LiteralNode: '24'
+|  \-[METHOD_CALL] MethodNode: '('
+|     +-[METHOD_NAME] IdentNode: 'hour' {originalText=hour}
+|     \-[EXPR_LIST] SqlNode: 'exprList'
+|        \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|           +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|           \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+\-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@2faf6e4a}
++-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@2faf6e4a}
+|  +-[METHOD_CALL] MethodNode: '('
+|  |  +-[METHOD_NAME] IdentNode: 'day' {originalText=day}
+|  |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |     \-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |        \-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+|  \-[NUM_INT] LiteralNode: '24'
+\-[METHOD_CALL] MethodNode: '('
++-[METHOD_NAME] IdentNode: 'hour' {originalText=hour}
+\-[EXPR_LIST] SqlNode: 'exprList'
+\-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
++-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+\-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administratorTaskController': Unsatisfied dependency expressed through field 'listService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administratorTaskListService': Unsatisfied dependency expressed through field 'repository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'administratorTaskRepository' defined in acme.features.administrator.taskstatics.AdministratorTaskRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.lang.Float acme.features.administrator.taskstatics.AdministratorTaskRepository.getDeviationExecPeriod()!
+ERROR [org.springframework.boot.SpringApplication] at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643): Error creating bean with name 'administratorTaskController': Unsatisfied dependency expressed through field 'listService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administratorTaskListService': Unsatisfied dependency expressed through field 'repository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'administratorTaskRepository' defined in acme.features.administrator.taskstatics.AdministratorTaskRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.lang.Float acme.features.administrator.taskstatics.AdministratorTaskRepository.getDeviationExecPeriod()!
+at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643): Error creating bean with name 'administratorTaskListService': Unsatisfied dependency expressed through field 'repository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'administratorTaskRepository' defined in acme.features.administrator.taskstatics.AdministratorTaskRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.lang.Float acme.features.administrator.taskstatics.AdministratorTaskRepository.getDeviationExecPeriod()!
+at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788): Error creating bean with name 'administratorTaskRepository' defined in acme.features.administrator.taskstatics.AdministratorTaskRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.lang.Float acme.features.administrator.taskstatics.AdministratorTaskRepository.getDeviationExecPeriod()!
+at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:93): Validation failed for query for method public abstract java.lang.Float acme.features.administrator.taskstatics.AdministratorTaskRepository.getDeviationExecPeriod()!
+at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:138): org.hibernate.QueryException: No data type for node: org.hibernate.hql.internal.ast.tree.MethodNode 
+\-[METHOD_CALL] MethodNode: '('
++-[METHOD_NAME] IdentNode: 'STTDEV' {originalText=STTDEV}
+\-[EXPR_LIST] SqlNode: 'exprList'
+\-[MINUS] BinaryArithmeticOperatorNode: '-' {dataType=org.hibernate.type.IntegerType@71262020}
++-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@71262020}
+|  +-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@71262020}
+|  |  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@71262020}
+|  |  |  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@71262020}
+|  |  |  |  +-[METHOD_CALL] MethodNode: '('
+|  |  |  |  |  +-[METHOD_NAME] IdentNode: 'day' {originalText=day}
+|  |  |  |  |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |  |  |  |     \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |  |  |  |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |  |  |  |        \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+|  |  |  |  \-[NUM_INT] LiteralNode: '24'
+|  |  |  \-[NUM_INT] LiteralNode: '60'
+|  |  \-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@71262020}
+|  |     +-[METHOD_CALL] MethodNode: '('
+|  |     |  +-[METHOD_NAME] IdentNode: 'hour' {originalText=hour}
+|  |     |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |     |     \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |     |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |     |        \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+|  |     \-[NUM_INT] LiteralNode: '60'
+|  \-[METHOD_CALL] MethodNode: '('
+|     +-[METHOD_NAME] IdentNode: 'minutes' {originalText=minutes}
+|     \-[EXPR_LIST] SqlNode: 'exprList'
+|        \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|           +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|           \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+\-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@71262020}
++-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@71262020}
+|  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@71262020}
+|  |  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@71262020}
+|  |  |  +-[METHOD_CALL] MethodNode: '('
+|  |  |  |  +-[METHOD_NAME] IdentNode: 'day' {originalText=day}
+|  |  |  |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |  |  |     \-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |  |  |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |  |  |        \-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+|  |  |  \-[NUM_INT] LiteralNode: '24'
+|  |  \-[NUM_INT] LiteralNode: '60'
+|  \-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@71262020}
+|     +-[METHOD_CALL] MethodNode: '('
+|     |  +-[METHOD_NAME] IdentNode: 'hour' {originalText=hour}
+|     |  \-[EXPR_LIST] SqlNode: 'exprList'
+|     |     \-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|     |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|     |        \-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+|     \-[NUM_INT] LiteralNode: '60'
+\-[METHOD_CALL] MethodNode: '('
++-[METHOD_NAME] IdentNode: 'minutes' {originalText=minutes}
+\-[EXPR_LIST] SqlNode: 'exprList'
+\-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
++-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+\-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+[SELECT STTDEV((day(t.executionEnd)*24*60 + hour(t.executionEnd)*60 + minutes(t.executionEnd)) - (day(t.executionStart)*24*60 + hour(t.executionStart)*60 + minutes(t.executionStart))) FROM acme.entities.tasks.Task t]
+at org.hibernate.QueryException.generateQueryException(QueryException.java:120): No data type for node: org.hibernate.hql.internal.ast.tree.MethodNode 
+\-[METHOD_CALL] MethodNode: '('
++-[METHOD_NAME] IdentNode: 'STTDEV' {originalText=STTDEV}
+\-[EXPR_LIST] SqlNode: 'exprList'
+\-[MINUS] BinaryArithmeticOperatorNode: '-' {dataType=org.hibernate.type.IntegerType@71262020}
++-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@71262020}
+|  +-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@71262020}
+|  |  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@71262020}
+|  |  |  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@71262020}
+|  |  |  |  +-[METHOD_CALL] MethodNode: '('
+|  |  |  |  |  +-[METHOD_NAME] IdentNode: 'day' {originalText=day}
+|  |  |  |  |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |  |  |  |     \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |  |  |  |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |  |  |  |        \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+|  |  |  |  \-[NUM_INT] LiteralNode: '24'
+|  |  |  \-[NUM_INT] LiteralNode: '60'
+|  |  \-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@71262020}
+|  |     +-[METHOD_CALL] MethodNode: '('
+|  |     |  +-[METHOD_NAME] IdentNode: 'hour' {originalText=hour}
+|  |     |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |     |     \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |     |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |     |        \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+|  |     \-[NUM_INT] LiteralNode: '60'
+|  \-[METHOD_CALL] MethodNode: '('
+|     +-[METHOD_NAME] IdentNode: 'minutes' {originalText=minutes}
+|     \-[EXPR_LIST] SqlNode: 'exprList'
+|        \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|           +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|           \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+\-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@71262020}
++-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@71262020}
+|  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@71262020}
+|  |  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@71262020}
+|  |  |  +-[METHOD_CALL] MethodNode: '('
+|  |  |  |  +-[METHOD_NAME] IdentNode: 'day' {originalText=day}
+|  |  |  |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |  |  |     \-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |  |  |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |  |  |        \-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+|  |  |  \-[NUM_INT] LiteralNode: '24'
+|  |  \-[NUM_INT] LiteralNode: '60'
+|  \-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@71262020}
+|     +-[METHOD_CALL] MethodNode: '('
+|     |  +-[METHOD_NAME] IdentNode: 'hour' {originalText=hour}
+|     |  \-[EXPR_LIST] SqlNode: 'exprList'
+|     |     \-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|     |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|     |        \-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+|     \-[NUM_INT] LiteralNode: '60'
+\-[METHOD_CALL] MethodNode: '('
++-[METHOD_NAME] IdentNode: 'minutes' {originalText=minutes}
+\-[EXPR_LIST] SqlNode: 'exprList'
+\-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
++-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+\-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+[SELECT STTDEV((day(t.executionEnd)*24*60 + hour(t.executionEnd)*60 + minutes(t.executionEnd)) - (day(t.executionStart)*24*60 + hour(t.executionStart)*60 + minutes(t.executionStart))) FROM acme.entities.tasks.Task t]
+at org.hibernate.hql.internal.ast.tree.SelectClause.initializeExplicitSelectClause(SelectClause.java:161): No data type for node: org.hibernate.hql.internal.ast.tree.MethodNode 
+\-[METHOD_CALL] MethodNode: '('
++-[METHOD_NAME] IdentNode: 'STTDEV' {originalText=STTDEV}
+\-[EXPR_LIST] SqlNode: 'exprList'
+\-[MINUS] BinaryArithmeticOperatorNode: '-' {dataType=org.hibernate.type.IntegerType@71262020}
++-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@71262020}
+|  +-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@71262020}
+|  |  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@71262020}
+|  |  |  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@71262020}
+|  |  |  |  +-[METHOD_CALL] MethodNode: '('
+|  |  |  |  |  +-[METHOD_NAME] IdentNode: 'day' {originalText=day}
+|  |  |  |  |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |  |  |  |     \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |  |  |  |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |  |  |  |        \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+|  |  |  |  \-[NUM_INT] LiteralNode: '24'
+|  |  |  \-[NUM_INT] LiteralNode: '60'
+|  |  \-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@71262020}
+|  |     +-[METHOD_CALL] MethodNode: '('
+|  |     |  +-[METHOD_NAME] IdentNode: 'hour' {originalText=hour}
+|  |     |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |     |     \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |     |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |     |        \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+|  |     \-[NUM_INT] LiteralNode: '60'
+|  \-[METHOD_CALL] MethodNode: '('
+|     +-[METHOD_NAME] IdentNode: 'minutes' {originalText=minutes}
+|     \-[EXPR_LIST] SqlNode: 'exprList'
+|        \-[DOT] DotNode: 'task0_.execution_end' {propertyName=executionEnd,dereferenceType=PRIMITIVE,getPropertyPath=executionEnd,path=t.executionEnd,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|           +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|           \-[IDENT] IdentNode: 'executionEnd' {originalText=executionEnd}
+\-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@71262020}
++-[PLUS] BinaryArithmeticOperatorNode: '+' {dataType=org.hibernate.type.IntegerType@71262020}
+|  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@71262020}
+|  |  +-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@71262020}
+|  |  |  +-[METHOD_CALL] MethodNode: '('
+|  |  |  |  +-[METHOD_NAME] IdentNode: 'day' {originalText=day}
+|  |  |  |  \-[EXPR_LIST] SqlNode: 'exprList'
+|  |  |  |     \-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|  |  |  |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|  |  |  |        \-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+|  |  |  \-[NUM_INT] LiteralNode: '24'
+|  |  \-[NUM_INT] LiteralNode: '60'
+|  \-[STAR] BinaryArithmeticOperatorNode: '*' {dataType=org.hibernate.type.IntegerType@71262020}
+|     +-[METHOD_CALL] MethodNode: '('
+|     |  +-[METHOD_NAME] IdentNode: 'hour' {originalText=hour}
+|     |  \-[EXPR_LIST] SqlNode: 'exprList'
+|     |     \-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
+|     |        +-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+|     |        \-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+|     \-[NUM_INT] LiteralNode: '60'
+\-[METHOD_CALL] MethodNode: '('
++-[METHOD_NAME] IdentNode: 'minutes' {originalText=minutes}
+\-[EXPR_LIST] SqlNode: 'exprList'
+\-[DOT] DotNode: 'task0_.execution_start' {propertyName=executionStart,dereferenceType=PRIMITIVE,getPropertyPath=executionStart,path=t.executionStart,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
++-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+\-[IDENT] IdentNode: 'executionStart' {originalText=executionStart}
+WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administratorTaskController': Unsatisfied dependency expressed through field 'listService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administratorTaskListService': Unsatisfied dependency expressed through field 'repository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'administratorTaskRepository' defined in acme.features.administrator.taskstatics.AdministratorTaskRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.lang.Float acme.features.administrator.taskstatics.AdministratorTaskRepository.getDeviationWorkloads()!
+ERROR [org.springframework.boot.SpringApplication] at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643): Error creating bean with name 'administratorTaskController': Unsatisfied dependency expressed through field 'listService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administratorTaskListService': Unsatisfied dependency expressed through field 'repository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'administratorTaskRepository' defined in acme.features.administrator.taskstatics.AdministratorTaskRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.lang.Float acme.features.administrator.taskstatics.AdministratorTaskRepository.getDeviationWorkloads()!
+at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643): Error creating bean with name 'administratorTaskListService': Unsatisfied dependency expressed through field 'repository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'administratorTaskRepository' defined in acme.features.administrator.taskstatics.AdministratorTaskRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.lang.Float acme.features.administrator.taskstatics.AdministratorTaskRepository.getDeviationWorkloads()!
+at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788): Error creating bean with name 'administratorTaskRepository' defined in acme.features.administrator.taskstatics.AdministratorTaskRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.lang.Float acme.features.administrator.taskstatics.AdministratorTaskRepository.getDeviationWorkloads()!
+at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:93): Validation failed for query for method public abstract java.lang.Float acme.features.administrator.taskstatics.AdministratorTaskRepository.getDeviationWorkloads()!
+at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:138): org.hibernate.QueryException: No data type for node: org.hibernate.hql.internal.ast.tree.MethodNode 
+\-[METHOD_CALL] MethodNode: '('
++-[METHOD_NAME] IdentNode: 'STTDEV' {originalText=STTDEV}
+\-[EXPR_LIST] SqlNode: 'exprList'
+\-[DOT] DotNode: 'task0_.workload' {propertyName=workload,dereferenceType=PRIMITIVE,getPropertyPath=workload,path=t.workload,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
++-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+\-[IDENT] IdentNode: 'workload' {originalText=workload}
+[SELECT STTDEV(t.workload) FROM acme.entities.tasks.Task t]
+at org.hibernate.QueryException.generateQueryException(QueryException.java:120): No data type for node: org.hibernate.hql.internal.ast.tree.MethodNode 
+\-[METHOD_CALL] MethodNode: '('
++-[METHOD_NAME] IdentNode: 'STTDEV' {originalText=STTDEV}
+\-[EXPR_LIST] SqlNode: 'exprList'
+\-[DOT] DotNode: 'task0_.workload' {propertyName=workload,dereferenceType=PRIMITIVE,getPropertyPath=workload,path=t.workload,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
++-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+\-[IDENT] IdentNode: 'workload' {originalText=workload}
+[SELECT STTDEV(t.workload) FROM acme.entities.tasks.Task t]
+at org.hibernate.hql.internal.ast.tree.SelectClause.initializeExplicitSelectClause(SelectClause.java:161): No data type for node: org.hibernate.hql.internal.ast.tree.MethodNode 
+\-[METHOD_CALL] MethodNode: '('
++-[METHOD_NAME] IdentNode: 'STTDEV' {originalText=STTDEV}
+\-[EXPR_LIST] SqlNode: 'exprList'
+\-[DOT] DotNode: 'task0_.workload' {propertyName=workload,dereferenceType=PRIMITIVE,getPropertyPath=workload,path=t.workload,tableAlias=task0_,className=acme.entities.tasks.Task,classAlias=t}
++-[ALIAS_REF] IdentNode: 'task0_.id' {alias=t, className=acme.entities.tasks.Task, tableAlias=task0_}
+\-[IDENT] IdentNode: 'workload' {originalText=workload}
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.features.administrator.taskstatics.AdministratorTaskListService.getDeviationWorkloads(AdministratorTaskListService.java:106): Unresolved compilation problem: 
+	The method getDeviationWorkloads() is undefined for the type AdministratorTaskRepository
+WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+ERROR [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] ***************************
+APPLICATION FAILED TO START
+***************************
+Description:
+Web server failed to start. Port 8080 was already in use.
+Action:
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:45): Access is not authorised

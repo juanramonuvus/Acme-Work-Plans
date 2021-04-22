@@ -5,10 +5,13 @@ import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.tasks.Task;
 import acme.forms.Taskstatistics;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -37,8 +40,8 @@ public class AdministratorTaskListService implements AbstractListService<Adminis
 		
 		request.unbind(entity, model, "numberOfPublicTasks", "numberOfPrivateTasks", 
 			"numberOfFinishedTasks", "numberOfNonFinishedTasks", 
-			"avarageWorkloads", "minimumWorkloads", "maximumWorkloads",
-			"avarageExecPeriod", "minimumExecPeriod", "maximumExecPeriod");
+			"avarageWorkloads", "minimumWorkloads", "maximumWorkloads", "deviationWorkload",
+			"avarageExecPeriod", "minimumExecPeriod", "maximumExecPeriod", "deviationExecPeriod");
 		
 	}
 
@@ -100,24 +103,49 @@ public class AdministratorTaskListService implements AbstractListService<Adminis
 		return this.repository.getMaximumWorkloads();
 	}
 
+	public Float getDeviationWorkloads(final Request<Taskstatistics> request) {
+		assert request!=null;
+		
+		return this.repository.getDeviationWorkloads();
+	}
+
 	
 	//----------------------------------------------------------------------------------------------------------------------------
 	public Float getAvarageExecPeriod(final Request<Taskstatistics> request) {
 		assert request!=null;
 		
-		return this.repository.getAvarageExecPeriod();
+		long total =  0L;
+		
+		final List<Task> lsT = this.repository.findAllTasks().stream().collect(Collectors.toList());
+		for (int i = 0; i < lsT.size(); i++) {
+			final long diff = lsT.get(i).getExecutionEnd().getTime() - lsT.get(i).getExecutionStart().getTime();
+			total += diff;
+		}
+		
+
+		final Float media = (float) total/lsT.size();
+		return Float.parseFloat(media.toString().substring(0, 4));
 	}
 
 	public Float getMinimumExecPeriod(final Request<Taskstatistics> request) {
 		assert request!=null;
 		
-		return this.repository.getMinimumExecPeriod();
+		//return this.repository.getMinimumExecPeriod();
+		return 0.f;
 	}
 
 	public Float getMaximumExecPeriod(final Request<Taskstatistics> request) {
 		assert request!=null;
 		
-		return this.repository.getMaximumExecPeriod();
+		//return this.repository.getMaximumExecPeriod();
+		return 0.f;
+	}
+
+	public Float getDeviationExecPeriod(final Request<Taskstatistics> request) {
+		assert request!=null;
+		
+		//return this.repository.getDeviationExecPeriod();
+		return 0.f;
 	}
 
 	
@@ -131,14 +159,19 @@ public class AdministratorTaskListService implements AbstractListService<Adminis
 		
 		result.setNumberOfPublicTasks(this.getNumberOfPublicTasks(request));
 		result.setNumberOfPrivateTasks(this.getNumberOfPrivateTasks(request));
+		
 		result.setNumberOfNonFinishedTasks(this.getNumberOfNonFinishedTasks(request));
 		result.setNumberOfFinishedTasks(this.getNumberOfFinishedTasks(request));
+		
 		result.setMinimumWorkloads(this.getMinimumWorkloads(request));
 		result.setMaximumWorkloads(this.getMaximumWorkloads(request));
 		result.setAvarageWorkloads(this.getAvarageWorkloads(request));
+		result.setDeviationWorkload(this.getDeviationWorkloads(request));
+		
 		result.setMinimumExecPeriod(this.getMinimumExecPeriod(request));
 		result.setMaximumExecPeriod(this.getMaximumExecPeriod(request));
 		result.setAvarageExecPeriod(this.getAvarageExecPeriod(request));
+		result.setDeviationExecPeriod(this.getDeviationExecPeriod(request));
 		
 		lsResult.add(result);
 		return lsResult;

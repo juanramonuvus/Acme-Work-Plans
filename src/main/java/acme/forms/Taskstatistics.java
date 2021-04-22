@@ -23,11 +23,15 @@ public class Taskstatistics implements Serializable {
 	@NotNull
 	Integer numberOfPrivateTasks;
 	
+	
+	
 	@NotNull
 	Integer numberOfFinishedTasks;
 	
 	@NotNull
 	Integer numberOfNonFinishedTasks;
+	
+	
 	
 	@NotNull
 	Float avarageWorkloads;
@@ -39,6 +43,11 @@ public class Taskstatistics implements Serializable {
 	Float maximumWorkloads;
 	
 	@NotNull
+	Float deviationWorkload;
+	
+	
+	
+	@NotNull
 	Float avarageExecPeriod;
 	
 	@NotNull
@@ -46,6 +55,9 @@ public class Taskstatistics implements Serializable {
 	
 	@NotNull
 	Float maximumExecPeriod;
+	
+	@NotNull
+	Float deviationExecPeriod;
 	
 
 }
