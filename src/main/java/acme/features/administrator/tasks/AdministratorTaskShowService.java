@@ -36,10 +36,8 @@ public class AdministratorTaskShowService implements AbstractShowService<Adminis
 		
 	}
 
-
 	
-	
-	
+	//----------------------------------------------------------------------------------------------------------------------------
 	public Integer getNumberOfPublicTasks(final Request<TaskStatistics> request) {
 		assert request!=null;
 		
@@ -52,6 +50,8 @@ public class AdministratorTaskShowService implements AbstractShowService<Adminis
 		return this.repository.getNumberOfPrivateTasks();
 	}
 
+	
+	//----------------------------------------------------------------------------------------------------------------------------
 	public Integer getNumberOfFinishedTasks(final Request<TaskStatistics> request) {
 		assert request!=null;
 
@@ -74,6 +74,8 @@ public class AdministratorTaskShowService implements AbstractShowService<Adminis
 		return this.repository.getNumberOfNonFinishedTasks(date);
 	}
 
+	
+	//----------------------------------------------------------------------------------------------------------------------------
 	public Float getAvarageWorkloads(final Request<TaskStatistics> request) {
 		assert request!=null;
 		
@@ -93,8 +95,29 @@ public class AdministratorTaskShowService implements AbstractShowService<Adminis
 	}
 
 	
+	//----------------------------------------------------------------------------------------------------------------------------
+	public Float getAvarageExecPeriod(final Request<TaskStatistics> request) {
+		assert request!=null;
+		
+		return this.repository.getAvarageExecPeriod();
+	}
+
+	public Float getMinimumExecPeriod(final Request<TaskStatistics> request) {
+		assert request!=null;
+		
+		return this.repository.getMinimumExecPeriod();
+	}
+
+	public Float getMaximumExecPeriod(final Request<TaskStatistics> request) {
+		assert request!=null;
+		
+		return this.repository.getMaximumExecPeriod();
+	}
+
 	
+
 	
+	//----------------------------------------------------------------------------------------------------------------------------
 	@Override
 	public TaskStatistics findOne(final Request<TaskStatistics> request) {
 		assert request!=null;

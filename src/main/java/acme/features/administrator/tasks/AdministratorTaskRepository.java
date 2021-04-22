@@ -10,26 +10,38 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AdministratorTaskRepository extends AbstractRepository{
 
-	@Query("select COUNT(t) from Task t WHERE t.isPublic = true")
+	@Query("SELECT COUNT(t) FROM Task t WHERE t.isPublic = true")
 	Integer getNumberOfPublicTasks();
 	
-	@Query("select COUNT(t) from Task t WHERE t.isPublic = false")
+	@Query("SELECT COUNT(t) FROM Task t WHERE t.isPublic = false")
 	Integer getNumberOfPrivateTasks();
 	
-	@Query("select COUNT(t) from Task t WHERE t.executionEnd <= ?1")
+	//----------------------------------------------------------------------------------------------------------------------------
+	@Query("SELECT COUNT(t) FROM Task t WHERE t.executionEnd <= ?1")
 	Integer getNumberOfFinishedTasks(Date fechaActual);
 	
-	@Query("select COUNT(t) from Task t WHERE t.executionEnd > ?1")
+	@Query("SELECT COUNT(t) FROM Task t WHERE t.executionEnd > ?1")
 	Integer getNumberOfNonFinishedTasks(Date fechaActual);
-
 	
-	@Query("select AVG(t.workload) from Task t")
+	//----------------------------------------------------------------------------------------------------------------------------
+	@Query("SELECT AVG(t.workload) FROM Task t")
 	Float getAvarageWorkloads();
 	
-	@Query("select MIN(t.workload) from Task t")
+	@Query("SELECT MIN(t.workload) FROM Task t")
 	Float getMinimumWorkloads();
 	
-	@Query("select MAX(t.workload) from Task t")
+	@Query("SELECT MAX(t.workload) FROM Task t")
 	Float getMaximumWorkloads();
+	
+	//----------------------------------------------------------------------------------------------------------------------------
+	@Query("SELECT AVG(t.executionEnd - t.executionStart) FROM Task t")
+	Float getAvarageExecPeriod();
+
+	@Query("SELECT MIN(t.executionEnd - t.executionStart) FROM Task t")
+	Float getMinimumExecPeriod();
+	
+	//@Query("SELECT MAX(resultado) FROM SELECT DATE_PART('day', t.executionEnd - t.executionStart)  AS resultado FROM Task t")
+	@Query("SELECT MAX(t.executionEnd - t.executionStart) FROM Task t")
+	Float getMaximumExecPeriod();
 	
 }
