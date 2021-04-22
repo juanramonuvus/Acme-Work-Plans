@@ -27,7 +27,7 @@ public class ManagerTaskDeleteService implements AbstractDeleteService<Manager, 
 	public void delete(final Request<Task> request, final Task entity) {
 		assert request != null;
 		assert entity != null;
-
+		
 		this.managerTaskRepository.delete(entity);
 		
 	}

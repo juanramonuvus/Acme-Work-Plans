@@ -17,4 +17,7 @@ public interface ManagerTaskRepository extends AbstractRepository{
 	@Query("select t from Task t where t.manager.id = :managerId")
 	Collection<Task> findManyByManagerId(int managerId);
 	
+//	@Query("select pts.id from Plan pts where pts.tasks like :taskId")
+//	Collection<Plan> findPlanTaskByTaskId(int taskId);
+	
 }
