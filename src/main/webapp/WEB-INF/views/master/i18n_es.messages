@@ -44,6 +44,10 @@ master.menu.administrator.populate-initial = Poblar BD (inicial)
 master.menu.administrator.populate-sample = Poblar BD (ejemplos)
 master.menu.administrator.shutdown = Parar el sistema
 master.menu.administrator.tasks = Tareas
+master.panelAdmin.administrator = Configuración spam
+master.panelAdmin.administrator.blacklist = Lista negra
+master.panel.administrator.threshold = Configuración del umbral
+master.panelAdmin.administrator.blacklist.create = Añadir nueva palabra prohibida
 
 # master.menu.provider ########################################################
 

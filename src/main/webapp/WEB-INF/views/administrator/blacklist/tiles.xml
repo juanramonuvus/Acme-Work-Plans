@@ -18,13 +18,14 @@
 
 <tiles-definitions>
 
-	<definition name="administrator/user-account/list" extends="master">		
-		<put-attribute name="body" type="template" value="../administrator/user-account/list.jsp" />
+	<definition name="administrator/black-list/list" extends="master">
+		<put-attribute name="body" type="template" value="../administrator/blacklist/list.jsp" />
 	</definition>
 	
-	<definition name="administrator/user-account/form" extends="master">
-		<put-attribute name="body" type="template" value="../administrator/user-account/form.jsp" />
+	<definition name="administrator/black-list/form" extends="master">
+		<put-attribute name="body" type="template" value="../administrator/blacklist/form.jsp" />
 	</definition>
+
 	
 
 </tiles-definitions>

@@ -35,6 +35,13 @@
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.tasks" action="/authenticated/task/list"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.panelAdmin.administrator" access="hasRole('Administrator')">
+			<acme:menu-suboption code="master.panelAdmin.administrator.blacklist" action="/administrator/spamconfig/list"/>
+			<acme:menu-suboption code="master.panelAdmin.administrator.blacklist.create" action="/administrator/spamconfig/create"/>
+			<acme:menu-suboption code="master.panel.administrator.threshold" action="/administrator/threshold/list"/>
+		</acme:menu-option>
+		
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
 			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.example.com/"/>

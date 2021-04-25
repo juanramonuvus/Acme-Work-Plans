@@ -18,6 +18,7 @@ public class BlackList extends DomainEntity{
 	
 	//Attributes -------------------------------------------------------
 	
+
 	@NotBlank
 	protected String word;
 	
