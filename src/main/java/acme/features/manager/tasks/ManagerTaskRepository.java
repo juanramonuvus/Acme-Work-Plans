@@ -20,6 +20,5 @@ public interface ManagerTaskRepository extends AbstractRepository{
 	
 	@Query("select m from Manager m where m.id = :managerId")
 	Manager findManagerById(int managerId);
-
 	
 }
