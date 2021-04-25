@@ -33,6 +33,7 @@ master.menu.anonymous.favourite-link = Favourite link
 master.menu.anonymous.plans = Plans
 master.menu.anonymous.shoutsList = Shouts List
 master.menu.anonymous.tasks = Tasks
+master.menu.anonymous.tasks.create = Create a shout
 
 
 # master.menu.administrator ###################################################
@@ -44,9 +45,9 @@ master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shutdown = Shut down
 master.menu.administrator.tasks = Tasks
-master.panelAdmin.administrator = Spam config
-master.panelAdmin.administrator.blacklist = Black list
-master.panel.administrator.threshold = Threshold setting
+master.panelAdmin.administrator = Spam panel
+master.panelAdmin.administrator.blacklist = BlackList
+master.panel.administrator.threshold = Settings
 master.panelAdmin.administrator.blacklist.create = Add new prohibited word
 
 # master.menu.provider ########################################################
