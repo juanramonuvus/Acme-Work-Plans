@@ -1,6 +1,8 @@
 package acme.entities.spamConfig;
 
 import javax.persistence.Entity;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 import acme.framework.entities.DomainEntity;
@@ -18,6 +20,8 @@ public class SpamConfig extends DomainEntity{
 	
 	//Attributes -------------------------------------------------------
 	
+	@Max(value=(long) 100.0)
+	@Min(value=(long) 0.0)
 	@NotNull
 	protected Float threshold;
 	

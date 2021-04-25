@@ -14,5 +14,10 @@ public interface AdministratorSpamConfigRepository extends AbstractRepository {
 	
 	@Query("SELECT w FROM BlackList w")
 	Collection<BlackList> findBlackList();
+	
+	@Query("SELECT w FROM BlackList w where w.id = :id")
+	BlackList findOneById(int id);
+	
+	
 
 }

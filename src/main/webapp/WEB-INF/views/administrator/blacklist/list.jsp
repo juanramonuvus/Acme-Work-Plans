@@ -5,5 +5,5 @@
 
 <acme:list>
 	<acme:list-column code="administrator.spamconfig.blacklist.label.word" path="word"/>
-
 </acme:list>
+
