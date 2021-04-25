@@ -55,7 +55,7 @@ public interface AdministratorTaskRepository extends AbstractRepository{
 	
 	@Query("SELECT STDDEV((day(t.executionEnd)*24*60 + hour(t.executionEnd)*60 + minutes(t.executionEnd)) - (day(t.executionStart)*24*60 + hour(t.executionStart)*60 + minutes(t.executionStart))) FROM Task t")
 	Float getDeviationExecPeriod();
-	*/	
+	*/
 	//----------------------------------------------------------------------------------------------------------------------------
 	@Query("SELECT t FROM Task t")
 	Collection<Task> findAllTasks();

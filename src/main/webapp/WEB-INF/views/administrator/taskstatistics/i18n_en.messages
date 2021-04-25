@@ -5,8 +5,10 @@ administrator.taskstatistics.list.label.numberOfNonFinishedTasks = Non-Finished 
 administrator.taskstatistics.list.label.avarageWorkloads = Average Worload
 administrator.taskstatistics.list.label.minimumWorkloads = Minimum Worload
 administrator.taskstatistics.list.label.maximumWorkloads = Maximum Worload
+administrator.taskstatistics.list.label.deviationWorkload =  Workload Deviation
 administrator.taskstatistics.list.label.avarageExecPeriod = Average Execution Period
 administrator.taskstatistics.list.label.minimumExecPeriod = Minimum Execution Period
 administrator.taskstatistics.list.label.maximumExecPeriod = Maximum Execution Period
+administrator.taskstatistics.list.label.deviationExecPeriod =  Execution Period Deviation
 
 administrator.taskstatistics.show.title = Task Statistics Table

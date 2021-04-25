@@ -114,56 +114,66 @@ public class AdministratorTaskListService implements AbstractListService<Adminis
 	public Float getAvarageExecPeriod(final Request<Taskstatistics> request) {
 		assert request!=null;
 		
-		long total =  0L;
+		Float total =  0f;
 		
 		final List<Task> lsT = this.repository.findAllTasks().stream().collect(Collectors.toList());
 		for (int i = 0; i < lsT.size(); i++) {
-			final long diff = lsT.get(i).getExecutionEnd().getTime() - lsT.get(i).getExecutionStart().getTime();
+			final Float diff = lsT.get(i).getPeriod();
 			total += diff;
 		}
 		
 
-		final Float media = (float) total/lsT.size();
-		return Float.parseFloat(media.toString().substring(0, 4));
+		final Float media = total/lsT.size();
+		return media;
 	}
 
 	public Float getMinimumExecPeriod(final Request<Taskstatistics> request) {
 		assert request!=null;
 		
-		Long min =  1000000000000L;
+		Float min =  1000000000000f;
 		
 		final List<Task> lsT = this.repository.findAllTasks().stream().collect(Collectors.toList());
 		for (int i = 0; i < lsT.size(); i++) {
-			final Long diff = lsT.get(i).getExecutionEnd().getTime() - lsT.get(i).getExecutionStart().getTime();
+			final Float diff = lsT.get(i).getPeriod();
 			if (diff <= min) {
 				min = diff;
 			}
 		}
 		
-		return (float) min/86400000;
+		return min;
 	}
 
 	public Float getMaximumExecPeriod(final Request<Taskstatistics> request) {
 		assert request!=null;
 		
-		Long max =  0L;
+		Float max =  0f;
 		
 		final List<Task> lsT = this.repository.findAllTasks().stream().collect(Collectors.toList());
 		for (int i = 0; i < lsT.size(); i++) {
-			final Long diff = lsT.get(i).getExecutionEnd().getTime() - lsT.get(i).getExecutionStart().getTime();
+			final Float diff = lsT.get(i).getPeriod();
 			if (diff >= max) {
 				max = diff;
 			}
 		}
 		
-		return (float) max/86400000;
+		return max;
 	}
 
 	public Float getDeviationExecPeriod(final Request<Taskstatistics> request) {
-		assert request!=null;
 		
-		//return this.repository.getDeviationExecPeriod();
-		return 0.f;
+		final Double num =  this.getAvarageExecPeriod(request)/0.0000166667;
+		final Long average= num.longValue();
+		
+		Float res =  0f;
+
+		final List<Task> lsT = this.repository.findAllTasks().stream().collect(Collectors.toList());
+		for (int i = 0; i < lsT.size(); i++) {
+			final Float diff = lsT.get(i).getPeriod();
+			final Float individualDeviation = Math.abs(diff-average)*Math.abs(diff-average);
+			res+=individualDeviation;
+		}
+		res = res/lsT.size();
+		return (float) (res.floatValue()*0.0000166667);
 	}
 
 	

@@ -5,8 +5,10 @@ administrator.taskstatistics.list.label.numberOfNonFinishedTasks = Tareas Sin Ac
 administrator.taskstatistics.list.label.avarageWorkloads = Workload Medio
 administrator.taskstatistics.list.label.minimumWorkloads = Workload Mínimo
 administrator.taskstatistics.list.label.maximumWorkloads = Workload Máximo
+administrator.taskstatistics.list.label.deviationWorkload = Desviación del Workload
 administrator.taskstatistics.list.label.avarageExecPeriod = Periodo de Ejecución Medio
 administrator.taskstatistics.list.label.minimumExecPeriod = Periodo de Ejecución Mínimo
 administrator.taskstatistics.list.label.maximumExecPeriod = Periodo de Ejecución Máximo
+administrator.taskstatistics.list.label.deviationExecPeriod = Desviación del periodo de ejecución
 
 administrator.taskstatistics.show.title = Tabla de Estadísticas de Tareas
