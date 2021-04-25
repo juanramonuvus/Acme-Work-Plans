@@ -130,15 +130,33 @@ public class AdministratorTaskListService implements AbstractListService<Adminis
 	public Float getMinimumExecPeriod(final Request<Taskstatistics> request) {
 		assert request!=null;
 		
-		//return this.repository.getMinimumExecPeriod();
-		return 0.f;
+		Long min =  1000000000000L;
+		
+		final List<Task> lsT = this.repository.findAllTasks().stream().collect(Collectors.toList());
+		for (int i = 0; i < lsT.size(); i++) {
+			final Long diff = lsT.get(i).getExecutionEnd().getTime() - lsT.get(i).getExecutionStart().getTime();
+			if (diff <= min) {
+				min = diff;
+			}
+		}
+		
+		return (float) min/86400000;
 	}
 
 	public Float getMaximumExecPeriod(final Request<Taskstatistics> request) {
 		assert request!=null;
 		
-		//return this.repository.getMaximumExecPeriod();
-		return 0.f;
+		Long max =  0L;
+		
+		final List<Task> lsT = this.repository.findAllTasks().stream().collect(Collectors.toList());
+		for (int i = 0; i < lsT.size(); i++) {
+			final Long diff = lsT.get(i).getExecutionEnd().getTime() - lsT.get(i).getExecutionStart().getTime();
+			if (diff >= max) {
+				max = diff;
+			}
+		}
+		
+		return (float) max/86400000;
 	}
 
 	public Float getDeviationExecPeriod(final Request<Taskstatistics> request) {
