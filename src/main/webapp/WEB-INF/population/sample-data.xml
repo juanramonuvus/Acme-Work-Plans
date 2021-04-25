@@ -211,7 +211,7 @@
 		<property name="description" value="Create controller of task entity"/>
 		<property name="isPublic" value="true"/>
 		<property name="link" value="https://github.com/task1"/>
-		<property name="manager" ref="manager02"/>
+		<property name="manager" ref="manager01"/>
 	</bean>
 
 
@@ -219,13 +219,13 @@
 	
 	<bean id="shout01" class="acme.entities.shouts.Shout">
 		<property name="moment" value="2021/03/29 10:30"/>
-		<property name="author" value="Miguel"/>
+		<property name="author" value="Miguel Toro"/>
 		<property name="text" value="Hola Mundo!"/>
 		<property name="info"><null/></property>	
 	</bean>
 	<bean id="shout02" class="acme.entities.shouts.Shout">
 		<property name="moment" value="2021/03/30 17:32"/>
-		<property name="author" value="Juanito"/>
+		<property name="author" value="Juan"/>
 		<property name="text" value= "Me gusta esta web"/>
 		<property name="info"><null/></property>	
 	</bean>
@@ -237,7 +237,7 @@
 	</bean>
 	<bean id="shout04" class="acme.entities.shouts.Shout">
 		<property name="moment" value="2021/04/01 12:00"/>
-		<property name="author" value="Pepe Gil"/>
+		<property name="author" value="Pepe"/>
 		<property name="text" value="La web de la escuela no funciona."/>
 		<property name="info" value= "https://www.informatica.us.es/"/>	
 	</bean>

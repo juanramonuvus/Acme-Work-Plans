@@ -7,5 +7,3 @@ authenticated.task.list.label.executionEnd = Execution end
 authenticated.task.list.label.workload = Workload
 authenticated.task.list.label.description = Description
 authenticated.task.list.label.link = Link
-
-authenticated.task.form.button.return = Return
