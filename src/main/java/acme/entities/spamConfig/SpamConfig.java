@@ -1,9 +1,9 @@
 package acme.entities.spamConfig;
 
 import javax.persistence.Entity;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.Range;
 
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -20,8 +20,7 @@ public class SpamConfig extends DomainEntity{
 	
 	//Attributes -------------------------------------------------------
 	
-	@Max(value=(long) 100.0)
-	@Min(value=(long) 0.0)
+	@Range(min = 0, max = 100)
 	@NotNull
 	protected Float threshold;
 	
