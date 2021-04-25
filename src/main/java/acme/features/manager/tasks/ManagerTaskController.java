@@ -25,6 +25,7 @@ public class ManagerTaskController extends AbstractController<Manager, Task> {
 	
 	@Autowired
 	private ManagerTaskDeleteService deleteService;
+
 	
 	//Constructors ------------------------------------------------
 	@PostConstruct
