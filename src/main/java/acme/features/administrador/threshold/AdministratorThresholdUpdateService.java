@@ -1,5 +1,6 @@
 package acme.features.administrador.threshold;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.spamConfig.SpamConfig;
@@ -13,6 +14,7 @@ import acme.framework.services.AbstractUpdateService;
 public class AdministratorThresholdUpdateService implements AbstractUpdateService<Administrator, SpamConfig>{
 
 	//Internal state ---------------------------------------------------------------
+	@Autowired
 	AdmimistratorThresholdRepository repository;
 	
 	@Override
@@ -20,7 +22,6 @@ public class AdministratorThresholdUpdateService implements AbstractUpdateServic
 		assert request != null;
 		final int id = request.getModel().getInteger("id");
 		final SpamConfig result = this.repository.findOneSpamConfigById(id);
-		System.out.println(result);
 		return result;
 	}
 
