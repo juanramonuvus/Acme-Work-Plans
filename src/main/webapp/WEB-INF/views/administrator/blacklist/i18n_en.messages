@@ -1,4 +1,5 @@
-administrator.spamconfig.blacklist.laberl.delete = Delete
+administrator.spamconfig.blacklist.label.delete = Delete
 administrator.spamconfig.blacklist.label.word = word
 administrator.spamconfig.blacklist.label.create = Add
 administrator.spamconfig.blacklist.form.error.duplicate = This word already exists
+administrator.spamconfig.form.button.return = Return
