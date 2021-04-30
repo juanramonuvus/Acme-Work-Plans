@@ -33,7 +33,7 @@ master.menu.anonymous.favourite-link = Enlace favorito
 master.menu.anonymous.plans = Planes
 master.menu.anonymous.shoutsList = Lista de anuncios
 master.menu.anonymous.tasks = Tareas
-master.menu.anonymous.tasks.create = Crear anuncio
+master.menu.anonymous.shout.create = Crear anuncio
 
 
 # master.menu.administrator ###################################################
