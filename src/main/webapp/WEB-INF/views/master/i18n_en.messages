@@ -33,7 +33,7 @@ master.menu.anonymous.favourite-link = Favourite link
 master.menu.anonymous.plans = Plans
 master.menu.anonymous.shoutsList = Shouts List
 master.menu.anonymous.tasks = Tasks
-master.menu.anonymous.tasks.create = Create a shout
+master.menu.anonymous.shout.create = Create a shout
 
 
 # master.menu.administrator ###################################################
