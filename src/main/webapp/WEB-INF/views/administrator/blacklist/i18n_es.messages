@@ -1,4 +1,7 @@
 administrator.spamconfig.blacklist.label.word = palabra
-administrator.spamconfig.blacklist.laberl.delete = Eliminar
-administrator.spamconfig.blacklist.laberl.create = Añadir
+administrator.spamconfig.blacklist.label.delete = Eliminar
+administrator.spamconfig.blacklist.label.create = Añadir
 administrator.spamconfig.blacklist.form.error.duplicate = Esta palabra ya esta registrada
+administrator.spamconfig.form.button.return = Volver
+administrator.spamconfig.blacklist.label.update = Actualizar
+administrator.spamconfig.blacklist.form.error.blank = No puede estar en blanco
