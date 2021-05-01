@@ -1,5 +1,8 @@
 package acme.features.administrator.spamConfig;
 
+import java.util.Collection;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -59,6 +62,16 @@ public class AdministratorBlackListUpdateService implements AbstractUpdateServic
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		
+		final Collection<String> lista = this.repository.findBlackList().stream().map(x->x.getWord()).collect(Collectors.toList());
+		
+		
+		if(!errors.hasErrors("word")) {
+			final boolean res = lista.contains(entity.getWord());
+			errors.state(request, !res, "word", "administrator.spamconfig.blacklist.form.error.duplicate");
+		}
+		
+		
 	}
 
 	@Override

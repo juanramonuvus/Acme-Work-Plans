@@ -4,3 +4,4 @@ administrator.spamconfig.blacklist.label.create = Add
 administrator.spamconfig.blacklist.form.error.duplicate = This word already exists
 administrator.spamconfig.form.button.return = Return
 administrator.spamconfig.blacklist.label.update = Update
+administrator.spamconfig.blacklist.form.error.blank = Not be empty
