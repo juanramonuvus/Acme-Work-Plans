@@ -11,7 +11,7 @@
 	<acme:form-textarea code="manager.task.list.label.description" path="description"/>
 	<acme:form-url code="manager.task.list.label.link" path="link"/>
 	<acme:form-checkbox code="manager.task.list.label.isPublic" path="isPublic"/>
+	<acme:form-submit test="true" code="manager.task.form.button.delete" action="/manager/task/delete"/>
 	<acme:form-submit test="${command == 'create'}" code="manager.task.create.label.create" action="/manager/task/create"/>
-	<acme:form-submit test="${command == 'show'}" code="manager.task.form.button.update" action="/manager/task/update"/>
 	<acme:form-return code="manager.task.list.label.return"/>
 </acme:form>
