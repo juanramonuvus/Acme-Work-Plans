@@ -26,12 +26,17 @@ public class ManagerTaskController extends AbstractController<Manager, Task> {
 	@Autowired
 	private ManagerTaskCreateService createService;
 	
+	@Autowired
+	private ManagerTaskUpdateService updateService;
+	
 	//Constructors ------------------------------------------------
 	@PostConstruct
 	private void initialise() {
 		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listMineService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+		
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
 	}
 
 }

@@ -10,5 +10,6 @@
 	<acme:form-double code="authenticated.task.list.label.workload" path="workload"/>
 	<acme:form-textarea code="authenticated.task.list.label.description" path="description"/>
 	<acme:form-url code="authenticated.task.list.label.link" path="link"/>
+	<acme:form-return code="authenticated.task.label.return"/>
 
 </acme:form>
