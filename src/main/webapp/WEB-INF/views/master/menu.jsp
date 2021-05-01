@@ -19,8 +19,7 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
-			<acme:menu-suboption code="master.menu.anonymous.plans" action="/anonymous/plan/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="https://www.informatica.us.es/"/>
 			<acme:menu-suboption code="master.menu.anonymous.shoutsList" action="/anonymous/shout/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.tasks" action="/anonymous/task/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.shout.create" action="/anonymous/shout/create"/>
@@ -45,22 +44,22 @@
 		
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
-			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.provider.favourite-link" action="https://www.informatica.us.es/"/>
 			<acme:menu-suboption code="master.menu.provider.tasks" action="/authenticated/task/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
-			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="https://www.informatica.us.es/"/>
 			<acme:menu-suboption code="master.menu.consumer.tasks" action="/authenticated/task/list"/>
 		</acme:menu-option>
 		
 
 		<acme:menu-option code="master.menu.manager" access="hasRole('Manager')">
-			<acme:menu-suboption code="master.menu.manager.favourite-link" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.manager.favourite-link" action="https://www.informatica.us.es/"/>
 			<acme:menu-suboption code="master.menu.manager.tasks" action="/authenticated/task/list"/>
 			<acme:menu-suboption code="master.menu.manager.personal.tasks" action="/manager/task/list-mine"/>
 			<acme:menu-suboption code="master.menu.manager.personal.create" action="/manager/task/create"/>
-			<acme:menu-suboption code="master.menu.manager.plans" action="/manager/plan/list"/>
+			
 
 		</acme:menu-option>
 
