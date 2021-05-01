@@ -213,6 +213,17 @@
 		<property name="link" value="https://github.com/task1"/>
 		<property name="manager" ref="manager01"/>
 	</bean>
+	
+	<bean id="task13" class="acme.entities.tasks.Task">
+		<property name="title" value="Create UserRepository"/>
+		<property name="executionStart" value="2018/02/13 19:39"/>
+		<property name="executionEnd" value="2018/03/14 19:39"/>
+		<property name="workload" value="20.50"/>
+		<property name="description" value="Create controller of task entity"/>
+		<property name="isPublic" value="true"/>
+		<property name="link" value="https://github.com/task1"/>
+		<property name="manager" ref="manager02"/>
+	</bean>
 
 
 		<!-- Shouts -->

@@ -21,6 +21,7 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 	@Override
 	public boolean authorise(final Request<Task> request) {
 		assert request != null;
+		
 		return true;
 	}
 
@@ -50,7 +51,6 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		assert request != null;
 		final Task t = new Task();
 		t.setManager(this.repository.findManagerById(request.getPrincipal().getActiveRoleId()));
-
 		return t;
 	}
 

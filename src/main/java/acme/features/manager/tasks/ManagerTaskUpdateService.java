@@ -19,7 +19,8 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 	@Override
 	public boolean authorise(final Request<Task> request) {
 		assert request != null;
-		return true;
+		final Task task = this.repository.findOneTaskById(request.getModel().getInteger("id"));
+		return task.getManager().getId() == request.getPrincipal().getActiveRoleId();
 	}
 
 	@Override
