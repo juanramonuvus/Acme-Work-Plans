@@ -25,6 +25,10 @@
 	<definition name="administrator/black-list/form" extends="master">
 		<put-attribute name="body" type="template" value="../administrator/blacklist/form.jsp" />
 	</definition>
+	
+	<definition name="administrator/black-list/form" extends="master">
+		<put-attribute name="body" type="template" value="../administrator/blacklist/form.jsp" />
+	</definition>
 
 	
 
