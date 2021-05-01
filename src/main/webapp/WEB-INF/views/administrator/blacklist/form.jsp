@@ -6,9 +6,10 @@
 
 
 <c:if test="${command == 'show'}">
-	<acme:form readonly="true">
+	<acme:form>
 		<acme:form-textbox code="administrator.spamconfig.blacklist.label.word" path="word"/>
 		<acme:form-submit test="${command == 'show'}" code="administrator.spamconfig.blacklist.label.delete" action="/administrator/spamconfig/delete"/>
+		<acme:form-submit test="${command == 'show'}" code="administrator.spamconfig.blacklist.label.update" action="/administrator/spamconfig/update"/>
 		<acme:form-return code="administrator.spamconfig.form.button.return"/>
 	</acme:form>
 </c:if>

@@ -27,6 +27,9 @@ public class AdministratorSpamConfigController extends AbstractController<Admini
 	@Autowired
 	protected AdministratorBlackListCreateService createService;
 	
+	@Autowired
+	protected AdministratorBlackListUpdateService updateService;
+	
 	
 	@PostConstruct
 	private void initialise() {
@@ -34,5 +37,6 @@ public class AdministratorSpamConfigController extends AbstractController<Admini
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
 		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
 	}
 }
