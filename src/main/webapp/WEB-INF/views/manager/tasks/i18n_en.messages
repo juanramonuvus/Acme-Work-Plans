@@ -11,3 +11,4 @@ manager.task.list.label.isPublic = Public
 manager.task.list.label.return = Return
 manager.task.create.label.create = Create
 manager.task.form.button.update = Update
+manager.task.form.button.delete = Delete
