@@ -3,6 +3,7 @@ package acme.features.manager.tasks;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.spamValidator.SpamValidatorService;
 import acme.entities.tasks.Task;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
@@ -15,6 +16,9 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 	
 	@Autowired
 	protected ManagerTaskRepository repository;
+	
+	@Autowired
+	protected SpamValidatorService spamValidatorService;
 
 	@Override
 	public boolean authorise(final Request<Task> request) {
@@ -73,6 +77,20 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 			final float workLoadDecimals = entity.getWorkload() - entity.getWorkload().intValue();
 			final boolean res = entity.getWorkload() >= 0 && workLoadDecimals <= 0.59;
 			errors.state(request, res, "workload", "acme.validators.validworkload");
+		}
+		
+		///spam validate
+		
+		if (!errors.hasErrors("description")) {
+				errors.state(request, this.spamValidatorService.spamValidate(entity.getDescription()), "description", "acme.validators.spamtext");
+			}
+		
+		if (!errors.hasErrors("title")) {
+			errors.state(request, this.spamValidatorService.spamValidate(entity.getTitle()), "title", "acme.validators.spamtext");
+		}
+		
+		if (!errors.hasErrors("link")) {
+			errors.state(request, this.spamValidatorService.spamValidate(entity.getLink()), "link", "acme.validators.spamtext");
 		}
 	}
 
