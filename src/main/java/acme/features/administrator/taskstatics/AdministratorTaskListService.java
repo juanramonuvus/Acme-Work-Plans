@@ -15,14 +15,14 @@ import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Service;
 
 import acme.entities.tasks.Task;
-import acme.forms.Taskstatistics;
+import acme.forms.Dashboard;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AdministratorTaskListService implements AbstractListService<Administrator, Taskstatistics> {
+public class AdministratorTaskListService implements AbstractListService<Administrator, Dashboard> {
 
 	//Internal state -------------------------------------------------
 	@Autowired
@@ -33,13 +33,13 @@ public class AdministratorTaskListService implements AbstractListService<Adminis
 	
 	
 	@Override
-	public boolean authorise(final Request<Taskstatistics> request) {
+	public boolean authorise(final Request<Dashboard> request) {
 		assert request !=null;
 		return true;
 	}
 
 	@Override
-	public void unbind(final Request<Taskstatistics> request, final Taskstatistics entity, final Model model) {
+	public void unbind(final Request<Dashboard> request, final Dashboard entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
@@ -75,13 +75,13 @@ public class AdministratorTaskListService implements AbstractListService<Adminis
 	}
 	
 	//----------------------------------------------------------------------------------------------------------------------------
-	public Integer getNumberOfPublicTasks(final Request<Taskstatistics> request) {
+	public Integer getNumberOfPublicTasks(final Request<Dashboard> request) {
 		assert request!=null;
 		
 		return this.repository.getNumberOfPublicTasks();
 	}
 
-	public Integer getNumberOfPrivateTasks(final Request<Taskstatistics> request) {
+	public Integer getNumberOfPrivateTasks(final Request<Dashboard> request) {
 		assert request!=null;
 		
 		return this.repository.getNumberOfPrivateTasks();
@@ -89,7 +89,7 @@ public class AdministratorTaskListService implements AbstractListService<Adminis
 
 	
 	//----------------------------------------------------------------------------------------------------------------------------
-	public Integer getNumberOfFinishedTasks(final Request<Taskstatistics> request) {
+	public Integer getNumberOfFinishedTasks(final Request<Dashboard> request) {
 		assert request!=null;
 
 		final ZoneId defaultZoneId = ZoneId.systemDefault();
@@ -100,7 +100,7 @@ public class AdministratorTaskListService implements AbstractListService<Adminis
 		return this.repository.getNumberOfFinishedTasks(date);
 	}
 
-	public Integer getNumberOfNonFinishedTasks(final Request<Taskstatistics> request) {
+	public Integer getNumberOfNonFinishedTasks(final Request<Dashboard> request) {
 		assert request!=null;
 
 		final ZoneId defaultZoneId = ZoneId.systemDefault();
@@ -113,7 +113,7 @@ public class AdministratorTaskListService implements AbstractListService<Adminis
 
 	
 	//----------------------------------------------------------------------------------------------------------------------------
-	public Float getAvarageWorkloads(final Request<Taskstatistics> request) {
+	public Float getAvarageWorkloads(final Request<Dashboard> request) {
 		assert request!=null;
 		
 		Float total = 0f;
@@ -129,19 +129,19 @@ public class AdministratorTaskListService implements AbstractListService<Adminis
 		return AdministratorTaskListService.round(this.datesTransformationBackward(avg),2);
 	}
 
-	public Float getMinimumWorkloads(final Request<Taskstatistics> request) {
+	public Float getMinimumWorkloads(final Request<Dashboard> request) {
 		assert request!=null;
 		
 		return this.repository.getMinimumWorkloads();
 	}
 
-	public Float getMaximumWorkloads(final Request<Taskstatistics> request) {
+	public Float getMaximumWorkloads(final Request<Dashboard> request) {
 		assert request!=null;
 		
 		return this.repository.getMaximumWorkloads();
 	}
 
-	public Float getDeviationWorkloads(final Request<Taskstatistics> request) {
+	public Float getDeviationWorkloads(final Request<Dashboard> request) {
 		assert request!=null;
 		final Float average = this.getAvarageWorkloads(request);
 		
@@ -167,7 +167,7 @@ public class AdministratorTaskListService implements AbstractListService<Adminis
 
 	
 	//----------------------------------------------------------------------------------------------------------------------------
-	public Float getAvarageExecPeriod(final Request<Taskstatistics> request) {
+	public Float getAvarageExecPeriod(final Request<Dashboard> request) {
 		assert request!=null;
 		
 		Float total =  0f;
@@ -184,7 +184,7 @@ public class AdministratorTaskListService implements AbstractListService<Adminis
 		return AdministratorTaskListService.round(this.datesTransformationBackward(avg),2);
 	}
 
-	public Float getMinimumExecPeriod(final Request<Taskstatistics> request) {
+	public Float getMinimumExecPeriod(final Request<Dashboard> request) {
 		assert request!=null;
 		
 		Float min =  1000000000000f;
@@ -200,7 +200,7 @@ public class AdministratorTaskListService implements AbstractListService<Adminis
 		return AdministratorTaskListService.round(min,2);
 	}
 
-	public Float getMaximumExecPeriod(final Request<Taskstatistics> request) {
+	public Float getMaximumExecPeriod(final Request<Dashboard> request) {
 		assert request!=null;
 		
 		Float max =  0f;
@@ -216,7 +216,7 @@ public class AdministratorTaskListService implements AbstractListService<Adminis
 		return AdministratorTaskListService.round(max,2);
 	}
 
-	public Float getDeviationExecPeriod(final Request<Taskstatistics> request) {
+	public Float getDeviationExecPeriod(final Request<Dashboard> request) {
 		
 		final Float average = this.getAvarageExecPeriod(request);
 		
@@ -239,11 +239,11 @@ public class AdministratorTaskListService implements AbstractListService<Adminis
 	
 
 	@Override
-	public Collection<Taskstatistics> findMany(final Request<Taskstatistics> request) {
+	public Collection<Dashboard> findMany(final Request<Dashboard> request) {
 		assert request!=null;
-		final ArrayList<Taskstatistics> lsResult = new ArrayList<>();
+		final ArrayList<Dashboard> lsResult = new ArrayList<>();
 		
-		final Taskstatistics result = new Taskstatistics();
+		final Dashboard result = new Dashboard();
 		
 		result.setNumberOfPublicTasks(this.getNumberOfPublicTasks(request) + " " + this.messageSource.getMessage("default.dashboard.task", null, LocaleContextHolder.getLocale()));
 		result.setNumberOfPrivateTasks(this.getNumberOfPrivateTasks(request) + " " + this.messageSource.getMessage("default.dashboard.task", null, LocaleContextHolder.getLocale()));

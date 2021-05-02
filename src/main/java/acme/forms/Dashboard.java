@@ -9,7 +9,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Taskstatistics implements Serializable {
+public class Dashboard implements Serializable {
 
 	// Serialisation identifier -----------------------------------------------
 

@@ -33,7 +33,7 @@
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.tasks" action="/authenticated/task/list"/>
-			<acme:menu-suboption code="master.menu.administrator.taskstatistics" action="/administrator/taskstatistics/list"/>
+			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/list"/>
 			
 		</acme:menu-option>
 
