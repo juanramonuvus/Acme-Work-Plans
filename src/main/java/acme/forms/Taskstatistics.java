@@ -18,46 +18,46 @@ public class Taskstatistics implements Serializable {
 	// Attributes -------------------------------------------------------------
 	
 	@NotNull
-	Integer numberOfPublicTasks;
+	String numberOfPublicTasks;
 	
 	@NotNull
-	Integer numberOfPrivateTasks;
-	
-	
-	
-	@NotNull
-	Integer numberOfFinishedTasks;
-	
-	@NotNull
-	Integer numberOfNonFinishedTasks;
+	String numberOfPrivateTasks;
 	
 	
 	
 	@NotNull
-	Float avarageWorkloads;
+	String numberOfFinishedTasks;
 	
 	@NotNull
-	Float minimumWorkloads;
-	
-	@NotNull
-	Float maximumWorkloads;
-	
-	@NotNull
-	Float deviationWorkload;
+	String numberOfNonFinishedTasks;
 	
 	
 	
 	@NotNull
-	Float avarageExecPeriod;
+	String avarageWorkloads;
 	
 	@NotNull
-	Float minimumExecPeriod;
+	String minimumWorkloads;
 	
 	@NotNull
-	Float maximumExecPeriod;
+	String maximumWorkloads;
 	
 	@NotNull
-	Float deviationExecPeriod;
+	String deviationWorkload;
+	
+	
+	
+	@NotNull
+	String avarageExecPeriod;
+	
+	@NotNull
+	String minimumExecPeriod;
+	
+	@NotNull
+	String maximumExecPeriod;
+	
+	@NotNull
+	String deviationExecPeriod;
 	
 
 }

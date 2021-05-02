@@ -1,5 +1,6 @@
 package acme.features.administrator.taskstatics;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.ArrayList;
@@ -9,6 +10,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Service;
 
 import acme.entities.tasks.Task;
@@ -24,6 +27,9 @@ public class AdministratorTaskListService implements AbstractListService<Adminis
 	//Internal state -------------------------------------------------
 	@Autowired
 	protected AdministratorTaskRepository repository;
+	
+	@Autowired
+	MessageSource messageSource;
 	
 	
 	@Override
@@ -45,6 +51,28 @@ public class AdministratorTaskListService implements AbstractListService<Adminis
 		
 	}
 
+	//----------------------------------------------------------------------------------------------------------------------------
+	public Float datesTransformationForward(final Float date) {
+		final double dat = Double.parseDouble(date.toString());
+		final int horas = (int) dat;
+		final double minutos = (dat - horas) * 100 * 100 / 60;
+
+		return Float.parseFloat(horas + "." + (int) minutos);
+	}
+
+	public Float datesTransformationBackward(final Float date) {
+		final double dat = Double.parseDouble(date.toString());
+		final int horas = (int) dat;
+		final double minutos = (dat - horas) * 100 * 60 / 100;
+
+		return Float.parseFloat(horas + "." + (int) minutos);
+	}
+	
+	public static Float round(final float d, final int decimalPlace) {
+	    BigDecimal bd = new BigDecimal(Float.toString(d));
+	    bd = bd.setScale(decimalPlace, BigDecimal.ROUND_HALF_UP);       
+	    return bd.floatValue();
+	}
 	
 	//----------------------------------------------------------------------------------------------------------------------------
 	public Integer getNumberOfPublicTasks(final Request<Taskstatistics> request) {
@@ -88,7 +116,17 @@ public class AdministratorTaskListService implements AbstractListService<Adminis
 	public Float getAvarageWorkloads(final Request<Taskstatistics> request) {
 		assert request!=null;
 		
-		return this.repository.getAvarageWorkloads();
+		Float total = 0f;
+		
+		final List<Task> lsT = this.repository.findAllTasks().stream().collect(Collectors.toList());
+		for (int i = 0; i < lsT.size(); i++) {			
+			final Float horasMin = this.datesTransformationForward(lsT.get(i).getWorkload());
+			
+			total += horasMin;
+		}
+		
+		final Float avg = total / lsT.size();
+		return AdministratorTaskListService.round(this.datesTransformationBackward(avg),2);
 	}
 
 	public Float getMinimumWorkloads(final Request<Taskstatistics> request) {
@@ -105,9 +143,27 @@ public class AdministratorTaskListService implements AbstractListService<Adminis
 
 	public Float getDeviationWorkloads(final Request<Taskstatistics> request) {
 		assert request!=null;
+		final Float average = this.getAvarageWorkloads(request);
 		
-		return this.repository.getDeviationWorkloads();
+		Float res =  0f;
+		
+		final List<Task> lsT = this.repository.findAllTasks().stream().collect(Collectors.toList());
+		for (int i = 0; i < lsT.size(); i++) {			
+			final Float diff = this.datesTransformationForward(lsT.get(i).getWorkload());
+			
+			final Float individualDeviation = Math.abs(diff-average)*Math.abs(diff-average);
+			res+=individualDeviation;
+		}
+		res = res/lsT.size();
+		final double sqrt = Math.sqrt(Double.parseDouble(res.toString()));
+		final Float final1 = Float.parseFloat(sqrt + "");
+		final Float fin = this.datesTransformationBackward(final1);
+		return AdministratorTaskListService.round(fin,2);
 	}
+	
+		
+	
+	
 
 	
 	//----------------------------------------------------------------------------------------------------------------------------
@@ -118,13 +174,14 @@ public class AdministratorTaskListService implements AbstractListService<Adminis
 		
 		final List<Task> lsT = this.repository.findAllTasks().stream().collect(Collectors.toList());
 		for (int i = 0; i < lsT.size(); i++) {
-			final Float diff = lsT.get(i).getPeriod();
-			total += diff;
+			final Float horasMin = this.datesTransformationForward(lsT.get(i).getPeriod());
+			
+			total += horasMin;
 		}
 		
 
-		final Float media = total/lsT.size();
-		return media;
+		final Float avg = total/lsT.size();
+		return AdministratorTaskListService.round(this.datesTransformationBackward(avg),2);
 	}
 
 	public Float getMinimumExecPeriod(final Request<Taskstatistics> request) {
@@ -140,7 +197,7 @@ public class AdministratorTaskListService implements AbstractListService<Adminis
 			}
 		}
 		
-		return min;
+		return AdministratorTaskListService.round(min,2);
 	}
 
 	public Float getMaximumExecPeriod(final Request<Taskstatistics> request) {
@@ -156,24 +213,27 @@ public class AdministratorTaskListService implements AbstractListService<Adminis
 			}
 		}
 		
-		return max;
+		return AdministratorTaskListService.round(max,2);
 	}
 
 	public Float getDeviationExecPeriod(final Request<Taskstatistics> request) {
 		
-		final Double num =  this.getAvarageExecPeriod(request)/0.0000166667;
-		final Long average= num.longValue();
+		final Float average = this.getAvarageExecPeriod(request);
 		
 		Float res =  0f;
 
 		final List<Task> lsT = this.repository.findAllTasks().stream().collect(Collectors.toList());
 		for (int i = 0; i < lsT.size(); i++) {
-			final Float diff = lsT.get(i).getPeriod();
+			final Float diff = this.datesTransformationForward(lsT.get(i).getPeriod());
+			
 			final Float individualDeviation = Math.abs(diff-average)*Math.abs(diff-average);
 			res+=individualDeviation;
 		}
 		res = res/lsT.size();
-		return (float) (res.floatValue()*0.0000166667);
+		final double sqrt = Math.sqrt(Double.parseDouble(res.toString()));
+		final Float final1 = Float.parseFloat(sqrt + "");
+		final Float fin = this.datesTransformationBackward(final1);
+		return AdministratorTaskListService.round(fin,2);
 	}
 
 	
@@ -185,21 +245,21 @@ public class AdministratorTaskListService implements AbstractListService<Adminis
 		
 		final Taskstatistics result = new Taskstatistics();
 		
-		result.setNumberOfPublicTasks(this.getNumberOfPublicTasks(request));
-		result.setNumberOfPrivateTasks(this.getNumberOfPrivateTasks(request));
+		result.setNumberOfPublicTasks(this.getNumberOfPublicTasks(request) + " " + this.messageSource.getMessage("default.dashboard.task", null, LocaleContextHolder.getLocale()));
+		result.setNumberOfPrivateTasks(this.getNumberOfPrivateTasks(request) + " " + this.messageSource.getMessage("default.dashboard.task", null, LocaleContextHolder.getLocale()));
 		
-		result.setNumberOfNonFinishedTasks(this.getNumberOfNonFinishedTasks(request));
-		result.setNumberOfFinishedTasks(this.getNumberOfFinishedTasks(request));
+		result.setNumberOfNonFinishedTasks(this.getNumberOfNonFinishedTasks(request) + " " + this.messageSource.getMessage("default.dashboard.task", null, LocaleContextHolder.getLocale()));
+		result.setNumberOfFinishedTasks(this.getNumberOfFinishedTasks(request) + " " + this.messageSource.getMessage("default.dashboard.task", null, LocaleContextHolder.getLocale()));
 		
-		result.setMinimumWorkloads(this.getMinimumWorkloads(request));
-		result.setMaximumWorkloads(this.getMaximumWorkloads(request));
-		result.setAvarageWorkloads(this.getAvarageWorkloads(request));
-		result.setDeviationWorkload(this.getDeviationWorkloads(request));
+		result.setMinimumWorkloads(this.getMinimumWorkloads(request) + " " + this.messageSource.getMessage("default.dashboard.workloadPeriod", null, LocaleContextHolder.getLocale()));
+		result.setMaximumWorkloads(this.getMaximumWorkloads(request) + " " + this.messageSource.getMessage("default.dashboard.workloadPeriod", null, LocaleContextHolder.getLocale()));
+		result.setAvarageWorkloads(this.getAvarageWorkloads(request) + " " + this.messageSource.getMessage("default.dashboard.workloadPeriod", null, LocaleContextHolder.getLocale()));
+		result.setDeviationWorkload(this.getDeviationWorkloads(request) + " " + this.messageSource.getMessage("default.dashboard.workloadPeriod", null, LocaleContextHolder.getLocale()));
 		
-		result.setMinimumExecPeriod(this.getMinimumExecPeriod(request));
-		result.setMaximumExecPeriod(this.getMaximumExecPeriod(request));
-		result.setAvarageExecPeriod(this.getAvarageExecPeriod(request));
-		result.setDeviationExecPeriod(this.getDeviationExecPeriod(request));
+		result.setMinimumExecPeriod(this.getMinimumExecPeriod(request) + " " + this.messageSource.getMessage("default.dashboard.workloadPeriod", null, LocaleContextHolder.getLocale()));
+		result.setMaximumExecPeriod(this.getMaximumExecPeriod(request) + " " + this.messageSource.getMessage("default.dashboard.workloadPeriod", null, LocaleContextHolder.getLocale()));
+		result.setAvarageExecPeriod(this.getAvarageExecPeriod(request) + " " + this.messageSource.getMessage("default.dashboard.workloadPeriod", null, LocaleContextHolder.getLocale()));
+		result.setDeviationExecPeriod(this.getDeviationExecPeriod(request) + " " + this.messageSource.getMessage("default.dashboard.workloadPeriod", null, LocaleContextHolder.getLocale()));
 		
 		lsResult.add(result);
 		return lsResult;

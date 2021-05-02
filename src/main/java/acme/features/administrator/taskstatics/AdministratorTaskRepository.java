@@ -26,20 +26,23 @@ public interface AdministratorTaskRepository extends AbstractRepository{
 	Integer getNumberOfNonFinishedTasks(Date fechaActual);
 	
 	//----------------------------------------------------------------------------------------------------------------------------
-	@Query("SELECT AVG(t.workload) FROM Task t")
-	Float getAvarageWorkloads();
-	
 	@Query("SELECT MIN(t.workload) FROM Task t")
 	Float getMinimumWorkloads();
 	
 	@Query("SELECT MAX(t.workload) FROM Task t")
 	Float getMaximumWorkloads();
 	
-	@Query("SELECT STDDEV(t.workload) FROM Task t")
-	Float getDeviationWorkloads();
+
 	
 	//----------------------------------------------------------------------------------------------------------------------------
 	/*
+	@Query("SELECT AVG(t.workload) FROM Task t")
+	Float getAvarageWorkloads();
+	
+	@Query("SELECT STDDEV(t.workload) FROM Task t")
+	Float getDeviationWorkloads();
+	
+	
 	@Query("select avg((day(t.executionEnd)*24*60 + hour(t.executionEnd)*60 + minute(t.executionEnd))-(day(t.executionStart)*24*60 + hour(t.executionStart)*60 + minute(t.executionEnd))) from Task t")
 	Float getAvarageExecPeriod();
 	
