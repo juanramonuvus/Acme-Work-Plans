@@ -14,6 +14,6 @@ public interface AuthenticatedTaskRepository extends AbstractRepository{
 	@Query("select t from Task t where t.id = ?1")
 	Task findOneTaskById(int id);
 	
-	@Query("select t from Task t where t.executionEnd<current_timestamp")
+	@Query("select t from Task t where t.executionEnd<current_timestamp and t.isPublic=1")
 	Collection<Task> findMany();
 }

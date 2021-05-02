@@ -46,3 +46,5 @@ acme.validators.validdates = Start date must be earlier than end date
 acme.validators.validworkload = Invalid workload
 acme.validators.validdatesplan = Tasks's dates must fit inside plan's execution start and end
 acme.validators.validtasksinplan = Only public tasks can be associated to a public plan
+
+acme.validators.spamtext = Text considerated spam
