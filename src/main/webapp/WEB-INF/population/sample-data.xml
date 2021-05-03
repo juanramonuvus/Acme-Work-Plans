@@ -222,6 +222,60 @@
 		<property name="manager" ref="manager02"/>
 	</bean>
 
+	<bean id="task14" class="acme.entities.tasks.Task">
+		<property name="title" value="Seguridad"/>
+		<property name="executionStart" value="2021/05/01 19:39"/>
+		<property name="executionEnd" value="2021/05/05 19:39"/>
+		<property name="workload" value="15"/>
+		<property name="description" value="Comprobar la seguridad del apartado tasks"/>
+		<property name="isPublic" value="true"/>
+		<property name="link" value="https://github.com/task1"/>
+		<property name="manager" ref="manager02"/>
+	</bean>
+	
+	<bean id="task15" class="acme.entities.tasks.Task">
+		<property name="title" value="Entidad Plan"/>
+		<property name="executionStart" value="2021/05/01 19:39"/>
+		<property name="executionEnd" value="2021/07/01 19:39"/>
+		<property name="workload" value="30"/>
+		<property name="description" value="Crear la entidad Plan"/>
+		<property name="isPublic" value="true"/>
+		<property name="link" value="https://github.com/task1"/>
+		<property name="manager" ref="manager02"/>
+	</bean>
+	
+	<bean id="task16" class="acme.entities.tasks.Task">
+		<property name="title" value="Vistas de la entidad Plan"/>
+		<property name="executionStart" value="2021/05/01 19:39"/>
+		<property name="executionEnd" value="2021/07/01 19:39"/>
+		<property name="workload" value="30"/>
+		<property name="description" value="Crear la vistas referidas a la entidad Plan"/>
+		<property name="isPublic" value="true"/>
+		<property name="link" value="https://github.com/task1"/>
+		<property name="manager" ref="manager02"/>
+	</bean>
+	<bean id="task17" class="acme.entities.tasks.Task">
+		<property name="title" value="Release Plan"/>
+		<property name="executionStart" value="2021/05/01 19:39"/>
+		<property name="executionEnd" value="2021/07/22 19:39"/>
+		<property name="workload" value="4"/>
+		<property name="description" value="Crear una release con toda la funcionalidad de planes"/>
+		<property name="isPublic" value="true"/>
+		<property name="link" value="https://github.com/task1"/>
+		<property name="manager" ref="manager02"/>
+	</bean>
+	<bean id="task18" class="acme.entities.tasks.Task">
+		<property name="title" value="Diseñar nueva web"/>
+		<property name="executionStart" value="2021/05/01 12:00"/>
+		<property name="executionEnd" value="2021/06/22 20:00"/>
+		<property name="workload" value="50"/>
+		<property name="description" value="Montar nueva web para el colegio Poetas Andaluces de Montequinto"/>
+		<property name="isPublic" value="true"/>
+		<property name="link" value="https://github.com/task1"/>
+		<property name="manager" ref="manager02"/>
+	</bean>
+	
+	
 
 		<!-- Shouts -->
 	
@@ -274,7 +328,49 @@
 		<property name="text" value="Tarea Betis!"/>
 		<property name="info"><null/></property>	
 	</bean>
-
+	
+	<bean id="shout09" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/05/01 21:00"/>
+		<property name="author" value="María"/>
+		<property name="text" value="Que buen proyecto"/>
+		<property name="info"><null/></property>	
+	</bean>
+	
+	<bean id="shout10" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/05/02 10:00"/>
+		<property name="author" value="Victor Granero"/>
+		<property name="text" value="Habeis visto la nueva página CodeUs?"/>
+		<property name="info" value= "https://codeUs.es"/>	
+	</bean>	
+	
+	<bean id="shout11" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/05/02 12:00"/>
+		<property name="author" value="Francisco"/>
+		<property name="text" value="Este proyecto va sobre ruedas, enhorabuena!"/>
+		<property name="info"><null/></property>	
+	</bean>
+	
+	<bean id="shout12" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/05/03 13:00"/>
+		<property name="author" value="David"/>
+		<property name="text" value="Muchas gracias Paco"/>
+		<property name="info"><null/></property>	
+	</bean>	
+		
+	<bean id="shout13" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/05/03 13:10"/>
+		<property name="author" value="Jesús"/>
+		<property name="text" value="Mirad esta metodología, parece muy agile"/>
+		<property name="info" value= "https://www.scrum.org/"/>	
+	</bean>
+			
+	<bean id="shout14" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/05/03 13:14"/>
+		<property name="author" value="Juan Ramón"/>
+		<property name="text" value="Acabo de terminar todas mis tareas, por fin."/>
+		<property name="info"><null/></property>		
+	</bean>
+	
 			<!-- Blacklist words -->
 	
 	<bean id="blacklist01" class="acme.entities.spamConfig.BlackList">
