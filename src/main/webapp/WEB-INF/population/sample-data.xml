@@ -233,7 +233,7 @@
 	</bean>
 	<bean id="shout02" class="acme.entities.shouts.Shout">
 		<property name="moment" value="2021/03/30 17:32"/>
-		<property name="author" value="Juan"/>
+		<property name="author" value="Juana"/>
 		<property name="text" value= "Me gusta esta web"/>
 		<property name="info"><null/></property>	
 	</bean>
@@ -245,7 +245,7 @@
 	</bean>
 	<bean id="shout04" class="acme.entities.shouts.Shout">
 		<property name="moment" value="2021/04/01 12:00"/>
-		<property name="author" value="Pepe"/>
+		<property name="author" value="Pedro"/>
 		<property name="text" value="La web de la escuela no funciona."/>
 		<property name="info" value= "https://www.informatica.us.es/"/>	
 	</bean>
