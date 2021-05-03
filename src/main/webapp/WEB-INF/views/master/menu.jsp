@@ -20,10 +20,13 @@
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="https://www.informatica.us.es/"/>
-
 			<acme:menu-suboption code="master.menu.anonymous.shoutsList" action="/anonymous/shout/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.tasks" action="/anonymous/task/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.shout.create" action="/anonymous/shout/create"/>
+		</acme:menu-option>
+		
+		<acme:menu-option code="authenticated.menu.authenticated" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.administrator.tasks" action="/authenticated/task/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
@@ -34,32 +37,26 @@
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 			<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.administrator.tasks" action="/authenticated/task/list"/>
-			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/list"/>
-			
-		</acme:menu-option>
-		
-		<acme:menu-option code="master.panelAdmin.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.panelAdmin.administrator.blacklist" action="/administrator/spamconfig/list"/>
 			<acme:menu-suboption code="master.panelAdmin.administrator.blacklist.create" action="/administrator/spamconfig/create"/>
 			<acme:menu-suboption code="master.panel.administrator.threshold" action="/administrator/threshold/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/list"/>
 		</acme:menu-option>
+		
 		
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
 			<acme:menu-suboption code="master.menu.provider.favourite-link" action="https://www.informatica.us.es/"/>
-			<acme:menu-suboption code="master.menu.provider.tasks" action="/authenticated/task/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="https://www.informatica.us.es/"/>
-			<acme:menu-suboption code="master.menu.consumer.tasks" action="/authenticated/task/list"/>
 		</acme:menu-option>
 		
 
 		<acme:menu-option code="master.menu.manager" access="hasRole('Manager')">
 			<acme:menu-suboption code="master.menu.manager.favourite-link" action="https://www.informatica.us.es/"/>
-			<acme:menu-suboption code="master.menu.manager.tasks" action="/authenticated/task/list"/>
 			<acme:menu-suboption code="master.menu.manager.personal.tasks" action="/manager/task/list-mine"/>
 			<acme:menu-suboption code="master.menu.manager.personal.create" action="/manager/task/create"/>
 			
