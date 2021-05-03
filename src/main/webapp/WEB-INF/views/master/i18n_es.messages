@@ -30,8 +30,10 @@ master.menu.sign-out = Salir
 
 master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link = Enlace favorito
+master.menu.anonymous.plans = Planes
 master.menu.anonymous.shoutsList = Lista de anuncios
 master.menu.anonymous.tasks = Tareas
+master.menu.anonymous.shout.create = Crear anuncio
 
 
 # master.menu.administrator ###################################################
@@ -43,6 +45,10 @@ master.menu.administrator.populate-initial = Poblar BD (inicial)
 master.menu.administrator.populate-sample = Poblar BD (ejemplos)
 master.menu.administrator.shutdown = Parar el sistema
 master.menu.administrator.tasks = Tareas
+master.panelAdmin.administrator = Panel Spam
+master.panelAdmin.administrator.blacklist = Lista negra
+master.panel.administrator.threshold = Configuración
+master.panelAdmin.administrator.blacklist.create = Añadir nueva palabra prohibida
 
 # master.menu.provider ########################################################
 
@@ -61,11 +67,21 @@ master.menu.manager.favourite-link = Enlace favorito
 master.menu.manager = Manager
 master.menu.manager.tasks = Tareas
 master.menu.manager.personal.tasks = Tareas personales
+master.menu.manager.personal.create = Crear Tarea
+
+# master.menu.manager ##########################################################
+master.menu.manager.favourite-link = Enlace favorito
+master.menu.manager = Manager
+master.menu.manager.tasks = Tareas
+master.menu.manager.personal.tasks = Tareas personales
+master.menu.manager.plans = Planes
 
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
 master.menu.user-account.general-data = Datos generales
+master.menu.user-account.become-manager = Hazte manager
+master.menu.user-account.manager = Datos de manager
 master.menu.user-account.provider = Datos de proveedor
 master.menu.user-account.become-provider = Hazte proveedor
 master.menu.user-account.consumer = Datos de consumidor

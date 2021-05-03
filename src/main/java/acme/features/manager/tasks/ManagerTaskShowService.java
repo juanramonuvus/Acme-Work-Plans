@@ -3,10 +3,10 @@ package acme.features.manager.tasks;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.roles.Manager;
 import acme.entities.tasks.Task;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Manager;
 import acme.framework.services.AbstractShowService;
 
 @Service
@@ -19,7 +19,10 @@ public class ManagerTaskShowService implements AbstractShowService<Manager, Task
 	@Override
 	public boolean authorise(final Request<Task> request) {
 		assert request != null;
-		return true;
+		final Task task = this.repository.findOneTaskById(request.getModel().getInteger("id"));
+		
+		return task.getManager().getId() == request.getPrincipal().getActiveRoleId();
+
 	}
 
 	@Override
