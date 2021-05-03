@@ -46,3 +46,5 @@ acme.validators.validdates = La fecha fin debe ser posterior a la fecha de inici
 acme.validators.validworkload = Carga de trabajo inválida
 acme.validators.validdatesplan = Las fechas de las tareas deben ajustarse a las fechas de inicio y fin del plan
 acme.validators.validtasksinplan = Solo se pueden asociar tareas públicas a un plan público
+
+acme.validators.spamtext = Texto considerado spam

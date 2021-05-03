@@ -20,6 +20,7 @@
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="https://www.informatica.us.es/"/>
+
 			<acme:menu-suboption code="master.menu.anonymous.shoutsList" action="/anonymous/shout/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.tasks" action="/anonymous/task/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.shout.create" action="/anonymous/shout/create"/>
@@ -34,6 +35,8 @@
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.tasks" action="/authenticated/task/list"/>
+			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/list"/>
+			
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.panelAdmin.administrator" access="hasRole('Administrator')">
