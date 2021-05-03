@@ -255,7 +255,7 @@ bg=yellow</panel_attributes>
       <x>612</x>
       <y>0</y>
       <w>306</w>
-      <h>117</h>
+      <h>126</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 UserAccount
@@ -275,15 +275,15 @@ UserAccount
     <id>Relation</id>
     <coordinates>
       <x>765</x>
-      <y>108</y>
+      <y>117</y>
       <w>63</w>
-      <h>126</h>
+      <h>117</h>
     </coordinates>
     <panel_attributes>lt=&lt;-&gt;
 m1=1
 m2=*
 has v</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -437,5 +437,31 @@ bg=yellow</panel_attributes>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;60.0;10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1089</x>
+      <y>162</y>
+      <w>333</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Form&gt;&gt;
+Dashboard
+--
++ numberOfPublicTasks: String
++ numberOfPrivateTasks: String
++ numberOfFinishedTasks: String
++ numberOfNonFinishedTasks: String
++ averageWorkloads: String
++ minimumWorkloads: String
++ maximumWorkloads: String
++ deviationWorkload: String
++ averageExecPeriod: String
++ minimumExecPeriod: String
++ maximumExecPeriod: String
++ deviationExecPeriod: String
+</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
