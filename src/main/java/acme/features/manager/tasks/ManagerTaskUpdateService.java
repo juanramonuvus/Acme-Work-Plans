@@ -59,39 +59,65 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		return result;
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void validate(final Request<Task> request, final Task entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		
+		/// tiene errores workload?
+		boolean resworkload = !errors.hasErrors("workload");
+		
+		if(resworkload) {
+			// actualizamos si tiene errores workload
+			resworkload = entity.getWorkload() >= 0;
+			errors.state(request, resworkload, "workload", "acme.validators.validworkload");
+		}
+		
+		if(resworkload) {
+			final float workLoadDecimals = entity.getWorkload() - entity.getWorkload().intValue();
+			resworkload = workLoadDecimals < 0.595;
+			errors.state(request, resworkload, "workload", "acme.validators.validworkloaddecimals");
+		}
+		
+		if(resworkload) {
+			final String strWorkload = String.valueOf(entity.getWorkload());
+			if (strWorkload.contains(".")) {		
+				resworkload = strWorkload.split("\\.")[1].length()<=2;
+				errors.state(request, strWorkload.split("\\.")[1].length()<=2, "workload", "acme.validators.validworkloadtoomuchdecimals");
+			}
+			
+		}
+		
+		
+		
 		if (!errors.hasErrors("executionStart") && !errors.hasErrors("executionEnd")) {
+			
+			
 			errors.state(request, entity.getExecutionStart().before(entity.getExecutionEnd()), "executionEnd", "acme.validators.validdates");
 			
-			if(!errors.hasErrors("workload")) {
+			// si no dio el error de los decimales evaluamos con el periodo
+			if(resworkload) {
 				final boolean res =  entity.getPeriod() >= entity.getWorkload();
-				errors.state(request, res, "workload", "acme.validators.validworkload");
+				errors.state(request, res, "workload", "acme.validators.validworkloadperiod");
 			}
 		}
 			
-		if(!errors.hasErrors("workload")) {
-			final float workLoadDecimals = entity.getWorkload() - entity.getWorkload().intValue();
-			final boolean res = entity.getWorkload() >= 0 && workLoadDecimals <= 0.59;
-			errors.state(request, res, "workload", "acme.validators.validworkload");
-		}
+		
 		
 		///spam validate
+	
 		
-		if (!errors.hasErrors("description")) {
+		if (!errors.hasErrors("description")) 
 				errors.state(request, this.spamValidatorService.spamValidate(entity.getDescription()), "description", "acme.validators.spamtext");
-			}
 		
-		if (!errors.hasErrors("title")) {
+		if (!errors.hasErrors("title"))
 			errors.state(request, this.spamValidatorService.spamValidate(entity.getTitle()), "title", "acme.validators.spamtext");
-		}
 		
-		if (!errors.hasErrors("link")) {
+		if (!errors.hasErrors("link"))
 			errors.state(request, this.spamValidatorService.spamValidate(entity.getLink()), "link", "acme.validators.spamtext");
-		}
+		
 	}
 
 	@Override
