@@ -490,7 +490,7 @@ BlackList
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 SpamConfig
 --
-+ 	Threshold: Float {NotNull, min = 0, max = 100}
++ 	threshold: Float {NotNull, min = 0, max = 100}
 
 
 
