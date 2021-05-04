@@ -12,5 +12,5 @@ This is the Acme-Planner project, providing shouts and tasks service for the use
 link: https://github.com/alebarled/Acme-Planner
 Clevercloud:
  - username: alebarled@alum.us.es
- - password: Acmeplanners22
+ - password: ********* (Password included in Item 2 for obvious security reasons)
 link-release: https://github.com/alebarled/Acme-Planner/releases/tag/1.0.0
