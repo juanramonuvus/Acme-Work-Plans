@@ -73,7 +73,7 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 			final float workLoadDecimals = entity.getWorkload() - entity.getWorkload().intValue();
 			
 			// actualizamos si tiene errores workload
-			resworkload = entity.getWorkload() >= 0 && workLoadDecimals <= 0.60;
+			resworkload = entity.getWorkload() >= 0 && workLoadDecimals < 0.60;
 			errors.state(request, resworkload, "workload", "acme.validators.validworkloaddecimals");
 		}
 		
