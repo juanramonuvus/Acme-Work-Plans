@@ -34,13 +34,12 @@ public class SpamValidatorService {
 		final List<String> blackList = this.repository.findWordList().stream().map(BlackList::getWord).collect(Collectors.toList());
 		for(final String blackword: blackList) {
 	
-			final int literalSize = this.wordCount(blackword);
 
 			final Pattern pattern = Pattern.compile(blackword,Pattern.CASE_INSENSITIVE);
 			final Matcher matcher = pattern.matcher(message);
 			
 			while(matcher.find())
-				blackMatches+=literalSize;
+				blackMatches++;
 		}
 		
 		final Float spamPercentage = ((float) blackMatches) / ((float)wordsNumber)*100;
