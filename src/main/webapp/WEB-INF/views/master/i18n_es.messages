@@ -35,6 +35,9 @@ master.menu.anonymous.shoutsList = Lista de anuncios
 master.menu.anonymous.tasks = Tareas
 master.menu.anonymous.shout.create = Crear anuncio
 
+# master.menu.authenticated #######################################################
+
+authenticated.menu.authenticated = Autenticado
 
 # master.menu.administrator ###################################################
 
@@ -47,7 +50,7 @@ master.menu.administrator.shutdown = Parar el sistema
 master.menu.administrator.tasks = Tareas
 master.panelAdmin.administrator = Panel Spam
 master.panelAdmin.administrator.blacklist = Lista negra
-master.panel.administrator.threshold = Configuración
+master.panel.administrator.threshold = Configuración spam
 master.panelAdmin.administrator.blacklist.create = Añadir nueva palabra prohibida
 
 # master.menu.provider ########################################################

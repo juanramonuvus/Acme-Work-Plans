@@ -35,6 +35,9 @@ master.menu.anonymous.shoutsList = Shouts List
 master.menu.anonymous.tasks = Tasks
 master.menu.anonymous.shout.create = Create a shout
 
+# master.menu.authenticated #######################################################
+
+authenticated.menu.authenticated = Authenticated
 
 # master.menu.administrator ###################################################
 
@@ -47,7 +50,7 @@ master.menu.administrator.shutdown = Shut down
 master.menu.administrator.tasks = Tasks
 master.panelAdmin.administrator = Spam panel
 master.panelAdmin.administrator.blacklist = BlackList
-master.panel.administrator.threshold = Settings
+master.panel.administrator.threshold = Spam settings
 master.panelAdmin.administrator.blacklist.create = Add new prohibited word
 
 # master.menu.provider ########################################################
