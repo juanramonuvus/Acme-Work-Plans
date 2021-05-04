@@ -80,6 +80,9 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 			
 			if (!errors.hasErrors("author")) 
 				errors.state(request, this.spamValidatorService.spamValidate(entity.getAuthor()), "author", "acme.validators.spamtext");
+			
+			if (!errors.hasErrors("info")) 
+				errors.state(request, this.spamValidatorService.spamValidate(entity.getInfo()), "info", "acme.validators.spamtext");
 		}
 
 		@Override

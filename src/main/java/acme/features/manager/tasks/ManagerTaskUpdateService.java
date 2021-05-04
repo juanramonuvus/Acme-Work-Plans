@@ -1,5 +1,7 @@
 package acme.features.manager.tasks;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -64,34 +66,54 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		if (!errors.hasErrors("executionStart") && !errors.hasErrors("executionEnd")) {
-			errors.state(request, entity.getExecutionStart().before(entity.getExecutionEnd()), "executionEnd", "acme.validators.validdates");
-			
-			if(!errors.hasErrors("workload")) {
-				final boolean res =  entity.getPeriod() >= entity.getWorkload();
-				errors.state(request, res, "workload", "acme.validators.validworkload");
-			}
-		}
-			
+		
+		/// tiene errores workload?
+		boolean resworkload = !errors.hasErrors("workload");
+		
 		if(!errors.hasErrors("workload")) {
 			final float workLoadDecimals = entity.getWorkload() - entity.getWorkload().intValue();
-			final boolean res = entity.getWorkload() >= 0 && workLoadDecimals <= 0.59;
-			errors.state(request, res, "workload", "acme.validators.validworkload");
+			
+			// actualizamos si tiene errores workload
+			resworkload = entity.getWorkload() >= 0 && workLoadDecimals <= 0.59;
+			errors.state(request, resworkload, "workload", "acme.validators.validworkloaddecimals");
 		}
+		
+		if(!errors.hasErrors("executionStart")) {
+			final boolean futureStart = entity.getExecutionStart().after(new Date());
+			errors.state(request, futureStart, "executionStart", "javax.validation.constraints.Future.message");
+		}
+		
+		if(!errors.hasErrors("executionEnd")) {
+			final boolean futureEnd = entity.getExecutionEnd().after(new Date());
+			errors.state(request, futureEnd, "executionEnd", "javax.validation.constraints.Future.message");
+		}
+		
+		
+		if (!errors.hasErrors("executionStart") && !errors.hasErrors("executionEnd")) {
+			
+			errors.state(request, entity.getExecutionStart().before(entity.getExecutionEnd()), "executionEnd", "acme.validators.validdates");
+			
+			// si no dio el error de los decimales evaluamos con el periodo
+			if(resworkload) {
+				final boolean res =  entity.getPeriod() >= entity.getWorkload();
+				errors.state(request, res, "workload", "acme.validators.validworkloadperiod");
+			}
+		}
+			
+		
 		
 		///spam validate
+	
 		
-		if (!errors.hasErrors("description")) {
+		if (!errors.hasErrors("description")) 
 				errors.state(request, this.spamValidatorService.spamValidate(entity.getDescription()), "description", "acme.validators.spamtext");
-			}
 		
-		if (!errors.hasErrors("title")) {
+		if (!errors.hasErrors("title"))
 			errors.state(request, this.spamValidatorService.spamValidate(entity.getTitle()), "title", "acme.validators.spamtext");
-		}
 		
-		if (!errors.hasErrors("link")) {
+		if (!errors.hasErrors("link"))
 			errors.state(request, this.spamValidatorService.spamValidate(entity.getLink()), "link", "acme.validators.spamtext");
-		}
+		
 	}
 
 	@Override
