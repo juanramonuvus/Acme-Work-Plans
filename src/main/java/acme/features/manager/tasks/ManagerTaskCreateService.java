@@ -77,7 +77,7 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		
 		if(resworkload) {
 			final float workLoadDecimals = entity.getWorkload() - entity.getWorkload().intValue();
-			resworkload = workLoadDecimals < 0.60;
+			resworkload = workLoadDecimals < 0.595;
 			errors.state(request, resworkload, "workload", "acme.validators.validworkloaddecimals");
 		}
 		
