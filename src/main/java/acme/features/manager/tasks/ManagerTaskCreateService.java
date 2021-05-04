@@ -77,6 +77,15 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 			errors.state(request, resworkload, "workload", "acme.validators.validworkloaddecimals");
 		}
 		
+		if(resworkload) {
+			final String strWorkload = String.valueOf(entity.getWorkload());
+			if (strWorkload.contains(".")) {		
+				resworkload = strWorkload.split("\\.")[1].length()<=2;
+				errors.state(request, strWorkload.split("\\.")[1].length()<=2, "workload", "acme.validators.validworkloadtoomuchdecimals");
+			}
+			
+		}
+		
 		if(!errors.hasErrors("executionStart")) {
 			final boolean futureStart = entity.getExecutionStart().after(new Date());
 			errors.state(request, futureStart, "executionStart", "javax.validation.constraints.Future.message");

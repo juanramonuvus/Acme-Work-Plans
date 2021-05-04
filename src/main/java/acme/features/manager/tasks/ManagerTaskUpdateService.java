@@ -1,7 +1,5 @@
 package acme.features.manager.tasks;
 
-import java.util.Date;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -61,6 +59,7 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		return result;
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void validate(final Request<Task> request, final Task entity, final Errors errors) {
 		assert request != null;
@@ -78,18 +77,19 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 			errors.state(request, resworkload, "workload", "acme.validators.validworkloaddecimals");
 		}
 		
-		if(!errors.hasErrors("executionStart")) {
-			final boolean futureStart = entity.getExecutionStart().after(new Date());
-			errors.state(request, futureStart, "executionStart", "javax.validation.constraints.Future.message");
+		if(resworkload) {
+			final String strWorkload = String.valueOf(entity.getWorkload());
+			if (strWorkload.contains(".")) {		
+				resworkload = strWorkload.split("\\.")[1].length()<=2;
+				errors.state(request, strWorkload.split("\\.")[1].length()<=2, "workload", "acme.validators.validworkloadtoomuchdecimals");
+			}
+			
 		}
 		
-		if(!errors.hasErrors("executionEnd")) {
-			final boolean futureEnd = entity.getExecutionEnd().after(new Date());
-			errors.state(request, futureEnd, "executionEnd", "javax.validation.constraints.Future.message");
-		}
 		
 		
 		if (!errors.hasErrors("executionStart") && !errors.hasErrors("executionEnd")) {
+			
 			
 			errors.state(request, entity.getExecutionStart().before(entity.getExecutionEnd()), "executionEnd", "acme.validators.validdates");
 			

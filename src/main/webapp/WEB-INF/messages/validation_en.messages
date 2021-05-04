@@ -49,4 +49,6 @@ acme.validators.validworkloaddecimals = Workload decimals must be between 0 and 
 acme.validators.validdatesplan = Tasks's dates must fit inside plan's execution start and end
 acme.validators.validtasksinplan = Only public tasks can be associated to a public plan
 
+acme.validators.validworkloadtoomuchdecimals = Workload must contain 2 decimal figures or less
+
 acme.validators.spamtext = Text considerated spam

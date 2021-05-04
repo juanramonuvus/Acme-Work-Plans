@@ -49,4 +49,7 @@ acme.validators.validworkloaddecimals = El valor decimal del workload debe estar
 acme.validators.validdatesplan = Las fechas de las tareas deben ajustarse a las fechas de inicio y fin del plan
 acme.validators.validtasksinplan = Solo se pueden asociar tareas públicas a un plan público
 
+acme.validators.validworkloadtoomuchdecimals = La carga de trabajo debe contener dos cifras decimales o menos
+
+
 acme.validators.spamtext = Texto considerado spam
