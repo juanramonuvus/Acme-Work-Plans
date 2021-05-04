@@ -3,13 +3,13 @@ package acme.features.manager.tasks;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.components.spamValidator.SpamValidatorService;
 import acme.entities.roles.Manager;
 import acme.entities.tasks.Task;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.services.AbstractCreateService;
+import acme.validators.spamValidator.SpamValidatorService;
 
 @Service
 public class ManagerTaskCreateService implements AbstractCreateService<Manager, Task> {
