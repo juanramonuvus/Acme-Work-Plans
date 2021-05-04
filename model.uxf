@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  
   <zoom_level>9</zoom_level>
   <element>
     <id>UMLClass</id>
@@ -421,11 +420,7 @@ bg=#FF5555</panel_attributes>
     </coordinates>
     <panel_attributes>&lt;&lt;Role&gt;&gt;
 Manager
---
-+ company: String {NotBlank}
-+ sector: String {NotBlank}
-
-bg=yellow</panel_attributes>
+--</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -464,5 +459,71 @@ Dashboard
 + deviationExecPeriod: String
 </panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>207</x>
+      <y>549</y>
+      <w>171</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+BlackList
+--
++ word: String {NotBlank}
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>207</x>
+      <y>639</y>
+      <w>297</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+SpamConfig
+--
++ 	threshold: Float {NotNull, min = 0, max = 100}
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1017</x>
+      <y>711</y>
+      <w>234</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>RN-03
+
+In the workload, the entire part must 
+refers to the number of hours and the
+decimal part, to the minutes
+bg=#FF5555</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>927</x>
+      <y>693</y>
+      <w>108</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=red</panel_attributes>
+    <additional_attributes>100.0;50.0;10.0;50.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
