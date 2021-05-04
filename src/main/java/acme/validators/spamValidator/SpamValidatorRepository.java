@@ -1,4 +1,4 @@
-package acme.components.spamValidator;
+package acme.validators.spamValidator;
 
 import java.util.List;
 
