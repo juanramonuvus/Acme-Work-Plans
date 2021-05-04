@@ -1,5 +1,6 @@
 package acme.features.manager.tasks;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,6 +59,7 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		return t;
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void validate(final Request<Task> request, final Task entity, final Errors errors) {
 		assert request != null;
@@ -88,8 +90,13 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		
 		if (!errors.hasErrors("executionStart") && !errors.hasErrors("executionEnd")) {
 			
-			final boolean futureStart = entity.getExecutionStart().after(new Date());
-			final boolean futureEnd = entity.getExecutionEnd().after(new Date());
+			final Date now = new Date();
+			
+			now.setHours(LocalDateTime.now().getHour());
+			now.setMinutes(LocalDateTime.now().getMinute());
+			
+			final boolean futureStart = entity.getExecutionStart().after(now);
+			final boolean futureEnd = entity.getExecutionEnd().after(now);
 			
 			if(futureStart && futureEnd)
 				errors.state(request, entity.getExecutionStart().before(entity.getExecutionEnd()), "executionEnd", "acme.validators.validdates");
