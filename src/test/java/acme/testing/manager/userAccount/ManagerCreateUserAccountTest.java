@@ -13,7 +13,7 @@ public class ManagerCreateUserAccountTest extends AcmePlannerTest{
 	 */
 	@Test
 	@Order(10)
-	public void managerAccountCreateTest() {
+	public void managerAccountCreatePositive() {
 		
 		/// sign-up
 		super.navigateHome();
@@ -34,6 +34,19 @@ public class ManagerCreateUserAccountTest extends AcmePlannerTest{
 		super.clickOnMenu("Account", "Become a manager");
 		super.clickOnSubmitButton("Register");
 		super.checkLinkExists("Personal Tasks");
+		
+	}
+	
+	/*
+	 * This test tries to become a manager when it hasn't loged with any credentials.
+	 * (a bit silly but checks it can't be done)
+	 */
+	@Test
+	@Order(20)
+	public void managerAccountCreateNegative() {
+		
+		super.navigate("anonymous/task/show", "id=20");
+		super.checkErrorsExist();
 		
 	}
 	
