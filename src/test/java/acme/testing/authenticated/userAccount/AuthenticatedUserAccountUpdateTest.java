@@ -52,7 +52,7 @@ public class AuthenticatedUserAccountUpdateTest extends AcmePlannerTest{
 	 */
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/manager/task/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/authenticated/userAccount/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
 	public void updateNegative(final int recordIndex, final String password,
 		final String confirmation, final String name,
