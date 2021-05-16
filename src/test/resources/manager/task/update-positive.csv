@@ -1,0 +1,4 @@
+index,title,executionStart,executionEnd,workload,description,link,isPublic
+0,Create TaskValidators2,2017/08/13 19:39,2018/10/13 19:39,100.2,Create validators of task entity,https://github.com/task25,false
+1,Create TaskService2,2021/02/13 19:39,2021/05/14 19:39,50.5,Create service of task entity,https://github.com/task24,false
+2,Create TaskQueries2,2021/02/13 19:39,2021/04/14 19:39,30.2,Create changes of task entity,https://github.com/task62,false
