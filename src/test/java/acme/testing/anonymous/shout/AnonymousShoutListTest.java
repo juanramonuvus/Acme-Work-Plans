@@ -24,29 +24,40 @@ public class AnonymousShoutListTest extends AcmePlannerTest {
 	
 	// Test cases -------------------------------------------------------------
 	
+	/* 
+	 * This test navigates into a shout list, as an anonymous.
+	 * It also verificates that all the parameters of the shouts are correct.
+	 */
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/list.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)	
-	public void list(final int recordIndex, final String reference, final String moment, final String title, final String statement, final String skills, final String qualifications, final String status) {		
-		super.signIn("employer1", "employer1");
+	@Order(20)	
+	public void list(final int recordIndex, final String author, final String moment, final String text, final String info) {		
 		
-		super.clickOnMenu("Employer", "List my applications");		
+		super.clickOnMenu("Anonymous", "Shouts List");		
 		
-		super.checkColumnHasValue(recordIndex, 0, reference);
-		super.checkColumnHasValue(recordIndex, 1, status);
-		super.checkColumnHasValue(recordIndex, 2, title);
+		super.checkColumnHasValue(recordIndex, 0, moment);
+		super.checkColumnHasValue(recordIndex, 1, author);
+		super.checkColumnHasValue(recordIndex, 2, text);
+		super.checkColumnHasValue(recordIndex, 3, info);
 		
-		super.clickOnListingRecord(recordIndex);
-		
-		super.checkInputBoxHasValue("reference", reference);
-		super.checkInputBoxHasValue("moment", moment);		
-		super.checkInputBoxHasValue("statement", statement);
-		super.checkInputBoxHasValue("skills", skills);
-		super.checkInputBoxHasValue("qualifications", qualifications);
-		super.checkInputBoxHasValue("status", status);
-		
-		super.signOut();
 	}
+	
+	/* 
+	 * This test navigates into a shout list, as an anonymous.
+	 * It also verificates that all the parameters of the shouts are correct.
+	 */
+//	@Test
+//	@Order(10)	
+//	public void checkShoutsWithLessThanAMonthSinceWasCreated() {		
+//		
+//		super.clickOnMenu("Anonymous", "Shouts List");		
+//		
+//		final List<WebElement> allInputElements = this.driver.findElements(By.tagName("tr"));
+//		for(final WebElement inputElement : allInputElements) 
+//	    {
+//			System.out.println(inputElement.getText());
+//	    }
+//	}
 	
 	// Ancillary methods ------------------------------------------------------
 
