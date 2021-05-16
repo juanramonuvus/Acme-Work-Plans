@@ -10,12 +10,14 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.testing;
+package acme.testing.anonymous.userAccount;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.By;
+
+import acme.testing.AcmePlannerTest;
 
 public class SignUpTest extends AcmePlannerTest {
 
@@ -25,7 +27,7 @@ public class SignUpTest extends AcmePlannerTest {
 	 */
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/sign-up/positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/anonymous/userAccount/positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void positiveSingUp(final String username, final String password, final String name, final String surname, final String email){
 		super.signUp(username, password, name, surname, email, null);
@@ -39,10 +41,9 @@ public class SignUpTest extends AcmePlannerTest {
 	 *  and entering erroneous data, so that the system warns us that there are errors in the data entered.
 	 */
 	@ParameterizedTest
-	@CsvFileSource(resources = "/sign-up/negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(11)
+	@CsvFileSource(resources = "/anonymous/userAccount/negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(20)
 	public void negativeSingUp(final String username, final String password, final String name, final String surname, final String email) {
-		super.navigateHome();
 		super.clickOnMenu("Sign up", null);	
 		super.fillInputBoxIn("username", username);
 		super.fillInputBoxIn("password", password);
