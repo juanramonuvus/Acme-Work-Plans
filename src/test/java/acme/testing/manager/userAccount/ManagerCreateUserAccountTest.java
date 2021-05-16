@@ -32,9 +32,12 @@ public class ManagerCreateUserAccountTest extends AcmePlannerTest{
 		
 		//become a manager
 		super.clickOnMenu("Account", "Become a manager");
+		
+		//can use this one instead, just for checking it in the same way as negative case
+		//super.navigate("authenticated/manager/create", "");
+		
 		super.clickOnSubmitButton("Register");
 		super.checkLinkExists("Personal Tasks");
-		
 	}
 	
 	/*
@@ -45,7 +48,7 @@ public class ManagerCreateUserAccountTest extends AcmePlannerTest{
 	@Order(20)
 	public void managerAccountCreateNegative() {
 		
-		super.navigate("anonymous/task/show", "id=20");
+		super.navigate("authenticated/manager/create", "");
 		super.checkErrorsExist();
 		
 	}
