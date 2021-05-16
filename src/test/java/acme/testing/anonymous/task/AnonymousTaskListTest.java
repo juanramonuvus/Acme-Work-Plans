@@ -17,7 +17,7 @@ public class AnonymousTaskListTest extends AcmePlannerTest{
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/task/list-all.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void showPositive(final int index, final String title,
+	public void listPositive(final int index, final String title,
 		final String executionStart, final String executionEnd,
 		final String workload, final String description, final String link) {		
 		
@@ -34,7 +34,7 @@ public class AnonymousTaskListTest extends AcmePlannerTest{
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/task/list-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
-	public void showNegative(final int index, final String title,
+	public void listNegative(final int index, final String title,
 		final String executionStart, final String executionEnd,
 		final String workload, final String description, final String link) {
 		
