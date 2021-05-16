@@ -1,6 +1,2 @@
-index,title,executionStart,executionEnd,workload,description,link;;;;;;;
-18,Create PlanController,2021/02/13 19:39,2021/06/14 14:39,20.59,Create controller of task entity,https://github.com/task1;;;;;;;
-;;;;;;;
-;;;;;;;
-;;;;;;;
-;;;;;;;
+index,title,executionStart,executionEnd,workload,description,link
+18,Create PlanController,2021/02/13 19:39,2021/06/14 14:39,20.5,Create controller of task entity,https://github.com/task1
