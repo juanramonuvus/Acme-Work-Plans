@@ -13,6 +13,10 @@ import acme.testing.AcmePlannerTest;
 public class AnonymousTaskListTest extends AcmePlannerTest{
 	
 	// Test cases -------------------------------------------------------------
+	/* 
+	 * This test signs in as an anonymous, navigates into the tasks list and tries reading some of them.
+	 * There shouldn't be any error.
+	*/
 	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/task/list-all.csv", encoding = "utf-8", numLinesToSkip = 1)
@@ -30,7 +34,11 @@ public class AnonymousTaskListTest extends AcmePlannerTest{
 		super.checkColumnHasValue(index, 4, description);
 		super.checkColumnHasValue(index, 5, link);
 	}
-
+	
+	/* 
+	 * This test signs in as an anonymous, navigates into the tasks list and tries reading all of them comparing them with a private task.
+	 * There shouldn't be any error, the task must not be in the list due to its visibility.
+	*/
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/task/list-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
