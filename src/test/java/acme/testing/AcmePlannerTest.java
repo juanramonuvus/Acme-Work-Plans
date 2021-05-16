@@ -26,11 +26,12 @@ public abstract class AcmePlannerTest extends AcmeTest {
 	public void beforeAll() {
 		super.beforeAll();
 
-		super.setBaseCamp("http", "localhost", "8080", "/Acme-Jobs", "/master/welcome", "?language=en&debug=true");
+		super.setBaseCamp("http", "localhost", "8080", "/Acme-Planner", "/master/welcome", "?language=en&debug=true");
 		super.setAutoPausing(false);
 		
 		this.navigateHome();
 		this.signIn("administrator", "administrator");
+		super.clickOnMenu("Administrator", "Populate DB (initial)");
 		super.clickOnMenu("Administrator", "Populate DB (samples)");
 		super.checkAlertExists(true);		
 		this.signOut();
