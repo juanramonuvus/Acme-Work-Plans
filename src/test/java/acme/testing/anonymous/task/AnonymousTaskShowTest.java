@@ -11,6 +11,10 @@ public class AnonymousTaskShowTest extends AcmePlannerTest{
 	
 	// Test cases -------------------------------------------------------------
 	
+	/* 
+	 * This test navigates into a public task, with not authorized credentials (public).
+	 * It also verificates that all the parameters of the task are correct.
+	 */
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/task/show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
@@ -30,6 +34,10 @@ public class AnonymousTaskShowTest extends AcmePlannerTest{
 		
 	}
 	
+	/*
+	 * This test navigates into a private task, with not authorized credentials (public).
+	 * An error must rise, telling the user that has no permission to show the task 20 info.
+	 */
 	@Test
 	@Order(20)
 	public void showNegative() {		
