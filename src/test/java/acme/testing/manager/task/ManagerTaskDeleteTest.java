@@ -17,7 +17,7 @@ public class ManagerTaskDeleteTest extends AcmePlannerTest{
 	 * and confirm that the task no longer exists in the list.
 	 */
 	@ParameterizedTest
-	@CsvFileSource(resources = "/manager/task/list-mine.csv", encoding = "utf-8", numLinesToSkip=1)
+	@CsvFileSource(resources = "/manager/task/delete.csv", encoding = "utf-8", numLinesToSkip=1)
 	@Order(10)
 	public void deletePositive(final String title, final String executionStart, final String executionEnd, final String workload, final String description, final String link, final String publica) {
 		
