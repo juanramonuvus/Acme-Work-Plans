@@ -38,22 +38,60 @@ public class SignUpTest extends AcmePlannerTest {
 	
 	/*
 	 * In this test, a new anonymous user is created, accessing the "Sing up" section,
-	 *  and entering erroneous data, so that the system warns us that there are errors in the data entered.
+	 *  and entering erroneous data:
+	 *  - User name too short or too long
+	 *	- Password too short or too long
+	 *	- Blank form field
+	 *	- Passwords do not match
+	 *	- Incorrect email
+	 *	- Form submitted blank
+	 *	- Do not check the box to accept the license
 	 */
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/userAccount/negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
-	public void negativeSingUp(final String username, final String password, final String name, final String surname, final String email) {
+	public void negativeSingUp(final Integer recordIndex, final String username, final String password, final String confirmation,
+		final String name, final String surname, 
+		final String email, final String accept) {
 		super.clickOnMenu("Sign up", null);	
 		super.fillInputBoxIn("username", username);
 		super.fillInputBoxIn("password", password);
-		super.fillInputBoxIn("confirmation", password);
+		super.fillInputBoxIn("confirmation", confirmation);
 		super.fillInputBoxIn("identity.name", name);
 		super.fillInputBoxIn("identity.surname", surname);
 		super.fillInputBoxIn("identity.email", email);
-		super.fillInputBoxIn("accept", "true");
+		if(accept.equals("true")) {
+			super.fillInputBoxIn("accept", "true");
+		}
 		super.clickOnSubmitButton("Sign up");
-		super.checkErrorsExist();
+		
+		switch (recordIndex) {
+		case 0:
+			super.checkErrorsExist("username");
+			break;
+		case 1:
+			super.checkErrorsExist("password");
+			break;
+		case 2:
+			super.checkErrorsExist("identity.name");
+			break;
+		case 3:
+			super.checkErrorsExist("confirmation");
+			break;
+		case 4:
+			super.checkErrorsExist("identity.email");
+			break;
+		case 5:
+			super.checkErrorsExist("username");
+			super.checkErrorsExist("password");
+			super.checkErrorsExist("identity.name");
+			super.checkErrorsExist("identity.surname");
+			super.checkErrorsExist("identity.email");
+			break;
+		case 6:
+			super.checkErrorsExist();
+		}
+		
 		super.navigateHome();
 	}
 }
