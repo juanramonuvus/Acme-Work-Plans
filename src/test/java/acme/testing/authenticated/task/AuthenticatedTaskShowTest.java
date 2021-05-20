@@ -12,7 +12,7 @@ public class AuthenticatedTaskShowTest extends AcmePlannerTest{
 	// Test cases -------------------------------------------------------------
 	
 	/* 
-	 * This test navigates into a public task, with authorized credentials (public).
+	 * This test navigates into a public task, with authorized credentials.
 	 * It also verificates that all the parameters of the task are correct.
 	 */
 	@ParameterizedTest
@@ -41,8 +41,10 @@ public class AuthenticatedTaskShowTest extends AcmePlannerTest{
 	 */
 	@Test
 	@Order(20)
-	public void showNegative() {		
-		super.navigate("authenticated/task/show", "id=18");
+	public void showNegative() {
+		super.signIn("manager1", "manag3r");
+		
+		super.navigate("authenticated/task/show", "id=26");
 		super.checkErrorsExist();
 
 		
