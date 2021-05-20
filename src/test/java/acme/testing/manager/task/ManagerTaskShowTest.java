@@ -7,7 +7,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.AcmePlannerTest;
 
-public class AuthenticatedTaskShowTest extends AcmePlannerTest{
+public class ManagerTaskShowTest extends AcmePlannerTest{
 	
 	// Test cases -------------------------------------------------------------
 	
@@ -36,13 +36,15 @@ public class AuthenticatedTaskShowTest extends AcmePlannerTest{
 	}
 	
 	/*
-	 * This test navigates into a private task of other manager.
+	 * This test navigates into a private task of other manager which tasks are private so the first one can not see them.
 	 * An error must rise, telling the user that has no permission to show the task 10 info.
 	 */
 	@Test
 	@Order(20)
 	public void showNegative() {		
-		super.navigate("manager/task/show", "id=10");
+		super.signIn("manager1", "manag3r");
+		
+		super.navigate("manager/task/show", "id=26");
 		super.checkErrorsExist();
 
 		
