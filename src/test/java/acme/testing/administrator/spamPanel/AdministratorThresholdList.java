@@ -26,6 +26,10 @@ public class AdministratorThresholdList extends AcmePlannerTest{
 		super.checkColumnHasValue(index, 0, threshold);
 	}
 	
+	/* 
+	 * Signing in as a manager, who has not permissions to see the Spam List Configuration, we try navigating into it and returns us an error.
+	 * There shouldn't be any error.
+	*/
 	@Test
 	@Order(20)
 	public void listNegative() {
