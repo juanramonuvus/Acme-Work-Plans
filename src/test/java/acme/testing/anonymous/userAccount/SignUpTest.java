@@ -39,13 +39,18 @@ public class SignUpTest extends AcmePlannerTest {
 	/*
 	 * In this test, a new anonymous user is created, accessing the "Sing up" section,
 	 *  and entering erroneous data:
-	 *  - User name too short or too long
-	 *	- Password too short or too long
-	 *	- Blank form field
-	 *	- Passwords do not match
-	 *	- Incorrect email
-	 *	- Form submitted blank
-	 *	- Do not check the box to accept the license
+	 *  case 0:	- User name too short or too long
+	 *			- Password too short or too long
+	 *			- Blank form field in name and surname
+	 *			- Incorrect email
+	 *			- Do not check the box to accept the license
+	 *	
+	 *	case 1:	- Passwords do not match
+	 *	
+	 *	case 2:	- Form submitted blank
+	 *
+	 *	case 3: - No accept the license
+	 *	
 	 */
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/userAccount/negative.csv", encoding = "utf-8", numLinesToSkip = 1)
@@ -68,28 +73,24 @@ public class SignUpTest extends AcmePlannerTest {
 		switch (recordIndex) {
 		case 0:
 			super.checkErrorsExist("username");
-			break;
-		case 1:
 			super.checkErrorsExist("password");
-			break;
-		case 2:
 			super.checkErrorsExist("identity.name");
-			break;
-		case 3:
-			super.checkErrorsExist("confirmation");
-			break;
-		case 4:
+			super.checkErrorsExist("identity.surname");
 			super.checkErrorsExist("identity.email");
 			break;
-		case 5:
+		case 1:
+			super.checkErrorsExist("confirmation");
+			break;
+		case 2:
 			super.checkErrorsExist("username");
 			super.checkErrorsExist("password");
 			super.checkErrorsExist("identity.name");
 			super.checkErrorsExist("identity.surname");
 			super.checkErrorsExist("identity.email");
 			break;
-		case 6:
+		case 3:
 			super.checkErrorsExist();
+			break;
 		}
 		
 		super.navigateHome();

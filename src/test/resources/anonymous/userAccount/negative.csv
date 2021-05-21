@@ -1,8 +1,5 @@
 recordIndex,username,password,confirmation,name,surname,email,accept
-0,Lisa,simpsons,simpsons,Lisa,López,morgan@mail.com,true
-1,Morgan,1234,1234,Morgan,López,morgan@mail.com,true
-2,Javier,contrasena,contrasena,,Gabri,gabri@mail.com,true
-3,Gabriel,constrasena,password,Gabri,Gabri,gabri@mail.com,true
-4,Sonia,password,password,sonia,sonia,sonigmail.com,true
-5,,,,,,,true
-6,tester,tester,tester,tester,tester,tester@mail.com,false
+0,Lisa,1234,1234,,,morganmail.com,true
+1,Gabriel,constrasena,password,Gabri,Gabri,gabri@mail.com,true
+2,,,,,,,true
+3,Gabriel,constrasena,constrasena,Gabri,Gabri,gabri@mail.com,false
