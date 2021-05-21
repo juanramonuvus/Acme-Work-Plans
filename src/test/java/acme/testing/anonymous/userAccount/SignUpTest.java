@@ -34,6 +34,8 @@ public class SignUpTest extends AcmePlannerTest {
 		super.signIn(username, password);
 		assert super.exists(By.linkText("Account"));
 		super.signOut();
+		
+		
 	}
 	
 	/*
@@ -58,6 +60,7 @@ public class SignUpTest extends AcmePlannerTest {
 	public void negativeSingUp(final Integer recordIndex, final String username, final String password, final String confirmation,
 		final String name, final String surname, 
 		final String email, final String accept) {
+		
 		super.clickOnMenu("Sign up", null);	
 		super.fillInputBoxIn("username", username);
 		super.fillInputBoxIn("password", password);
@@ -89,7 +92,11 @@ public class SignUpTest extends AcmePlannerTest {
 			super.checkErrorsExist("identity.email");
 			break;
 		case 3:
-			super.checkErrorsExist();
+			String xpath;
+			By locator;
+			xpath = String.format("//div[@class='text-danger']");
+			locator = By.xpath(xpath);
+			assert super.exists(locator) : String.format("Must accept the license.");
 			break;
 		}
 		
