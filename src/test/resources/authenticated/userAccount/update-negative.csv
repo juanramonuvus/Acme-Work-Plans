@@ -1,2 +1,3 @@
 recordIndex,password,confirmation,name,surname,email
-0,manag3r,manag4r,John,García,john@us.es
+0,,,,,
+1,manag3r,manag4r,sex,García,johnus.es
