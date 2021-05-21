@@ -45,7 +45,6 @@ public class SignUpTest extends AcmePlannerTest {
 	 *			- Password too short or too long
 	 *			- Blank form field in name and surname
 	 *			- Incorrect email
-	 *			- Do not check the box to accept the license
 	 *	
 	 *	case 1:	- Passwords do not match
 	 *	
