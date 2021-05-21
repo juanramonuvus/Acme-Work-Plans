@@ -1,4 +1,5 @@
-username,password,name,surname,email
-Jesús,alfabeto,Jesus,,sñlksjfñlaksd@mail.com
-Lisa,simpsons,Lisa,López,morgan@mail.com
-Morgan,1234,Morgan,López,morgan@mail.com
+recordIndex,username,password,confirmation,name,surname,email,accept
+0,Lisa,1234,1234,,,morganmail.com,true
+1,Gabriel,constrasena,password,Gabri,Gabri,gabri@mail.com,true
+2,,,,,,,true
+3,Gabriel,constrasena,constrasena,Gabri,Gabri,gabri@mail.com,false

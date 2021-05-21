@@ -34,26 +34,71 @@ public class SignUpTest extends AcmePlannerTest {
 		super.signIn(username, password);
 		assert super.exists(By.linkText("Account"));
 		super.signOut();
+		
+		
 	}
 	
 	/*
 	 * In this test, a new anonymous user is created, accessing the "Sing up" section,
-	 *  and entering erroneous data, so that the system warns us that there are errors in the data entered.
+	 *  and entering erroneous data:
+	 *  case 0:	- User name too short or too long
+	 *			- Password too short or too long
+	 *			- Blank form field in name and surname
+	 *			- Incorrect email
+	 *	
+	 *	case 1:	- Passwords do not match
+	 *	
+	 *	case 2:	- Form submitted blank
+	 *
+	 *	case 3: - No accept the license
+	 *	
 	 */
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/userAccount/negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
-	public void negativeSingUp(final String username, final String password, final String name, final String surname, final String email) {
+	public void negativeSingUp(final Integer recordIndex, final String username, final String password, final String confirmation,
+		final String name, final String surname, 
+		final String email, final String accept) {
+		
 		super.clickOnMenu("Sign up", null);	
 		super.fillInputBoxIn("username", username);
 		super.fillInputBoxIn("password", password);
-		super.fillInputBoxIn("confirmation", password);
+		super.fillInputBoxIn("confirmation", confirmation);
 		super.fillInputBoxIn("identity.name", name);
 		super.fillInputBoxIn("identity.surname", surname);
 		super.fillInputBoxIn("identity.email", email);
-		super.fillInputBoxIn("accept", "true");
+		if(accept.equals("true")) {
+			super.fillInputBoxIn("accept", "true");
+		}
 		super.clickOnSubmitButton("Sign up");
-		super.checkErrorsExist();
+		
+		switch (recordIndex) {
+		case 0:
+			super.checkErrorsExist("username");
+			super.checkErrorsExist("password");
+			super.checkErrorsExist("identity.name");
+			super.checkErrorsExist("identity.surname");
+			super.checkErrorsExist("identity.email");
+			break;
+		case 1:
+			super.checkErrorsExist("confirmation");
+			break;
+		case 2:
+			super.checkErrorsExist("username");
+			super.checkErrorsExist("password");
+			super.checkErrorsExist("identity.name");
+			super.checkErrorsExist("identity.surname");
+			super.checkErrorsExist("identity.email");
+			break;
+		case 3:
+			String xpath;
+			By locator;
+			xpath = String.format("//div[@class='text-danger']");
+			locator = By.xpath(xpath);
+			assert super.exists(locator) : String.format("Must accept the license.");
+			break;
+		}
+		
 		super.navigateHome();
 	}
 }
