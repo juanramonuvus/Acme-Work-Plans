@@ -7,11 +7,11 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.AcmePlannerTest;
 
-public class AdministratorThresholdList extends AcmePlannerTest{
+public class AdministratorThresholdListTest extends AcmePlannerTest{
 	
 	// Test cases -------------------------------------------------------------
 	/* 
-	 * As an administrator, test that can see the spam panel configuration and the asociated threshold
+	 * As an administrator, test that can see the spam panel configuration and the associated threshold
 	 * There shouldn't be any error.
 	*/
 	
@@ -28,7 +28,7 @@ public class AdministratorThresholdList extends AcmePlannerTest{
 	
 	/* 
 	 * Signing in as a manager, who has not permissions to see the Spam List Configuration, we try navigating into it and returns us an error.
-	 * There shouldn't be any error.
+	 * There should be errors.
 	*/
 	@Test
 	@Order(20)
