@@ -29,15 +29,8 @@ public class AdministratorBlackListDeleteTest extends AcmePlannerTest{
 		super.navigate("administrator/spamconfig/show", "id=44");
 		
 		super.checkErrorsExist();
-		super.navigateHome();
 		super.signOut();
 		
-		//For security reasons we restore the database again.
-			this.signIn("administrator", "administrator");
-			super.clickOnMenu("Administrator", "Populate DB (initial)");
-			super.clickOnMenu("Administrator", "Populate DB (samples)");
-			super.checkAlertExists(true);		
-			this.signOut();
 	}
 	
 	/*
@@ -46,7 +39,7 @@ public class AdministratorBlackListDeleteTest extends AcmePlannerTest{
 	@Test
 	@Order(20)
 	public void deleteNegative() {
-		super.navigate("administrator/spamconfig/show", "id=60");
+		super.navigate("administrator/spamconfig/show", "id=45");
 		super.checkErrorsExist();
 	}
 	

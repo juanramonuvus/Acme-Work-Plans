@@ -17,7 +17,7 @@ public class ManagerCreateUserAccountTest extends AcmePlannerTest{
 		
 		/// sign-up
 		super.navigateHome();
-		super.clickOnMenu("Sign up", null);
+		super.clickOnMenu("Sign up", null);  
 		super.fillInputBoxIn("username", "user1");
 		super.fillInputBoxIn("password", "user1");
 		super.fillInputBoxIn("confirmation", "user1");

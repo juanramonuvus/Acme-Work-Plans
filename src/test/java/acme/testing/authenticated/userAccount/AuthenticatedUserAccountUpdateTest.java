@@ -46,9 +46,12 @@ public class AuthenticatedUserAccountUpdateTest extends AcmePlannerTest{
 	}
 	
 	/* 
-	 * This test signs in as a manager, navigates into its general data and updates its attributes.
-	 * There would rise some errors:
-	 * 	- Confirmation: Password confirmation doesn't match.
+	 * This test signs in as a manager, navigates into a personal task and updates its attributes.
+	 * Every row in csv file is a different case with different errors:
+	 * 
+	 * 	- case 0: All fields blank, errors would rise in every inputbox except confirmation.
+	 * 
+	 *  - case 1: Name considerated spam. confirmation is not equal to password and email has invalid values.
 	 */
 	
 	@ParameterizedTest
@@ -70,7 +73,21 @@ public class AuthenticatedUserAccountUpdateTest extends AcmePlannerTest{
 		
 		super.clickOnSubmitButton("Update");
 		
-		super.checkErrorsExist("confirmation");
+		switch(recordIndex) {
+		
+			case 0:
+				super.checkErrorsExist("password");
+				super.checkErrorsExist("identity.name");
+				super.checkErrorsExist("identity.surname");
+				super.checkErrorsExist("identity.email");
+				break;
+			
+			case 1:
+				super.checkErrorsExist("confirmation");
+				super.checkErrorsExist("identity.name");
+				super.checkErrorsExist("identity.email");
+				break;
+		}
 		
 		super.signOut();
 		
