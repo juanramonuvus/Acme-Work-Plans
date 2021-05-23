@@ -36,8 +36,8 @@ public class ManagerTaskShowTest extends AcmePlannerTest{
 	}
 	
 	/*
-	 * This test navigates into a private task of other manager which tasks are private so the first one can not see them.
-	 * An error must rise, telling the user that has no permission to show the task 10 info.
+	 * As a manager, this test navigates into a private task of other manager which tasks are private so the first one can not see them.
+	 * An error must rise, telling the user that has no permission to show the task 26 info.
 	 */
 	@Test
 	@Order(20)
