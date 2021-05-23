@@ -28,8 +28,8 @@ public class AdministratorListUserAccountTest extends AcmePlannerTest{
 	}
 	
 	/* 
-	 *  
-	 * check all the rows in the table.
+	 * This test tries to access to the user account list being an anonymous user.
+	 * An error must rise because anonymous users have no permission to access this list.
 	*/
 	@Test
 	@Order(20)
