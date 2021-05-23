@@ -43,7 +43,7 @@ public class AdministratorTaskstaticsListTest extends AcmePlannerTest{
 	*/
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/taskstatics/list.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)
+	@Order(20)
 	public void listNegative() {		
 		
 		super.navigate("administrator/dashboard/list","");
