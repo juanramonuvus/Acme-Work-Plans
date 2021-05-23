@@ -1,0 +1,2 @@
+publictasks,privatetasks,finishedtasks,nonfinishedtasks,averageworkload,minimumworkload,maximumworkload,workloaddeviation,averageexecutionperiod,minimumexecutionperiod,maximumexecutionperiod,executionperioddeviation
+16 tasks,2 tasks,11 tasks,7 tasks,28.58 hours.minutes,4.0 hours.minutes,100.2 hours.minutes,20.21 hours.minutes,1538.36 hours.minutes,24.0 hours.minutes,10224.0 hours.minutes,2312.54 hours.minutes
