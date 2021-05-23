@@ -1,6 +1,7 @@
 package acme.testing.administrator.spamPanel;
 
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
@@ -34,13 +35,11 @@ public class AdministratorThresholdShowTest extends AcmePlannerTest{
 	 * This test navigates into threshold show view, with not authorized credentials (only administrator has authority).
 	 * An error must rise, telling the user that has no permission.
 	 */
-	@ParameterizedTest
-	@CsvFileSource(resources = "/administrator/spamPanel/threshold-show.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Test
 	@Order(20)
-	public void showNegative(final int index, final int id, final String word) {
-		super.navigate("administrator/threshold/show", String.format("id=%d",id));
-		super.checkErrorsExist();
-		
+	public void showNegative() {
+		super.navigate("administrator/threshold/show", "id=55");
+		super.checkErrorsExist();		
 	}
 
 }
