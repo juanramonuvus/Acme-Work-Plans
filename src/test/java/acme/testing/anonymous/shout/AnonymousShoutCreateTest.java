@@ -21,15 +21,16 @@ import acme.testing.AcmePlannerTest;
 
 public class AnonymousShoutCreateTest extends AcmePlannerTest {
 
-	
 	/* 
-	 * This test navigates into a shout create form, as an anonymous  and create a new shout.
+	 * This test navigates into a shout list to count the number of shouts and then go to the create form, as an anonymous  and create a new shout.
 	 * There shouldn't be any error, all data matches with restrictions.
 	 */
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)	
 	public void createPositive(final int recordIndex, final String author, final String text, final String info) {		
+		super.clickOnMenu("Anonymous", "Shouts List");
+		final Integer last = this.driver.findElements(By.tagName("tr")).size();
 		super.clickOnMenu("Anonymous", "Create a shout");		
 		
 		super.fillInputBoxIn("author", author);
@@ -39,67 +40,69 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest {
 		super.clickOnSubmitButton("Shout!");
 		
 		super.clickOnMenu("Anonymous", "Shouts List");
-				
-		super.checkColumnHasValue(recordIndex, 1, author);
-		super.checkColumnHasValue(recordIndex, 2, text);
-		super.checkColumnHasValue(recordIndex, 3, info);
+		
+		super.checkColumnHasValue(last,1, author);
+		super.checkColumnHasValue(last,2, text);
+		super.checkColumnHasValue(last, 3, info);
 				
 	}
 	
 	/* 
-	 * This test navigates into a shout create form, as an anonymous  and try to create a blank shout.
+	 * This test navigates into a shout create form, as an anonymous and try to create a new shout.
 	 * There should be errors:
-	 * 	-Author: Length must be between 5 and 25. Must not be blank.
-	 * 	-Text: Length must be between 1 and 100. Must not be blank.
-	 */
-	@ParameterizedTest
-	@CsvFileSource(resources = "/anonymous/shout/create-blank.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(20)	
-	public void createNegativeBlank(final int recordIndex, final String author, final String text, final String info) {		
-		super.clickOnMenu("Anonymous", "Create a shout");		
-		
-		super.fillInputBoxIn("author", author);
-		super.fillInputBoxIn("text", text);
-		super.fillInputBoxIn("info", info);
-		
-		super.clickOnSubmitButton("Shout!");				
-		
-		super.checkErrorsExist("author");
-		
-		String xpath;
-		By locator;
-		xpath = String.format("//div[@class='form-group'][textarea[@id='%s'] and div[@class='text-danger']]", "text");
-		locator = By.xpath(xpath);
-		assert super.exists(locator) : String.format("Length must be between 1 and 100. Must not be blank.");
-				
-	}
-	/* 
-	 * This test navigates into a shout create form, as an anonymous  and try to create a shout with errors.
-	 * There should be errors:
-	 * 	-Author: Length must be between 5 and 25. Must not be blank.
-	 * 	-Text: Length must be between 1 and 100. Must not be blank.
+	 * 	-Case 0: The author and the text must not be blank.
+	 * 	-Case 1: The author length must be more than 5.
+	 * 	-Case 2: The author length must be less than 25.
+	 * 	-Case 3: The text length must be less than 100.
+	 * 	-Case 4: The url must be well formed.
+	 * 	-Case 5: The shouts field must not contain spam words.
 	 */
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(30)	
-	public void createNegative(final int recordIndex, final String author, final String text, final String info) {		
+	@Order(20)	
+	public void createNegativeCases(final int recordIndex, final String author, final String text, final String info) {		
 		super.clickOnMenu("Anonymous", "Create a shout");		
 		
 		super.fillInputBoxIn("author", author);
 		super.fillInputBoxIn("text", text);
 		super.fillInputBoxIn("info", info);
 		
-		super.clickOnSubmitButton("Shout!");				
-		
-		super.checkErrorsExist("author");
+		super.clickOnSubmitButton("Shout!");	
 		
 		String xpath;
 		By locator;
 		xpath = String.format("//div[@class='form-group'][textarea[@id='%s'] and div[@class='text-danger']]", "text");
 		locator = By.xpath(xpath);
-		assert super.exists(locator) : String.format("Length must be between 1 and 100.");
-		super.checkErrorsExist("info");
-				
+		
+		switch (recordIndex) {
+		case 0:
+			super.checkErrorsExist("author");
+			assert super.exists(locator);
+			break;
+
+		case 1:
+			super.checkErrorsExist("author");			
+			break;
+			
+		case 2:
+			super.checkErrorsExist("author");			
+			break;
+			
+		case 3:
+			assert super.exists(locator);
+			break;
+			
+		case 4:
+			super.checkErrorsExist("info");
+			break;
+			
+		case 5:
+			super.checkErrorsExist("author");
+			assert super.exists(locator);
+			super.checkErrorsExist("info");
+			break;
+			
+		}				
 	}
 
 }
