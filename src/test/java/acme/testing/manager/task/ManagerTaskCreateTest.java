@@ -1,7 +1,6 @@
 package acme.testing.manager.task;
 
 import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.By;
@@ -58,54 +57,30 @@ public class ManagerTaskCreateTest extends AcmePlannerTest{
 	}
 	
 	/* 
-	 * This test signs in as a manager, navigates into create a task and create a task.
-	 * There would rise some errors:
-	 * 	- Title: Must not be blank. Length must be between 1 and 80.
-	 *  - Execution start: May not be null.
-	 *  - Execution end: May not be null.
-	 *  - Workload: May not be null.
-	 *  - Description: Length must be between 1 and 500. Must not be blank.
-	 */
-	
-	@Test
-	@Order(20)
-	public void createBlankNegative() {		
-		
-		super.signIn("manager1", "manag3r");
-		
-		super.clickOnMenu("Manager", "Create Task");
-		
-		super.clickOnSubmitButton("Create");
-		
-		super.checkErrorsExist("title");
-		super.checkErrorsExist("executionStart");
-		super.checkErrorsExist("executionEnd");
-		super.checkErrorsExist("workload");
-		
-		String xpath;
-		By locator;
-		xpath = String.format("//div[@class='form-group'][textarea[@id='%s'] and div[@class='text-danger']]", "description");
-		locator = By.xpath(xpath);
-		assert super.exists(locator) : String.format("No errors found in input box '%s'", "description");
-		
-		super.signOut();
-		
-	}
-	
-	/* 
-	 * This test signs in as a manager, navigates into create a task and create a task.
-	 * There would rise some errors:
-	 * 	- Title: Must not be blank. Length must be between 1 and 80.
-	 *  - Execution start: Must be in the future. 
-	 *  - Execution end: Must be in the future. 
-	 *  - Workload: The workload value must be positive. 
-	 *  - link: Not a well-formed URL.
+	 * This test signs in as a manager, navigates into a personal task and updates its attributes.
+	 * Every row in csv file is a different case with different errors:
+	 * 
+	 * 	- case 0: All fields blank, errors would rise in every inputbox except link (optional).
+	 * 
+	 *  - case 1: Title, description and link considerated spam. Execution start, execution end
+	 *  and workload are invalid values.
+	 *  
+	 *  - case 2: Error would rise in execution end because start date must be earlier than end date.
+	 *  An error would rise in workload because its value is negative. An error would rise in link because
+	 *  is not a well-formed URL.
+	 *  
+	 *  - case 3: Error would rise in workload because it must fix in dates period.
+	 *  
+	 *  - case 4: Error would rise in workload because value must contain 2 decimal figures or less.
+	 *  
+	 *  - case 5: Error would rise in execution end because start date and end date must be later than the current date.
+	 *  An error would rise in workload because value must be between 0 and 59 (minutes).
 	 */
 	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(30)
-	public void updateNegative(final int recordIndex, final String title,
+	public void createNegative(final int recordIndex, final String title,
 		final String executionStart, final String executionEnd,
 		final String workload, final String description, final String link,final String isPublic) {		
 		
@@ -122,10 +97,53 @@ public class ManagerTaskCreateTest extends AcmePlannerTest{
 		
 		super.clickOnSubmitButton("Create");
 		
-		super.checkErrorsExist("executionStart");
-		super.checkErrorsExist("executionEnd");
-		super.checkErrorsExist("workload");
-		super.checkErrorsExist("link");
+		String xpath;
+		By locator;
+		xpath = String.format("//div[@class='form-group'][textarea[@id='%s'] and div[@class='text-danger']]", "description");
+		locator = By.xpath(xpath);
+		
+		//check different errors for each row in csv file
+		
+		switch(recordIndex) {
+		
+		case 0:
+			super.checkErrorsExist("title");
+			super.checkErrorsExist("executionStart");
+			super.checkErrorsExist("executionEnd");
+			super.checkErrorsExist("workload");
+			assert super.exists(locator) : String.format("No errors found in input box '%s'", "description");
+			break;
+		
+		case 1:
+			super.checkErrorsExist("title");
+			super.checkErrorsExist("executionStart");
+			super.checkErrorsExist("executionEnd");
+			super.checkErrorsExist("workload");
+			super.checkErrorsExist("link");
+			assert super.exists(locator) : String.format("No errors found in input box '%s'", "description");
+			break;
+		
+		case 2:
+			super.checkErrorsExist("executionEnd");
+			super.checkErrorsExist("workload");
+			super.checkErrorsExist("link");
+			break;
+		
+		case 3:
+			super.checkErrorsExist("workload");
+			break;
+		
+		case 4:
+			super.checkErrorsExist("workload");
+			break;
+			
+		case 5:
+			super.checkErrorsExist("executionStart");
+			super.checkErrorsExist("executionEnd");
+			super.checkErrorsExist("workload");
+			break;
+			
+		}
 		
 		super.signOut();
 		
