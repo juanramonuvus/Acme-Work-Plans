@@ -23,7 +23,7 @@ public class ManagerTaskShowTest extends AcmePlannerTest{
 		final String workload, final String description, final String link) {	
 		
 		super.signIn("manager1", "manag3r");
-		super.navigate("manager/task/show", "id=16");
+		super.navigate("/manager/task/show", "id=16");
 		
 		super.checkInputBoxHasValue("title", title);
 		super.checkInputBoxHasValue("executionStart", executionStart);
@@ -44,7 +44,7 @@ public class ManagerTaskShowTest extends AcmePlannerTest{
 	public void showNegative() {		
 		super.signIn("manager1", "manag3r");
 		
-		super.navigate("manager/task/show", "id=26");
+		super.navigate("/manager/task/show", "id=26");
 		super.checkErrorsExist();
 
 		

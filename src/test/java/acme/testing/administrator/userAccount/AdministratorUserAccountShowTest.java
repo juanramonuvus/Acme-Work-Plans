@@ -42,8 +42,8 @@ public class AdministratorUserAccountShowTest extends AcmePlannerTest {
 	 */
 	@Test
 	@Order(20)
-	public void updateNegative(final int recordIndex, final String threshold) {
-		super.navigate("administrator/user-account/show", "id=3");
+	public void updateNegative() {
+		super.navigate("/administrator/user-account/show", "id=3");
 		super.checkErrorsExist();
 		
 	}

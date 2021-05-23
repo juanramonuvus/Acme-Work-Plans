@@ -46,7 +46,7 @@ public class AdministratorTaskstaticsListTest extends AcmePlannerTest{
 	@Order(20)
 	public void listNegative() {		
 		
-		super.navigate("administrator/dashboard/list","");
+		super.navigate("/administrator/dashboard/list","");
 		super.checkErrorsExist();
 	}
 	

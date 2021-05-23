@@ -37,7 +37,7 @@ public class AdministratorBlackListShowTest extends AcmePlannerTest{
 	@CsvFileSource(resources = "/administrator/spamPanel/blacklist-show.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
 	public void showNegative(final int index, final int id, final String word) {		
-		super.navigate("administrator/spamconfig/show", String.format("id=%d",id));
+		super.navigate("/administrator/spamconfig/show", String.format("id=%d",id));
 		super.checkErrorsExist();
 
 		

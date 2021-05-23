@@ -48,7 +48,7 @@ public class ManagerCreateUserAccountTest extends AcmePlannerTest{
 	@Order(20)
 	public void managerAccountCreateNegative() {
 		
-		super.navigate("authenticated/manager/create", "");
+		super.navigate("/authenticated/manager/create", "");
 		super.checkErrorsExist();
 		
 	}

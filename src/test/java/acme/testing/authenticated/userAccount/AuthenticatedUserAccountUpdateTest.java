@@ -51,7 +51,7 @@ public class AuthenticatedUserAccountUpdateTest extends AcmePlannerTest{
 	 * 
 	 * 	- case 0: All fields blank, errors would rise in every inputbox except confirmation.
 	 * 
-	 *  - case 1: Name considerated spam. confirmation is not equal to password and email has invalid values.
+	 *  - case 1: Confirmation is not equal to password and email has invalid values.
 	 */
 	
 	@ParameterizedTest
@@ -84,7 +84,6 @@ public class AuthenticatedUserAccountUpdateTest extends AcmePlannerTest{
 			
 			case 1:
 				super.checkErrorsExist("confirmation");
-				super.checkErrorsExist("identity.name");
 				super.checkErrorsExist("identity.email");
 				break;
 		}

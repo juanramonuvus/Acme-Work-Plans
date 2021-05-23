@@ -1,6 +1,7 @@
 package acme.testing.authenticated.task;
 
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
@@ -37,14 +38,11 @@ public class AuthenticatedTaskListTest extends AcmePlannerTest{
 	 * This test as an anonymous, tries to navigate into the tasks list.
 	 * There should be an error, anonymous are not authorised to go there.
 	*/
-	@ParameterizedTest
-	@CsvFileSource(resources = "/authenticated/task/list-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Test
 	@Order(20)
-	public void listNegative(final int index, final String title,
-		final String executionStart, final String executionEnd,
-		final String workload, final String description, final String link) {
+	public void listNegative() {
 		
-		super.navigate("authenticated/task/list", "" );
+		super.navigate("/authenticated/task/list", "" );
 		
 		super.checkErrorsExist();
 	

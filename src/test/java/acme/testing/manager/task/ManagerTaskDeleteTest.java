@@ -23,7 +23,7 @@ public class ManagerTaskDeleteTest extends AcmePlannerTest{
 		
 		super.signIn("manager1", "manag3r");
 		
-		super.navigate("manager/task/show", "id=16");
+		super.navigate("/manager/task/show", "id=16");
 		
 		super.checkInputBoxHasValue("title", title);
 		super.checkInputBoxHasValue("executionStart", executionStart);
@@ -35,7 +35,7 @@ public class ManagerTaskDeleteTest extends AcmePlannerTest{
 		
 		super.clickOnSubmitButton("Delete");
 		
-		super.navigate("manager/task/show", "id=16");
+		super.navigate("/manager/task/show", "id=16");
 		
 		super.checkErrorsExist();
 		super.navigateHome();
@@ -57,7 +57,7 @@ public class ManagerTaskDeleteTest extends AcmePlannerTest{
 	@Order(20)
 	public void deleteNegative() {
 		super.signIn("manager1", "manag3r");
-		super.navigate("manager/task/show", "id=29");
+		super.navigate("/manager/task/show", "id=29");
 		super.checkErrorsExist();
 		super.signOut();
 	}

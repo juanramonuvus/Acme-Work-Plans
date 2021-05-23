@@ -15,7 +15,7 @@ public class AdministratorThresholdShowTest extends AcmePlannerTest{
 	 * This test sign in as administrator and navigate to the threshold, then it prove that the show is well formed.
 	 */
 	@ParameterizedTest
-	@CsvFileSource(resources = "/administrator/spamPanel/threshold.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/administrator/spamPanel/threshold-show.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void showPositive(final int index, final String threshold) {		
 		
@@ -38,7 +38,7 @@ public class AdministratorThresholdShowTest extends AcmePlannerTest{
 	@Test
 	@Order(20)
 	public void showNegative() {
-		super.navigate("administrator/threshold/show", "id=55");
+		super.navigate("/administrator/threshold/show", "id=55");
 		super.checkErrorsExist();		
 	}
 
