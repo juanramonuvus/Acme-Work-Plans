@@ -65,7 +65,8 @@ public class AdministratorBlackListCreateService implements AbstractCreateServic
 		assert entity != null;
 		assert errors != null;
 		
-		final Collection<String> lista = this.repository.findBlackList().stream().map(x->x.getWord()).collect(Collectors.toList());
+		final Collection<String> lista = this.repository.findBlackList().stream().map(BlackList::getWord)
+			.collect(Collectors.toList());
 		
 		
 		if(!errors.hasErrors("word")) {
