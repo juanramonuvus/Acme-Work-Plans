@@ -39,8 +39,7 @@ public class ManagerTaskShowService implements AbstractShowService<Manager, Task
 	public Task findOne(final Request<Task> request) {
 		assert request != null;
 		final int id = request.getModel().getInteger("id");
-		final Task result = this.repository.findOneTaskById(id);
-		return result;
+		return this.repository.findOneTaskById(id);
 	}
 
 }

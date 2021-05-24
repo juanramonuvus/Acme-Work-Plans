@@ -36,8 +36,7 @@ public class AdministratorBlackListShowService implements AbstractShowService<Ad
 	public BlackList findOne(final Request<BlackList> request) {
 		assert request != null;
 		final int id = request.getModel().getInteger("id");
-		final BlackList result = this.repository.findOneById(id);
-		return result;
+		return this.repository.findOneById(id);
 	}
 	
 	

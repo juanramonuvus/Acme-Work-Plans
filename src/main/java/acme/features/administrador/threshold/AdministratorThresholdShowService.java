@@ -36,8 +36,7 @@ public class AdministratorThresholdShowService implements AbstractShowService<Ad
 	public SpamConfig findOne(final Request<SpamConfig> request) {
 		assert request != null;
 		final int id = request.getModel().getInteger("id");
-		final SpamConfig result = this.repository.findOneSpamConfigById(id);
-		return result;
+		return this.repository.findOneSpamConfigById(id);
 	}
 
 }
