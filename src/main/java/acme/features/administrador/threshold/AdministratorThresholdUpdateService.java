@@ -44,12 +44,7 @@ public class AdministratorThresholdUpdateService implements AbstractUpdateServic
 
 	@Override
 	public void unbind(final Request<SpamConfig> request, final SpamConfig entity, final Model model) {
-		assert request != null;
-		assert entity != null;
-		assert model != null;
-		
-		request.unbind(entity, model, "threshold");
-		
+		//NotUsed
 	}
 
 	

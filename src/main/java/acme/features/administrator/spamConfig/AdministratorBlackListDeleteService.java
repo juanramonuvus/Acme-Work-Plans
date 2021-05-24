@@ -25,21 +25,12 @@ public class AdministratorBlackListDeleteService implements AbstractDeleteServic
 
 	@Override
 	public void bind(final Request<BlackList> request, final BlackList entity, final Errors errors) {
-		assert request != null;
-		assert entity != null;
-		assert errors != null;
-		
-		request.bind(entity, errors);
-		
+		//NotUsed		
 	}
 
 	@Override
 	public void unbind(final Request<BlackList> request, final BlackList entity, final Model model) {
-		assert request != null;
-		assert entity != null;
-		assert model != null;
-		
-		request.unbind(entity, model, "word");
+		//NotUsed
 	}
 
 	@Override

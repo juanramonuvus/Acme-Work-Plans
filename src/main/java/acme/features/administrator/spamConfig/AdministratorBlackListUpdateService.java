@@ -37,12 +37,7 @@ public class AdministratorBlackListUpdateService implements AbstractUpdateServic
 
 	@Override
 	public void unbind(final Request<BlackList> request, final BlackList entity, final Model model) {
-		assert request != null;
-		assert entity != null;
-		assert model != null;
-		
-		request.unbind(entity, model, "word");
-		
+		//NotUsed		
 	}
 
 	@Override
