@@ -37,12 +37,7 @@ public class AdministratorBlackListUpdateService implements AbstractUpdateServic
 
 	@Override
 	public void unbind(final Request<BlackList> request, final BlackList entity, final Model model) {
-		assert request != null;
-		assert entity != null;
-		assert model != null;
-		
-		request.unbind(entity, model, "word");
-		
+		//NotUsed		
 	}
 
 	@Override
@@ -63,7 +58,8 @@ public class AdministratorBlackListUpdateService implements AbstractUpdateServic
 		assert entity != null;
 		assert errors != null;
 		
-		final Collection<String> lista = this.repository.findBlackList().stream().map(x->x.getWord()).collect(Collectors.toList());
+		final Collection<String> lista = this.repository.findBlackList().stream().map(BlackList::getWord)
+			.collect(Collectors.toList());
 		
 		
 		if(!errors.hasErrors("word")) {

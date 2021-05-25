@@ -21,8 +21,7 @@ public class AdministratorThresholdUpdateService implements AbstractUpdateServic
 	public SpamConfig findOne(final Request<SpamConfig> request) {
 		assert request != null;
 		final int id = request.getModel().getInteger("id");
-		final SpamConfig result = this.repository.findOneSpamConfigById(id);
-		return result;
+		return this.repository.findOneSpamConfigById(id);
 	}
 
 	
@@ -44,12 +43,7 @@ public class AdministratorThresholdUpdateService implements AbstractUpdateServic
 
 	@Override
 	public void unbind(final Request<SpamConfig> request, final SpamConfig entity, final Model model) {
-		assert request != null;
-		assert entity != null;
-		assert model != null;
-		
-		request.unbind(entity, model, "threshold");
-		
+		//NotUsed
 	}
 
 	
