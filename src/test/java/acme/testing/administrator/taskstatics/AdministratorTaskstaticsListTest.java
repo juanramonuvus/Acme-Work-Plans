@@ -47,7 +47,7 @@ public class AdministratorTaskstaticsListTest extends AcmePlannerTest{
 	public void listNegative() {		
 		
 		super.navigate("/administrator/dashboard/list","");
-		super.checkErrorsExist();
+		super.checkPanicExists();
 	}
 	
 	

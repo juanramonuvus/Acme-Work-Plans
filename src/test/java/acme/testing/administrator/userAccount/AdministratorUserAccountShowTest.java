@@ -44,7 +44,7 @@ public class AdministratorUserAccountShowTest extends AcmePlannerTest {
 	@Order(20)
 	public void updateNegative() {
 		super.navigate("/administrator/user-account/show", "id=3");
-		super.checkErrorsExist();
+		super.checkPanicExists();
 		
 	}
 }

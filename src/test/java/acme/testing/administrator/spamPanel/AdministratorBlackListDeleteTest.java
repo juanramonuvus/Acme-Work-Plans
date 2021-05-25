@@ -40,7 +40,7 @@ public class AdministratorBlackListDeleteTest extends AcmePlannerTest{
 	@Order(20)
 	public void deleteNegative() {
 		super.navigate("/administrator/spamconfig/show", "id=45");
-		super.checkErrorsExist();
+		super.checkPanicExists();
 	}
 	
 }

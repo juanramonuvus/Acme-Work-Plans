@@ -3,6 +3,7 @@ package acme.testing.anonymous.task;
 import java.util.List;
 
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.By;
@@ -42,7 +43,7 @@ public class AnonymousTaskListTest extends AcmePlannerTest{
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/task/list-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
-	public void listNegative(final int index, final String title,
+	public void listPositiveNoTaskPrivate(final int index, final String title,
 		final String executionStart, final String executionEnd,
 		final String workload, final String description, final String link) {
 		
@@ -58,5 +59,21 @@ public class AnonymousTaskListTest extends AcmePlannerTest{
 					!inputElement.getText().contains(description) &&
 					!inputElement.getText().contains(link);
 	   }
+	}
+	
+	/*
+	 * This test signs in as a manager and navigate into the tasks list.
+	 * A panic error should rise and this test checks it.
+	 */
+	@Test
+	@Order(30)
+	public void listNegative() {	
+		
+		super.signIn("manager1", "manag3r");
+		super.navigate("/anonymous/task/list", "");
+		
+		super.checkPanicExists();
+
+		
 	}
 }

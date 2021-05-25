@@ -36,7 +36,7 @@ public class AdministratorThresholdListTest extends AcmePlannerTest{
 		super.signIn("manager1", "manag3r");
 		
 		super.navigate("/administrator/threshold/list", "");
-		super.checkErrorsExist();
+		super.checkPanicExists();
 		
 	}
 	

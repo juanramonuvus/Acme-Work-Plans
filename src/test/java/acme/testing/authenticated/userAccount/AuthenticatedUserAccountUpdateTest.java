@@ -88,8 +88,6 @@ public class AuthenticatedUserAccountUpdateTest extends AcmePlannerTest{
 				break;
 		}
 		
-		super.signOut();
-		
 		
 	}
 

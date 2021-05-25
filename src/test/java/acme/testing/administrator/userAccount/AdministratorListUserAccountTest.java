@@ -36,7 +36,7 @@ public class AdministratorListUserAccountTest extends AcmePlannerTest{
 	public void listNegative() {
 		
 		super.navigate("/administrator/user-account/list","");
-		super.checkErrorsExist();
+		super.checkPanicExists();
 		
 	}
 	

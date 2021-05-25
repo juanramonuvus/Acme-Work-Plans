@@ -58,8 +58,7 @@ public class ManagerTaskDeleteTest extends AcmePlannerTest{
 	public void deleteNegative() {
 		super.signIn("manager1", "manag3r");
 		super.navigate("/manager/task/show", "id=29");
-		super.checkErrorsExist();
-		super.signOut();
+		super.checkPanicExists();
 	}
 	
 }

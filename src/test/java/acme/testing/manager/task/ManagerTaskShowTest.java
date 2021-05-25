@@ -45,7 +45,7 @@ public class ManagerTaskShowTest extends AcmePlannerTest{
 		super.signIn("manager1", "manag3r");
 		
 		super.navigate("/manager/task/show", "id=26");
-		super.checkErrorsExist();
+		super.checkPanicExists();
 
 		
 	}

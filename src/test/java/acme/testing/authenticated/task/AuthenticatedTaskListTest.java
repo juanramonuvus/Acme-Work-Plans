@@ -44,7 +44,7 @@ public class AuthenticatedTaskListTest extends AcmePlannerTest{
 		
 		super.navigate("/authenticated/task/list", "" );
 		
-		super.checkErrorsExist();
+		super.checkPanicExists();
 	
 		
 	}

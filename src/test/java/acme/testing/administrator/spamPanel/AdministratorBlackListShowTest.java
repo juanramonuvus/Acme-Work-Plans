@@ -38,7 +38,7 @@ public class AdministratorBlackListShowTest extends AcmePlannerTest{
 	@Order(20)
 	public void showNegative(final int index, final int id, final String word) {		
 		super.navigate("/administrator/spamconfig/show", String.format("id=%d",id));
-		super.checkErrorsExist();
+		super.checkPanicExists();
 
 		
 	}

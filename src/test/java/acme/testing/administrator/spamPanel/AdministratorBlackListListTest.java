@@ -33,6 +33,6 @@ public class AdministratorBlackListListTest extends AcmePlannerTest{
 	@Order(20)
 	public void listNegative() {
 		super.navigate("/administrator/spamconfig/list", "");
-		super.checkErrorsExist();
+		super.checkPanicExists();
 	}
 }

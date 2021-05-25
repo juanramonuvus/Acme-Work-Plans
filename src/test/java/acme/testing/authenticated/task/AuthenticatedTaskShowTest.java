@@ -45,7 +45,7 @@ public class AuthenticatedTaskShowTest extends AcmePlannerTest{
 		super.signIn("manager1", "manag3r");
 		
 		super.navigate("/authenticated/task/show", "id=26");
-		super.checkErrorsExist();
+		super.checkPanicExists();
 
 		
 	}

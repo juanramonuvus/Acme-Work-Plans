@@ -42,7 +42,7 @@ public class AnonymousTaskShowTest extends AcmePlannerTest{
 	@Order(20)
 	public void showNegative() {		
 		super.navigate("/anonymous/task/show", "id=20");
-		super.checkErrorsExist();
+		super.checkPanicExists();
 
 		
 	}

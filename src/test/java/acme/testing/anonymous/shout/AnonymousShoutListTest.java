@@ -13,16 +13,13 @@
 package acme.testing.anonymous.shout;
 
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.AcmePlannerTest;
 
 public class AnonymousShoutListTest extends AcmePlannerTest {
-
-	// Lifecycle management ---------------------------------------------------
-	
-	// Test cases -------------------------------------------------------------
 	
 	/* 
 	 * This test navigates into a shout list, as an anonymous.
@@ -30,7 +27,7 @@ public class AnonymousShoutListTest extends AcmePlannerTest {
 	 */
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/list.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(20)	
+	@Order(10)	
 	public void list(final int recordIndex, final String author, final String moment, final String text, final String info) {		
 		
 		super.clickOnMenu("Anonymous", "Shouts List");		
@@ -43,22 +40,17 @@ public class AnonymousShoutListTest extends AcmePlannerTest {
 	}
 	
 	/* 
-	 * This test navigates into a shout list, as an anonymous.
-	 * It also verificates that all the parameters of the shouts are correct.
+	 * This test navigates into a shout list, as a manager and checks there is a panic.
 	 */
-//	@Test
-//	@Order(10)	
-//	public void checkShoutsWithLessThanAMonthSinceWasCreated() {		
-//		
-//		super.clickOnMenu("Anonymous", "Shouts List");		
-//		
-//		final List<WebElement> allInputElements = this.driver.findElements(By.tagName("tr"));
-//		for(final WebElement inputElement : allInputElements) 
-//	    {
-//			System.out.println(inputElement.getText());
-//	    }
-//	}
-	
-	// Ancillary methods ------------------------------------------------------
+	@Test
+	@Order(20)	
+	public void listNegative() {		
+		
+		super.signIn("manager1", "manag3r");		
+		
+		super.navigate("/anonymous/shout/list","");
+		super.checkPanicExists();
+		
+	}
 
 }
