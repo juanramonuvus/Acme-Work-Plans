@@ -38,7 +38,7 @@ public class AdministratorThresholdShowTest extends AcmePlannerTest{
 	@Test
 	@Order(20)
 	public void showNegative() {
-		super.navigate("/administrator/threshold/show", ".&id=55");
+		super.navigate("/administrator/threshold/show", "id=55");
 		super.checkPanicExists();	
 	}
 

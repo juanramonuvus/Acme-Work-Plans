@@ -115,7 +115,7 @@ public abstract class AbstractTest {
 
 	protected AbstractTest() {
 		super();
-		this.headless = true;
+		this.headless = false;
 		this.autoPausing = false;
 		this.defaultTimeout = 30;
 	}

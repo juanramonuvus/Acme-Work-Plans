@@ -23,7 +23,7 @@ public class AuthenticatedTaskShowTest extends AcmePlannerTest{
 		final String workload, final String description, final String link) {	
 		
 		super.signIn("manager1", "manag3r");
-		super.navigate("/authenticated/task/show", ".&id=13");
+		super.navigate("/authenticated/task/show", "id=13");
 		
 		super.checkInputBoxHasValue("title", title);
 		super.checkInputBoxHasValue("executionStart", executionStart);
