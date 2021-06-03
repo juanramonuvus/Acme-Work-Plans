@@ -18,7 +18,9 @@ import java.util.Iterator;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Index;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
@@ -35,6 +37,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@Table(indexes = { @Index(columnList= "id")})
 public class UserAccount extends DomainEntity {
 
 	// Serialisation identifier -----------------------------------------------
