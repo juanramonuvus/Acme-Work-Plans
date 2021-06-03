@@ -21,6 +21,8 @@ import acme.testing.AcmePlannerTest;
 
 public class AnonymousShoutCreateTest extends AcmePlannerTest {
 
+	Integer last;
+	
 	/* 
 	 * This test navigates into a shout list to count the number of shouts and then go to the create form, as an anonymous  and create a new shout.
 	 * There shouldn't be any error, all data matches with restrictions.
@@ -30,7 +32,7 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest {
 	@Order(10)	
 	public void createPositive(final int recordIndex, final String author, final String text, final String info) {		
 		super.clickOnMenu("Anonymous", "Shouts List");
-		final Integer last = this.driver.findElements(By.tagName("tr")).size();
+		
 		super.clickOnMenu("Anonymous", "Create a shout");		
 		
 		super.fillInputBoxIn("author", author);
@@ -41,10 +43,14 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest {
 		
 		super.clickOnMenu("Anonymous", "Shouts List");
 		
-		super.checkColumnHasValue(last,1, author);
-		super.checkColumnHasValue(last,2, text);
-		super.checkColumnHasValue(last, 3, info);
-				
+		if(recordIndex==0)
+			this.last = this.driver.findElements(By.tagName("tr")).size();
+		else 
+			this.last++;
+		super.checkColumnHasValue(this.last,1, author);
+		super.checkColumnHasValue(this.last,2, text);
+		super.checkColumnHasValue(this.last, 3, info);
+		
 	}
 	
 	/* 
