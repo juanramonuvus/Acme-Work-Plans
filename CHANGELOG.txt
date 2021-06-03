@@ -1,1 +1,12 @@
+# CHANGELOG.txt
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+#
 
+Año 2021
+1.2 Corregido un bug a la hora de mostrar los shouts en la página, ya que en los meses de enero no se podian visualizar correctamente.
+1.2 Mejorada la funcionalidad "Dashboard" de la página, mostrandose ahora como una tabla en vez de con forma de lista.
