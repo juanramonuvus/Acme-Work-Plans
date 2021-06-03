@@ -1,14 +1,21 @@
-administrator.taskstatistics.list.label.numberOfPublicTasks = Public Tasks
-administrator.taskstatistics.list.label.numberOfPrivateTasks = Private Tasks
-administrator.taskstatistics.list.label.numberOfFinishedTasks = Finished Tasks
-administrator.taskstatistics.list.label.numberOfNonFinishedTasks = Non-Finished Tasks
-administrator.taskstatistics.list.label.avarageWorkloads = Average Workload
-administrator.taskstatistics.list.label.minimumWorkloads = Minimum Workload
-administrator.taskstatistics.list.label.maximumWorkloads = Maximum Workload
-administrator.taskstatistics.list.label.deviationWorkload =  Workload Deviation
-administrator.taskstatistics.list.label.avarageExecPeriod = Average Execution Period
-administrator.taskstatistics.list.label.minimumExecPeriod = Minimum Execution Period
-administrator.taskstatistics.list.label.maximumExecPeriod = Maximum Execution Period
-administrator.taskstatistics.list.label.deviationExecPeriod =  Execution Period Deviation
+administrator.taskstatistics.show.label.numberOfPublicTasks = Public Tasks
+administrator.taskstatistics.show.label.numberOfPrivateTasks = Private Tasks
+administrator.taskstatistics.show.label.numberOfFinishedTasks = Finished Tasks
+administrator.taskstatistics.show.label.numberOfNonFinishedTasks = Non-Finished Tasks
+administrator.taskstatistics.show.label.avarageWorkloads = Average Workload
+administrator.taskstatistics.show.label.minimumWorkloads = Minimum Workload
+administrator.taskstatistics.show.label.maximumWorkloads = Maximum Workload
+administrator.taskstatistics.show.label.deviationWorkload =  Workload Deviation
+administrator.taskstatistics.show.label.avarageExecPeriod = Average Execution Period
+administrator.taskstatistics.show.label.minimumExecPeriod = Minimum Execution Period
+administrator.taskstatistics.show.label.maximumExecPeriod = Maximum Execution Period
+administrator.taskstatistics.show.label.deviationExecPeriod =  Execution Period Deviation
 
 administrator.taskstatistics.show.title = Task Statistics Table
+
+
+administrator.taskstatistics.show.tasksdashboard = Tasks Dashboard
+administrator.taskstatistics.show.workloaddashboard = Workload Dashboard
+administrator.taskstatistics.show.excperioddashboard = Execution Period Dashboard
+
+administrator.taskstatistics.form.button.return = Return
