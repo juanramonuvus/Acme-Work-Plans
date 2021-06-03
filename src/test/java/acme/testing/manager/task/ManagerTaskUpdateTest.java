@@ -76,6 +76,8 @@ public class ManagerTaskUpdateTest extends AcmePlannerTest{
 	 *  - case 4: Error would rise in workload because value must contain 2 decimal figures or less.
 	 *  
 	 *  - case 5: Error would rise in workload because value must be between 0 and 59 (minutes).
+	 *  
+	 *  - case 6: Error would rise in title and description.
 	 */
 	
 	@ParameterizedTest
@@ -146,7 +148,11 @@ public class ManagerTaskUpdateTest extends AcmePlannerTest{
 		case 5:
 			super.checkErrorsExist("workload");
 			break;
-			
+		
+		case 6:
+			super.checkErrorsExist("title");
+			assert super.exists(locator) : String.format("No errors found in input box '%s'", "description");
+			break;
 		}
 		
 	}
