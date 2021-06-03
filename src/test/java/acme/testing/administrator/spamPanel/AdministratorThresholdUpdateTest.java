@@ -17,19 +17,16 @@ public class AdministratorThresholdUpdateTest extends AcmePlannerTest {
 	@CsvFileSource(resources = "/administrator/spamPanel/threshold-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void updatePositive(final int recordIndex, final String threshold) {
-		final String newThreshold = "30.0";
 		super.signIn("administrator", "administrator");
 		
 		super.clickOnMenu("Administrator", "Spam settings");
 		super.clickOnListingRecord(recordIndex);
-		
-		super.checkInputBoxHasValue("threshold", threshold);
-		
-		super.fillInputBoxIn("threshold", newThreshold);
+				
+		super.fillInputBoxIn("threshold", threshold);
 		super.clickOnSubmitButton("Update");
 		
 		super.clickOnListingRecord(recordIndex);
-		super.checkInputBoxHasValue("threshold", newThreshold);
+		super.checkInputBoxHasValue("threshold", threshold);
 	
 		super.signOut();
 		
