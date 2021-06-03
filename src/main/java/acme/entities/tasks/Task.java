@@ -2,6 +2,7 @@ package acme.entities.tasks;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
@@ -45,6 +46,7 @@ public class Task extends DomainEntity{
 	protected Float workload;
 	
 	@NotBlank
+	@Column(columnDefinition="varchar(500)")
 	@Length(min = 1, max = 500)
 	protected String description;
 	
