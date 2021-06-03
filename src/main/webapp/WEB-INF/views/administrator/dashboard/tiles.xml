@@ -20,7 +20,7 @@
 <tiles-definitions>
 
 	<definition name="administrator/dashboard/list" extends="master">
-		<put-attribute name="body" type="template" value="../administrator/dashboard/list.jsp" />
+		<put-attribute name="body" type="template" value="../administrator/dashboard/form.jsp" />
 	</definition>	
 
 </tiles-definitions>

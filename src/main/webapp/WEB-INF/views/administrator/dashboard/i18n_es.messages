@@ -1,15 +1,15 @@
-administrator.taskstatistics.list.label.numberOfPublicTasks = Tareas Públicas
-administrator.taskstatistics.list.label.numberOfPrivateTasks = Tareas Privadas
-administrator.taskstatistics.list.label.numberOfFinishedTasks = Tareas Acabadas
-administrator.taskstatistics.list.label.numberOfNonFinishedTasks = Tareas Sin Acabar
-administrator.taskstatistics.list.label.avarageWorkloads = Carga de trabajo Media
-administrator.taskstatistics.list.label.minimumWorkloads = Carga de trabajo Mínima
-administrator.taskstatistics.list.label.maximumWorkloads = Carga de trabajo Máxima
-administrator.taskstatistics.list.label.deviationWorkload = Desviación de la Carga de trabajo
-administrator.taskstatistics.list.label.avarageExecPeriod = Periodo de Ejecución Medio
-administrator.taskstatistics.list.label.minimumExecPeriod = Periodo de Ejecución Mínimo
-administrator.taskstatistics.list.label.maximumExecPeriod = Periodo de Ejecución Máximo
-administrator.taskstatistics.list.label.deviationExecPeriod = Desviación del periodo de ejecución
+administrator.taskstatistics.show.label.numberOfPublicTasks = Tareas Públicas
+administrator.taskstatistics.show.label.numberOfPrivateTasks = Tareas Privadas
+administrator.taskstatistics.show.label.numberOfFinishedTasks = Tareas Acabadas
+administrator.taskstatistics.show.label.numberOfNonFinishedTasks = Tareas Sin Acabar
+administrator.taskstatistics.show.label.avarageWorkloads = Carga de trabajo Media
+administrator.taskstatistics.show.label.minimumWorkloads = Carga de trabajo Mínima
+administrator.taskstatistics.show.label.maximumWorkloads = Carga de trabajo Máxima
+administrator.taskstatistics.show.label.deviationWorkload = Desviación de la Carga de trabajo
+administrator.taskstatistics.show.label.avarageExecPeriod = Periodo de Ejecución Medio
+administrator.taskstatistics.show.label.minimumExecPeriod = Periodo de Ejecución Mínimo
+administrator.taskstatistics.show.label.maximumExecPeriod = Periodo de Ejecución Máximo
+administrator.taskstatistics.show.label.deviationExecPeriod = Desviación del periodo de ejecución
 
 administrator.taskstatistics.show.title = Tabla de Estadísticas de Tareas
 
