@@ -17,3 +17,5 @@ administrator.taskstatistics.show.title = Task Statistics Table
 administrator.taskstatistics.show.tasksdashboard = Tasks Dashboard
 administrator.taskstatistics.show.workloaddashboard = Workload Dashboard
 administrator.taskstatistics.show.excperioddashboard = Execution Period Dashboard
+
+administrator.taskstatistics.form.button.return = Return

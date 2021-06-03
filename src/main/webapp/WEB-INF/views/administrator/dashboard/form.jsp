@@ -18,4 +18,5 @@
 	<acme:form-textbox code="administrator.taskstatistics.show.label.minimumExecPeriod" path="minimumExecPeriod"/>
 	<acme:form-textbox code="administrator.taskstatistics.show.label.maximumExecPeriod" path="maximumExecPeriod"/>
 	<acme:form-textbox code="administrator.taskstatistics.show.label.deviationExecPeriod" path="deviationExecPeriod"/>
+	<acme:form-return code="administrator.taskstatistics.form.button.return"/>
 </acme:form>
