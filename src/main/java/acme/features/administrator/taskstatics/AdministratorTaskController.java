@@ -19,10 +19,14 @@ public class AdministratorTaskController extends AbstractController<Administrato
 	@Autowired
 	protected AdministratorTaskListService listService;
 	
+	@Autowired
+	protected AdministratorTaskShowService showService;
+	
 	//Contructors -------------------------------------------------------
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
+		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 	
 }
