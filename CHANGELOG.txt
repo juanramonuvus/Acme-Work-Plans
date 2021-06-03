@@ -8,5 +8,5 @@
 #
 
 Año 2021
-1.2 Corregido un bug a la hora de mostrar los shouts en la página, ya que en los meses de enero no se podian visualizar correctamente.
-1.2 Mejorada la funcionalidad "Dashboard" de la página, mostrandose ahora como una tabla en vez de con forma de lista.
+1.2 Corregido bug listado de shouts, problemas con el mes de Enero y los dias 31.
+1.2 Mejorada la funcionalidad "Dashboard" de la página, se muestra como una tabla.
