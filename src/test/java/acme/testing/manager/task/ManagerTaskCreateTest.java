@@ -19,7 +19,7 @@ public class ManagerTaskCreateTest extends AcmePlannerTest{
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void createPositive(final int recordIndex, final String title,
+	public void createPositive(final int index, final String title,
 		final String executionStart, final String executionEnd,
 		final String workload, final String description, final String link,final String isPublic) {		
 		
@@ -41,7 +41,7 @@ public class ManagerTaskCreateTest extends AcmePlannerTest{
 		
 		super.clickOnMenu("Manager", "Personal Tasks");
 		
-		super.clickOnListingRecord(0);
+		super.clickOnListingRecord(index);
 		
 		super.checkInputBoxHasValue("title", title);
 		super.checkInputBoxHasValue("executionStart", executionStart);
@@ -75,6 +75,9 @@ public class ManagerTaskCreateTest extends AcmePlannerTest{
 	 *  
 	 *  - case 5: Error would rise in execution end because start date and end date must be later than the current date.
 	 *  An error would rise in workload because value must be between 0 and 59 (minutes).
+	 *  
+	 *  - case 6: Title has more than 80 words, Description has more than 500 words 
+	 *  
 	 */
 	
 	@ParameterizedTest
@@ -143,6 +146,9 @@ public class ManagerTaskCreateTest extends AcmePlannerTest{
 			super.checkErrorsExist("workload");
 			break;
 			
+		case 6:
+			super.checkErrorsExist("title");
+			assert super.exists(locator) : String.format("No errors found in input box '%s'", "description");
 		}
 		
 		super.signOut();
