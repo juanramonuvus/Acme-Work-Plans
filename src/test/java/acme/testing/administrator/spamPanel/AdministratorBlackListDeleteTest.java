@@ -20,13 +20,13 @@ public class AdministratorBlackListDeleteTest extends AcmePlannerTest{
 	public void deletePositive(final String word) {
 		super.signIn("administrator", "administrator");
 		
-		super.navigate("/administrator/spamconfig/show", ".&id=44");
+		super.navigate("/administrator/spamconfig/show", "id=44");
 		
 		super.checkInputBoxHasValue("word", word);
 		
 		super.clickOnSubmitButton("Delete");
 		
-		super.navigate("/administrator/spamconfig/show", ".&id=44");
+		super.navigate("/administrator/spamconfig/show", "id=44");
 		
 		super.checkErrorsExist();
 		super.signOut();
@@ -39,7 +39,7 @@ public class AdministratorBlackListDeleteTest extends AcmePlannerTest{
 	@Test
 	@Order(20)
 	public void deleteNegative() {
-		super.navigate("/administrator/spamconfig/show", ".&id=45");
+		super.navigate("/administrator/spamconfig/show", "id=45");
 		super.checkPanicExists();
 	}
 	

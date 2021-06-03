@@ -22,7 +22,7 @@ public class AnonymousTaskShowTest extends AcmePlannerTest{
 		final String executionStart, final String executionEnd,
 		final String workload, final String description, final String link) {		
 		
-		super.navigate("/anonymous/task/show", ".&id=18");
+		super.navigate("/anonymous/task/show", "id=18");
 		
 		super.checkInputBoxHasValue("title", title);
 		super.checkInputBoxHasValue("executionStart", executionStart);
@@ -41,7 +41,7 @@ public class AnonymousTaskShowTest extends AcmePlannerTest{
 	@Test
 	@Order(20)
 	public void showNegative() {		
-		super.navigate("/anonymous/task/show", ".&id=20");
+		super.navigate("/anonymous/task/show", "id=20");
 		super.checkPanicExists();
 
 		

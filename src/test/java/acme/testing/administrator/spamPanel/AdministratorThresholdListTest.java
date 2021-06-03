@@ -16,7 +16,7 @@ public class AdministratorThresholdListTest extends AcmePlannerTest{
 	*/
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/administrator/spamPanel/threshold-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/administrator/spamPanel/threshold-list-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void listPositive(final int index, final String threshold) {		
 		
