@@ -43,7 +43,7 @@ public class AnonymousShoutListService implements AbstractListService<Anonymous,
 
 		final ZoneId defaultZoneId = ZoneId.systemDefault();
 		
-		final LocalDate fechauno = LocalDate.of(LocalDate.now().getYear(), LocalDate.now().getMonthValue() - 1, LocalDate.now().getDayOfMonth());
+		final LocalDate fechauno = LocalDate.now().minusMonths(1L);
 		
 		final Date date = Date.from(fechauno.atStartOfDay(defaultZoneId).toInstant());
 		
