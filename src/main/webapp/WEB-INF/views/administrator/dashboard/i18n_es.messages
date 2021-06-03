@@ -12,3 +12,8 @@ administrator.taskstatistics.list.label.maximumExecPeriod = Periodo de Ejecució
 administrator.taskstatistics.list.label.deviationExecPeriod = Desviación del periodo de ejecución
 
 administrator.taskstatistics.show.title = Tabla de Estadísticas de Tareas
+
+
+administrator.taskstatistics.show.tasksdashboard = Estadísticas de tareas
+administrator.taskstatistics.show.workloaddashboard = Estadísticas de carga de trabajo
+administrator.taskstatistics.show.excperioddashboard = Estadísticas de periodo de ejecución

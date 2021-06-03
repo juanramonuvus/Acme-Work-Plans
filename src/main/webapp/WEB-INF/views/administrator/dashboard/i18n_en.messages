@@ -12,3 +12,8 @@ administrator.taskstatistics.list.label.maximumExecPeriod = Maximum Execution Pe
 administrator.taskstatistics.list.label.deviationExecPeriod =  Execution Period Deviation
 
 administrator.taskstatistics.show.title = Task Statistics Table
+
+
+administrator.taskstatistics.show.tasksdashboard = Tasks Dashboard
+administrator.taskstatistics.show.workloaddashboard = Workload Dashboard
+administrator.taskstatistics.show.excperioddashboard = Execution Period Dashboard
