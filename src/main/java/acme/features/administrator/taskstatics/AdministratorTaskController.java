@@ -16,8 +16,6 @@ import acme.framework.entities.Administrator;
 public class AdministratorTaskController extends AbstractController<Administrator, Dashboard> {
 	
 	//Internal state ----------------------------------------------------
-	@Autowired
-	protected AdministratorTaskListService listService;
 	
 	@Autowired
 	protected AdministratorTaskShowService showService;
@@ -25,7 +23,6 @@ public class AdministratorTaskController extends AbstractController<Administrato
 	//Contructors -------------------------------------------------------
 	@PostConstruct
 	private void initialise() {
-		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 	

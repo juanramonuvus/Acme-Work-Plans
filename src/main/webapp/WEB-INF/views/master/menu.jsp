@@ -40,7 +40,7 @@
 			<acme:menu-suboption code="master.panelAdmin.administrator.blacklist.create" action="/administrator/spamconfig/create"/>
 			<acme:menu-suboption code="master.panel.administrator.threshold" action="/administrator/threshold/list"/>
 			<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/list"/>
+			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show"/>
 		</acme:menu-option>
 		
 
