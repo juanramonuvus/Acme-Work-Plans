@@ -1,0 +1,2 @@
+1.2 Corregido bug listado de shouts, problemas con el mes de Enero y los dias 31.
+1.2 Mejorada la funcionalidad "Dashboard" de la página, se muestra como una tabla.
