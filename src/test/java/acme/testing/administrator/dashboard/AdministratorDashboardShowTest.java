@@ -1,4 +1,4 @@
-package acme.testing.administrator.taskstatics;
+package acme.testing.administrator.dashboard;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -7,13 +7,13 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.AcmePlannerTest;
 
-public class AdministratorTaskstaticsListTest extends AcmePlannerTest{
+public class AdministratorDashboardShowTest extends AcmePlannerTest{
 	
 	/* 
 	 * This test signs in as administrator, navigates into the dashboard and checks statistic values.
 	*/
 	@ParameterizedTest
-	@CsvFileSource(resources = "/administrator/taskstatics/show.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/administrator/dashboard/show.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void showPositive(final String publictasks,final String privatetasks,final String finishedtasks,
 		final String nonfinishedtasks,final String averageworkload,final String minimumworkload,
@@ -46,7 +46,7 @@ public class AdministratorTaskstaticsListTest extends AcmePlannerTest{
 	@Order(20)
 	public void showNegative() {		
 		
-		super.navigate("/administrator/dashboard/list","");
+		super.navigate("/administrator/dashboard/show","");
 		super.checkPanicExists();
 	}
 	

@@ -1,4 +1,4 @@
-package acme.features.administrator.taskstatics;
+package acme.features.administrator.dashboard;
 
 import java.util.Collection;
 import java.util.Date;
@@ -10,7 +10,7 @@ import acme.entities.tasks.Task;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface AdministratorTaskRepository extends AbstractRepository{
+public interface AdministratorDashboardRepository extends AbstractRepository{
 
 	@Query("SELECT COUNT(t) FROM Task t WHERE t.isPublic = true")
 	Integer getNumberOfPublicTasks();

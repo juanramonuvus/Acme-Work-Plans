@@ -1,4 +1,4 @@
-package acme.features.administrator.taskstatics;
+package acme.features.administrator.dashboard;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -20,11 +20,11 @@ import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AdministratorTaskShowService implements AbstractShowService<Administrator, Dashboard>{
+public class AdministratorDashboardShowService implements AbstractShowService<Administrator, Dashboard>{
 
 	//Internal state -------------------------------------------------
 		@Autowired
-		protected AdministratorTaskRepository repository;
+		protected AdministratorDashboardRepository repository;
 		
 		@Autowired
 		MessageSource messageSource;
@@ -124,7 +124,7 @@ public class AdministratorTaskShowService implements AbstractShowService<Adminis
 			}
 			
 			final Float avg = total / lsT.size();
-			return AdministratorTaskShowService.round(this.datesTransformationBackward(avg),2);
+			return AdministratorDashboardShowService.round(this.datesTransformationBackward(avg),2);
 		}
 
 		public Float getMinimumWorkloads(final Request<Dashboard> request) {
@@ -156,7 +156,7 @@ public class AdministratorTaskShowService implements AbstractShowService<Adminis
 			final double sqrt = Math.sqrt(Double.parseDouble(res.toString()));
 			final Float final1 = Float.parseFloat(sqrt + "");
 			final Float fin = this.datesTransformationBackward(final1);
-			return AdministratorTaskShowService.round(fin,2);
+			return AdministratorDashboardShowService.round(fin,2);
 		}
 		
 			
@@ -179,7 +179,7 @@ public class AdministratorTaskShowService implements AbstractShowService<Adminis
 			
 
 			final Float avg = total/lsT.size();
-			return AdministratorTaskShowService.round(this.datesTransformationBackward(avg),2);
+			return AdministratorDashboardShowService.round(this.datesTransformationBackward(avg),2);
 		}
 
 		public Float getMinimumExecPeriod(final Request<Dashboard> request) {
@@ -195,7 +195,7 @@ public class AdministratorTaskShowService implements AbstractShowService<Adminis
 				}
 			}
 			
-			return AdministratorTaskShowService.round(min,2);
+			return AdministratorDashboardShowService.round(min,2);
 		}
 
 		public Float getMaximumExecPeriod(final Request<Dashboard> request) {
@@ -211,7 +211,7 @@ public class AdministratorTaskShowService implements AbstractShowService<Adminis
 				}
 			}
 			
-			return AdministratorTaskShowService.round(max,2);
+			return AdministratorDashboardShowService.round(max,2);
 		}
 
 		public Float getDeviationExecPeriod(final Request<Dashboard> request) {
@@ -231,7 +231,7 @@ public class AdministratorTaskShowService implements AbstractShowService<Adminis
 			final double sqrt = Math.sqrt(Double.parseDouble(res.toString()));
 			final Float final1 = Float.parseFloat(sqrt + "");
 			final Float fin = this.datesTransformationBackward(final1);
-			return AdministratorTaskShowService.round(fin,2);
+			return AdministratorDashboardShowService.round(fin,2);
 		}
 
 		
