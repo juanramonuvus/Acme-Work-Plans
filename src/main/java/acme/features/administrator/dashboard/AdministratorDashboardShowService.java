@@ -113,6 +113,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		//----------------------------------------------------------------------------------------------------------------------------
 		public Float getAvarageWorkloads(final Request<Dashboard> request) {
 			assert request!=null;
+			if(this.repository.getNumberOfPrivateTasks() + this.repository.getNumberOfPublicTasks() == 0) return null;
 			
 			Float total = 0f;
 			
@@ -129,18 +130,24 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 
 		public Float getMinimumWorkloads(final Request<Dashboard> request) {
 			assert request!=null;
+			if(this.repository.getNumberOfPrivateTasks() + this.repository.getNumberOfPublicTasks() == 0) return null;
 			
 			return this.repository.getMinimumWorkloads();
+			
 		}
 
 		public Float getMaximumWorkloads(final Request<Dashboard> request) {
 			assert request!=null;
+			if(this.repository.getNumberOfPrivateTasks() + this.repository.getNumberOfPublicTasks() == 0) return null;
 			
 			return this.repository.getMaximumWorkloads();
+			
 		}
 
 		public Float getDeviationWorkloads(final Request<Dashboard> request) {
 			assert request!=null;
+			if(this.repository.getNumberOfPrivateTasks() + this.repository.getNumberOfPublicTasks() == 0) return null;
+			
 			final Float average = this.getAvarageWorkloads(request);
 			
 			Float res =  0f;
@@ -167,6 +174,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		//----------------------------------------------------------------------------------------------------------------------------
 		public Float getAvarageExecPeriod(final Request<Dashboard> request) {
 			assert request!=null;
+			if(this.repository.getNumberOfPrivateTasks() + this.repository.getNumberOfPublicTasks() == 0) return null;
 			
 			Float total =  0f;
 			
@@ -184,6 +192,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 
 		public Float getMinimumExecPeriod(final Request<Dashboard> request) {
 			assert request!=null;
+			if(this.repository.getNumberOfPrivateTasks() + this.repository.getNumberOfPublicTasks() == 0) return null;
 			
 			Float min =  1000000000000f;
 			
@@ -194,12 +203,14 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 					min = diff;
 				}
 			}
-			
+				
 			return AdministratorDashboardShowService.round(min,2);
+			
 		}
 
 		public Float getMaximumExecPeriod(final Request<Dashboard> request) {
 			assert request!=null;
+			if(this.repository.getNumberOfPrivateTasks() + this.repository.getNumberOfPublicTasks() == 0) return null;
 			
 			Float max =  0f;
 			
@@ -212,9 +223,12 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 			}
 			
 			return AdministratorDashboardShowService.round(max,2);
+			
+			
 		}
 
 		public Float getDeviationExecPeriod(final Request<Dashboard> request) {
+			if(this.repository.getNumberOfPrivateTasks() + this.repository.getNumberOfPublicTasks() == 0) return null;
 			
 			final Float average = this.getAvarageExecPeriod(request);
 			
@@ -248,15 +262,15 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 			result.setNumberOfNonFinishedTasks(this.getNumberOfNonFinishedTasks(request) + " " + this.messageSource.getMessage("default.dashboard.task", null, LocaleContextHolder.getLocale()));
 			result.setNumberOfFinishedTasks(this.getNumberOfFinishedTasks(request) + " " + this.messageSource.getMessage("default.dashboard.task", null, LocaleContextHolder.getLocale()));
 			
-			result.setMinimumWorkloads(this.getMinimumWorkloads(request) + " " + this.messageSource.getMessage("default.dashboard.workloadPeriod", null, LocaleContextHolder.getLocale()));
-			result.setMaximumWorkloads(this.getMaximumWorkloads(request) + " " + this.messageSource.getMessage("default.dashboard.workloadPeriod", null, LocaleContextHolder.getLocale()));
-			result.setAvarageWorkloads(this.getAvarageWorkloads(request) + " " + this.messageSource.getMessage("default.dashboard.workloadPeriod", null, LocaleContextHolder.getLocale()));
-			result.setDeviationWorkload(this.getDeviationWorkloads(request) + " " + this.messageSource.getMessage("default.dashboard.workloadPeriod", null, LocaleContextHolder.getLocale()));
+			result.setMinimumWorkloads(this.getMinimumWorkloads(request) !=null?this.getMinimumWorkloads(request) + " " + this.messageSource.getMessage("default.dashboard.workloadPeriod", null, LocaleContextHolder.getLocale()):"-");
+			result.setMaximumWorkloads(this.getMaximumWorkloads(request) !=null?this.getMaximumWorkloads(request) + " " + this.messageSource.getMessage("default.dashboard.workloadPeriod", null, LocaleContextHolder.getLocale()):"-");
+			result.setAvarageWorkloads(this.getAvarageWorkloads(request) !=null?this.getAvarageWorkloads(request) + " " + this.messageSource.getMessage("default.dashboard.workloadPeriod", null, LocaleContextHolder.getLocale()):"-");
+			result.setDeviationWorkload(this.getDeviationWorkloads(request) !=null?this.getDeviationWorkloads(request) + " " + this.messageSource.getMessage("default.dashboard.workloadPeriod", null, LocaleContextHolder.getLocale()):"-");
 			
-			result.setMinimumExecPeriod(this.getMinimumExecPeriod(request) + " " + this.messageSource.getMessage("default.dashboard.workloadPeriod", null, LocaleContextHolder.getLocale()));
-			result.setMaximumExecPeriod(this.getMaximumExecPeriod(request) + " " + this.messageSource.getMessage("default.dashboard.workloadPeriod", null, LocaleContextHolder.getLocale()));
-			result.setAvarageExecPeriod(this.getAvarageExecPeriod(request) + " " + this.messageSource.getMessage("default.dashboard.workloadPeriod", null, LocaleContextHolder.getLocale()));
-			result.setDeviationExecPeriod(this.getDeviationExecPeriod(request) + " " + this.messageSource.getMessage("default.dashboard.workloadPeriod", null, LocaleContextHolder.getLocale()));
+			result.setMinimumExecPeriod(this.getMinimumExecPeriod(request) !=null?this.getMinimumExecPeriod(request) + " " + this.messageSource.getMessage("default.dashboard.workloadPeriod", null, LocaleContextHolder.getLocale()):"-");
+			result.setMaximumExecPeriod(this.getMaximumExecPeriod(request) !=null?this.getMaximumExecPeriod(request) + " " + this.messageSource.getMessage("default.dashboard.workloadPeriod", null, LocaleContextHolder.getLocale()):"-");
+			result.setAvarageExecPeriod(this.getAvarageExecPeriod(request) !=null?this.getAvarageExecPeriod(request) + " " + this.messageSource.getMessage("default.dashboard.workloadPeriod", null, LocaleContextHolder.getLocale()):"-");
+			result.setDeviationExecPeriod(this.getDeviationExecPeriod(request) !=null?this.getDeviationExecPeriod(request) + " " + this.messageSource.getMessage("default.dashboard.workloadPeriod", null, LocaleContextHolder.getLocale()):"-");
 			
 			return result;
 		}
