@@ -1,0 +1,24 @@
+timestamp,simple-path,time
+2021-08-09 14:06:13.409,/master/welcome,279
+2021-08-09 14:06:13.624,/master/welcome,174
+2021-08-09 14:06:14.342,/master/sign-in,593
+2021-08-09 14:06:15.613,/master/welcome,602
+2021-08-09 14:06:17.447,/master/welcome,186
+2021-08-09 14:06:18.165,/master/welcome,593
+2021-08-09 14:06:18.475,/master/welcome,172
+2021-08-09 14:06:18.693,/master/welcome,168
+2021-08-09 14:06:19.397,/master/sign-in,593
+2021-08-09 14:06:20.651,/master/welcome,592
+2021-08-09 14:06:21.523,/authenticated/task/list,588
+2021-08-09 14:06:23.605,/master/welcome,156
+2021-08-09 14:06:23.809,/master/welcome,172
+2021-08-09 14:06:24.511,/master/sign-in,590
+2021-08-09 14:06:25.807,/master/welcome,596
+2021-08-09 14:06:26.641,/authenticated/task/list,584
+2021-08-09 14:06:28.719,/master/welcome,168
+2021-08-09 14:06:28.931,/master/welcome,172
+2021-08-09 14:06:29.642,/master/sign-in,591
+2021-08-09 14:06:30.946,/master/welcome,595
+2021-08-09 14:06:31.749,/authenticated/task/list,595
+2021-08-09 14:06:33.769,/master/welcome,172
+2021-08-09 14:06:33.989,/authenticated/task/list,189

@@ -21,7 +21,7 @@ import acme.testing.AcmePlannerTest;
 
 public class AnonymousShoutCreateTest extends AcmePlannerTest {
 
-	Integer last;
+	
 	
 	/* 
 	 * This test navigates into a shout list to count the number of shouts and then go to the create form, as an anonymous  and create a new shout.
@@ -31,7 +31,6 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest {
 	@CsvFileSource(resources = "/anonymous/shout/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)	
 	public void createPositive(final int recordIndex, final String author, final String text, final String info) {		
-		super.clickOnMenu("Anonymous", "Shouts List");
 		
 		super.clickOnMenu("Anonymous", "Create a shout");		
 		
@@ -43,13 +42,9 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest {
 		
 		super.clickOnMenu("Anonymous", "Shouts List");
 		
-		if(recordIndex==0)
-			this.last = this.driver.findElements(By.tagName("tr")).size();
-		else 
-			this.last++;
-		super.checkColumnHasValue(this.last,1, author);
-		super.checkColumnHasValue(this.last,2, text);
-		super.checkColumnHasValue(this.last, 3, info);
+		super.checkColumnHasValue(0,1, author);
+		super.checkColumnHasValue(0,2, text);
+		super.checkColumnHasValue(0,3, info);
 		
 	}
 	

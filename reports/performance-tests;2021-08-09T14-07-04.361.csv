@@ -1,0 +1,5 @@
+timestamp,test-class,test-method,time,description,result
+2021-08-09 14:07:17.663,acme.testing.authenticated.task.AuthenticatedTaskListTest,listPositive,4944,"[1] index=0, title=Create TaskService, executionStart=2021/02/13 19:39, executionEnd=2021/05/14 19:39, workload=50.5, description=Create service of task entity, link=https://github.com/task2",OK
+2021-08-09 14:07:22.783,acme.testing.authenticated.task.AuthenticatedTaskListTest,listPositive,4889,"[2] index=1, title=Entidad Plan, executionStart=2021/05/01 19:39, executionEnd=2021/07/01 19:39, workload=30.0, description=Crear la entidad Plan, link=https://github.com/task1",OK
+2021-08-09 14:07:27.95,acme.testing.authenticated.task.AuthenticatedTaskListTest,listPositive,4961,"[3] index=2, title=Vistas de la entidad Plan, executionStart=2021/05/01 19:39, executionEnd=2021/07/01 19:39, workload=30.0, description=Crear la vistas referidas a la entidad Plan, link=https://github.com/task1",OK
+2021-08-09 14:07:28.437,acme.testing.authenticated.task.AuthenticatedTaskListTest,listNegative,256,"listNegative()",OK

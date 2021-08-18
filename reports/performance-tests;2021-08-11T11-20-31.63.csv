@@ -1,0 +1,6 @@
+timestamp,test-class,test-method,time,description,result
+2021-08-11 11:20:43.276,acme.testing.anonymous.task.AnonymousTaskListTest,listPositive,3133,"[1] index=0, title=Diseñar nueva web, executionStart=2021/05/01 12:00, executionEnd=2023/06/22 20:00, workload=50.0, description=Montar nueva web para el colegio Poetas Andaluces de Montequinto, link=https://github.com/task1",OK
+2021-08-11 11:20:46.553,acme.testing.anonymous.task.AnonymousTaskListTest,listPositive,3061,"[2] index=1, title=Create TaskView, executionStart=2020/02/13 19:39, executionEnd=2021/10/14 19:39, workload=21.3, description=Create view of task entity, link=https://github.com/task3",OK
+2021-08-11 11:20:49.834,acme.testing.anonymous.task.AnonymousTaskListTest,listPositive,3056,"[3] index=2, title=Create PlanService, executionStart=2021/02/13 19:39, executionEnd=2022/06/14 19:39, workload=20.5, description=Create controller of task entity, link=https://github.com/task1",OK
+2021-08-11 11:20:51.113,acme.testing.anonymous.task.AnonymousTaskListTest,listPositiveNoTaskPrivate,1058,"[1] index=0, title=Create TaskValidators, executionStart=2017/08/13 19:39, executionEnd=2018/10/13 19:39, workload=100.20, description=Create validators of task entity, link=https://github.com/task5",OK
+2021-08-11 11:20:53.84,acme.testing.anonymous.task.AnonymousTaskListTest,listNegative,2518,"listNegative()",OK
