@@ -12,7 +12,7 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AnonymousShoutsRepository extends AbstractRepository {
 	
-	@Query("SELECT s FROM Shout s WHERE s.moment BETWEEN ?1 and current_timestamp ORDER BY s.moment")
+	@Query("SELECT s FROM Shout s WHERE s.moment BETWEEN ?1 and current_timestamp ORDER BY s.moment DESC")
 	Collection<Shout> findAllShouts(Date fechaInicio);
 
 }
