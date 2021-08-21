@@ -1,4 +1,0 @@
-timestamp,test-class,test-method,time,description,result
-2021-08-09 12:39:41.274,acme.testing.administrator.userAccount.AdministratorListUserAccountTest,listPositive,3857,"[1] index=0, username=anonymous, name=John, surname=Doe",OK
-2021-08-09 12:39:45.314,acme.testing.administrator.userAccount.AdministratorListUserAccountTest,listPositive,3783,"[2] index=1, username=administrator, name=Administrator, surname=Acme.com",OK
-2021-08-09 12:39:49.47,acme.testing.administrator.userAccount.AdministratorListUserAccountTest,listPositive,3868,"[3] index=2, username=manager1, name=Jhon, surname=Lock",OK

@@ -1,3 +1,0 @@
-timestamp,test-class,test-method,time,description,result
-2021-08-09 14:20:44.13,acme.testing.anonymous.task.AnonymousTaskShowTest,showPositive,661,"[1] index=29, title=Diseñar nueva web, executionStart=2021/05/01 12:00, executionEnd=2023/06/22 20:00, workload=50.0, description=Montar nueva web para el colegio Poetas Andaluces de Montequinto, link=https://github.com/task1",OK
-2021-08-09 14:20:44.574,acme.testing.anonymous.task.AnonymousTaskShowTest,showNegative,240,"showNegative()",OK

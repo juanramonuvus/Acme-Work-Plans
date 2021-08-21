@@ -1,3 +1,0 @@
-timestamp,test-class,test-method,time,description,result
-2021-08-09 14:17:58.793,acme.testing.authenticated.task.AuthenticatedTaskShowTest,showPositive,3365,"[1] index=13, title=Create TaskService, executionStart=2021/02/13 19:39, executionEnd=2021/05/14 19:39, workload=50.5, description=Create service of task entity, link=https://github.com/task2",OK
-2021-08-09 14:18:01.697,acme.testing.authenticated.task.AuthenticatedTaskShowTest,showNegative,2656,"showNegative()",OK
