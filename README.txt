@@ -8,9 +8,9 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-This is the Acme-Planner project, providing shouts and tasks service for the users.
-link: https://github.com/alebarled/Acme-Planner
+This is the Acme-Work-Plans project, providing shouts and tasks service for the users.
+link: https://github.com/juanramonuvus/Acme-Work-Plans
 Clevercloud:
- - username: alebarled@alum.us.es
+ - username: juaostrub@alum.us.es
  - password: ********* (Password included in Item 2 for obvious security reasons)
-link-release: https://github.com/alebarled/Acme-Planner/releases/tag/1.0.0
+link-release: https://github.com/juanramonuvus/Acme-Work-Plans
