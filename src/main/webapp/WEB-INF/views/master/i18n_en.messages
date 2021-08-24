@@ -16,7 +16,7 @@ master.banner.background = #b4a5ff
 
 master.welcome.title = Welcome!
 master.welcome.text = \
-	Welcome to Acme Planner! Never before has it bee easier to organize and develop a project.
+	Welcome to Acme Work-Plans! Never before has it bee easier to organize and develop a project.
 
 # master.menu #################################################################
 
@@ -106,9 +106,9 @@ master.footer.label.spanish = Spanish
 
 master.company.title = The company
 master.company.text = \
-	Acme Planner, Inc. is a project developed and started by the 9th group of \
+	Acme Work-Plans, Inc. is a project developed and started by the 9th group of \
 	de DP2 subject from the 3rd course of Software engineering, of the University of Seville. 
-master.company.name = Acme Planner, Inc.
+master.company.name = Acme Work-Plans, Inc.
 master.company.address = Without location
 master.company.phone = Without contact phone
 master.company.email = Without contact mail

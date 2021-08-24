@@ -82,7 +82,7 @@ INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAdmi
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAuthenticated = acme.framework.entities.Authenticated{id=5, version=0}
 INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
 WARN [org.hibernate.orm.connections.pooling] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on DESKTOP-KE4ECPD with PID 10456 (C:\Users\AB\Desktop\IS3\DP2\Workspace-21.1\Projects\Acme-Planner\target\classes started by AB in C:\Users\AB\Desktop\IS3\DP2\Workspace-21.1\Projects\Acme-Planner)
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on DESKTOP-KE4ECPD with PID 10456 (C:\Users\AB\Desktop\IS3\DP2\Workspace-21.1\Projects\Acme-Work-Plans\target\classes started by AB in C:\Users\AB\Desktop\IS3\DP2\Workspace-21.1\Projects\Acme-Work-Plans)
 INFO [acme.Launcher] The following profiles are active: development,populator
 INFO [acme.Launcher] Started Launcher in 11.289 seconds (JVM running for 12.314)
 INFO [acme.framework.utilities.DatabasePopulator] Populating initial data
