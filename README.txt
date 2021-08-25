@@ -13,4 +13,4 @@ link: https://github.com/juanramonuvus/Acme-Work-Plans
 Clevercloud:
  - username: juaostrub@alum.us.es
  - password: ********* (Password included in Item 2 for obvious security reasons)
-link-release: https://github.com/juanramonuvus/Acme-Work-Plans
+link-release: http://app-98c6ce73-a5f3-4518-b9e7-9fe942966036.cleverapps.io/Acme-Work-Plans/
