@@ -76,7 +76,7 @@ public class ManagerTaskCreateTest extends AcmePlannerTest{
 	 *  - case 5: Error would rise in execution end because start date and end date must be later than the current date.
 	 *  An error would rise in workload because value must be between 0 and 59 (minutes).
 	 *  
-	 *  - case 6: Title has more than 80 words, Description has more than 500 words 
+	 *  - case 6: Title has more than 80 words, Description has more than 500 words, Whole part of workload greater than 99 
 	 *  
 	 */
 	
@@ -148,6 +148,7 @@ public class ManagerTaskCreateTest extends AcmePlannerTest{
 			
 		case 6:
 			super.checkErrorsExist("title");
+			super.checkErrorsExist("workload");
 			assert super.exists(locator) : String.format("No errors found in input box '%s'", "description");
 		}
 		

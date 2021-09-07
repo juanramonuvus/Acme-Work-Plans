@@ -82,6 +82,13 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		}
 		
 		if(resworkload) {
+			final float workLoadDecimals = entity.getWorkload() - entity.getWorkload().byteValue();
+			final float workLoadInteger = entity.getWorkload() - workLoadDecimals;
+			resworkload = workLoadInteger < 100;
+			errors.state(request, resworkload, "workload", "acme.validators.validworkloadinteger");
+		}
+		
+		if(resworkload) {
 			final String strWorkload = String.valueOf(entity.getWorkload());
 			if (strWorkload.contains(".")) {		
 				resworkload = strWorkload.split("\\.")[1].length()<=2;

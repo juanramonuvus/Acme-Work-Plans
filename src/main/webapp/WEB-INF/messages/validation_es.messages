@@ -46,6 +46,7 @@ acme.validators.validdates = La fecha fin debe ser posterior a la fecha de inici
 acme.validators.validworkload = El valor de la carga de trabajo debe ser positivo
 acme.validators.validworkloadperiod = La carga de trabajo debe encajar en el periodo de las fechas
 acme.validators.validworkloaddecimals = El valor decimal del workload debe estar entre 0 y 59 (minutos)
+acme.validators.validworkloadinteger = La parte entera del workload tiene que ser menor que 100
 acme.validators.validdatesplan = Las fechas de las tareas deben ajustarse a las fechas de inicio y fin del plan
 acme.validators.validtasksinplan = Solo se pueden asociar tareas públicas a un plan público
 
