@@ -122,7 +122,7 @@
 		<property name="title" value="Create TaskValidators"/>
 		<property name="executionStart" value="2017/08/13 19:39"/>
 		<property name="executionEnd" value="2018/10/13 19:39"/>
-		<property name="workload" value="100.20"/>
+		<property name="workload" value="99.20"/>
 		<property name="description" value="Create validators of task entity"/>
 		<property name="isPublic" value="false"/>
 		<property name="link" value="https://github.com/task5"/>
